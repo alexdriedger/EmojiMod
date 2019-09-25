@@ -19,7 +19,8 @@ import java.nio.charset.StandardCharsets;
 @SpireInitializer
 public class EmojiMod implements
         EditStringsSubscriber,
-        EditKeywordsSubscriber
+        EditKeywordsSubscriber,
+        PostDungeonInitializeSubscriber
 {
     
     public static final Logger logger = LogManager.getLogger(EmojiMod.class.getName());
@@ -113,7 +114,13 @@ public class EmojiMod implements
 //            }
 //        }
     }
-    
+
+    @Override
+    public void receivePostDungeonInitialize() {
+        logger.info("postDungeonInitialize");
+        logger.info("Game Language is:\t" + Settings.language.toString());
+    }
+
     public static String makeID(String idText) {
         return getModID() + ":" + idText;
     }
