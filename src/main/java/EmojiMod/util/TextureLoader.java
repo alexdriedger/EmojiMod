@@ -1,4 +1,4 @@
-package theDefault.util;
+package EmojiMod.util;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.Texture.TextureFilter;

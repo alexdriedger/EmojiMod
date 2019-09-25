@@ -1,9 +1,6 @@
-package theDefault;
+package EmojiMod;
 
 import basemod.BaseMod;
-import basemod.ModLabeledToggleButton;
-import basemod.ModPanel;
-import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -11,51 +8,22 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import theDefault.util.IDCheckDontTouchPls;
+import EmojiMod.util.IDCheckDontTouchPls;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.util.Properties;
 
 @SpireInitializer
-public class DefaultMod implements
+public class EmojiMod implements
         EditStringsSubscriber,
         EditKeywordsSubscriber
 {
     
-    public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
+    public static final Logger logger = LogManager.getLogger(EmojiMod.class.getName());
     private static String modID;
     
-    private static final String MODNAME = "Default Mod";
-    private static final String AUTHOR = "Gremious";
-    private static final String DESCRIPTION = "A base for Slay the Spire to start your own mod from, feat. the Default.";
-    
-    public static String makeCardPath(String resourcePath) {
-        return getModID() + "Resources/images/cards/" + resourcePath;
-    }
-    
-    public static String makeRelicPath(String resourcePath) {
-        return getModID() + "Resources/images/relics/" + resourcePath;
-    }
-    
-    public static String makeRelicOutlinePath(String resourcePath) {
-        return getModID() + "Resources/images/relics/outline/" + resourcePath;
-    }
-    
-    public static String makeOrbPath(String resourcePath) {
-        return getModID() + "Resources/orbs/" + resourcePath;
-    }
-    
-    public static String makePowerPath(String resourcePath) {
-        return getModID() + "Resources/images/powers/" + resourcePath;
-    }
-    
-    public static String makeEventPath(String resourcePath) {
-        return getModID() + "Resources/images/events/" + resourcePath;
-    }
-    
-    public DefaultMod() {
+    public EmojiMod() {
         logger.info("Subscribe to BaseMod hooks");
         BaseMod.subscribe(this);
         setModID("EmojiMod");
@@ -65,7 +33,7 @@ public class DefaultMod implements
     public static void setModID(String ID) {
         Gson coolG = new Gson();
         
-        InputStream in = DefaultMod.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json");
+        InputStream in = EmojiMod.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json");
         IDCheckDontTouchPls EXCEPTION_STRINGS = coolG.fromJson(new InputStreamReader(in, StandardCharsets.UTF_8), IDCheckDontTouchPls.class);
         logger.info("You are attempting to set your mod ID as: " + ID);
         if (ID.equals(EXCEPTION_STRINGS.DEFAULTID)) {
@@ -82,28 +50,11 @@ public class DefaultMod implements
         return modID;
     }
     
-    private static void pathCheck() {
-        Gson coolG = new Gson();
-        
-        InputStream in = DefaultMod.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json");
-        IDCheckDontTouchPls EXCEPTION_STRINGS = coolG.fromJson(new InputStreamReader(in, StandardCharsets.UTF_8), IDCheckDontTouchPls.class);
-        String packageName = DefaultMod.class.getPackage().getName();
-        FileHandle resourcePathExists = Gdx.files.internal(getModID() + "Resources");
-        if (!modID.equals(EXCEPTION_STRINGS.DEVID)) {
-            if (!packageName.equals(getModID())) {
-                throw new RuntimeException(EXCEPTION_STRINGS.PACKAGE_EXCEPTION + getModID());
-            }
-            if (!resourcePathExists.exists()) {
-                throw new RuntimeException(EXCEPTION_STRINGS.RESOURCE_FOLDER_EXCEPTION + getModID() + "Resources");
-            }
-        }
-    }
-    
     @SuppressWarnings("unused")
     public static void initialize() {
-        logger.info("========================= Initializing Default Mod. Hi. =========================");
-        DefaultMod defaultmod = new DefaultMod();
-        logger.info("========================= /Default Mod Initialized. Hello World./ =========================");
+        logger.info("========================= Initializing Emoji Mod. =========================");
+        EmojiMod defaultmod = new EmojiMod();
+        logger.info("========================= /Emoji Mod Initialized. Hello :)./ =========================");
     }
     
     @Override
