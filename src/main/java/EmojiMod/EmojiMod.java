@@ -1,5 +1,6 @@
 package EmojiMod;
 
+import EmojiMod.patches.com.megacrit.cardcrawl.core.Settings.SettingsPatch;
 import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -69,33 +70,44 @@ public class EmojiMod implements
 
         BaseMod.loadCustomStringsFile(UIStrings.class,
                 path + "EmojiMod-Language-Dropdown-Strings.json");
-        
-//        BaseMod.loadCustomStringsFile(CardStrings.class,
-//                getModID() + "Resources/localization/eng/DefaultMod-Card-Strings.json");
-//
-//
-//        BaseMod.loadCustomStringsFile(PowerStrings.class,
-//                getModID() + "Resources/localization/eng/DefaultMod-Power-Strings.json");
-//
-//
-//        BaseMod.loadCustomStringsFile(RelicStrings.class,
-//                getModID() + "Resources/localization/eng/DefaultMod-Relic-Strings.json");
-//
-//
-//        BaseMod.loadCustomStringsFile(EventStrings.class,
-//                getModID() + "Resources/localization/eng/DefaultMod-Event-Strings.json");
-//
-//
-//        BaseMod.loadCustomStringsFile(PotionStrings.class,
-//                getModID() + "Resources/localization/eng/DefaultMod-Potion-Strings.json");
-//
-//
-//        BaseMod.loadCustomStringsFile(CharacterStrings.class,
-//                getModID() + "Resources/localization/eng/DefaultMod-Character-Strings.json");
-//
-//
-//        BaseMod.loadCustomStringsFile(OrbStrings.class,
-//                getModID() + "Resources/localization/eng/DefaultMod-Orb-Strings.json");
+
+//        if (Settings.language == SettingsPatch.EMO) {
+//            logger.info("Loading emoji localization files");
+//            BaseMod.loadCustomStringsFile(UIStrings.class,
+//                    path + "achievements.json");
+//            BaseMod.loadCustomStringsFile(UIStrings.class,
+//                    path + "blights.json");
+//            BaseMod.loadCustomStringsFile(UIStrings.class,
+//                    path + "cards.json");
+//            BaseMod.loadCustomStringsFile(UIStrings.class,
+//                    path + "characters.json");
+//            BaseMod.loadCustomStringsFile(UIStrings.class,
+//                    path + "credits.json");
+//            BaseMod.loadCustomStringsFile(UIStrings.class,
+//                    path + "events.json");
+//            BaseMod.loadCustomStringsFile(UIStrings.class,
+//                    path + "keywords.json");
+//            BaseMod.loadCustomStringsFile(UIStrings.class,
+//                    path + "monsters.json");
+//            BaseMod.loadCustomStringsFile(UIStrings.class,
+//                    path + "orbs.json");
+//            BaseMod.loadCustomStringsFile(UIStrings.class,
+//                    path + "potions.json");
+//            BaseMod.loadCustomStringsFile(UIStrings.class,
+//                    path + "powers.json");
+//            BaseMod.loadCustomStringsFile(UIStrings.class,
+//                    path + "relics.json");
+//            BaseMod.loadCustomStringsFile(UIStrings.class,
+//                    path + "run_mods.json");
+//            BaseMod.loadCustomStringsFile(UIStrings.class,
+//                    path + "score_bonuses.json");
+//            BaseMod.loadCustomStringsFile(UIStrings.class,
+//                    path + "stances.json");
+//            BaseMod.loadCustomStringsFile(UIStrings.class,
+//                    path + "tutorials.json");
+//            BaseMod.loadCustomStringsFile(UIStrings.class,
+//                    path + "ui.json");
+//        }
         
         logger.info("Done editing strings");
     }
