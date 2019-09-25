@@ -6,6 +6,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import EmojiMod.util.IDCheckDontTouchPls;
@@ -60,6 +62,12 @@ public class EmojiMod implements
     @Override
     public void receiveEditStrings() {
         logger.info("Beginning to edit strings for mod with ID: " + getModID());
+
+        String path = getModID() + "Resources/localization/" + Settings.language.toString().toLowerCase() + "/";
+        logger.info("receiveEditString path:\t" + path);
+
+        BaseMod.loadCustomStringsFile(UIStrings.class,
+                path + "EmojiMod-Language-Dropdown-Strings.json");
         
 //        BaseMod.loadCustomStringsFile(CardStrings.class,
 //                getModID() + "Resources/localization/eng/DefaultMod-Card-Strings.json");
