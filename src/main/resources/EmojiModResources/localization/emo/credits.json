@@ -97,7 +97,9 @@
     "NAMES": [
       "Jade \"HobNob\" Stevanovic",
       "Mero Marco",
-      "Luigi Squarzina"
+      "Luigi Squarzina",
+      "Playtesting:",
+      "Mattylink Heropon"
     ]
   },
   "LOC_JPN": {
@@ -149,10 +151,11 @@
       "Traductions additionnelles :",
       "Adrian \"xeros\" Rolka",
       "Marek \"Skorpionex\" Mazur",
+      "Foreigner",
       "Relecture :",
       "Oskar \"volf3n\" Nowak",
       "Suggestions et Retours :",
-      "Kasper \"Awokado\" Beræ",
+      "Kasper \"Awokado\" Berc",
       "Paweł \"BASTIL\" Kaleta",
       "Grzegorz \"GregPL\" Bogusławski",
       "Erwin \"mateusz3010\" Matys",
@@ -380,7 +383,7 @@
     ]
   },
   "LOC_VIE": {
-    "HEADER": "Vietnamese Localization",
+    "HEADER": "Traduction en vietnamien",
     "NAMES": [
       "MercTrans Localization Team",
       "Translation:",

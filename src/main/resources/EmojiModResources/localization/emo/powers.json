@@ -522,7 +522,8 @@
     "NAME": "Rituel",
     "DESCRIPTIONS": [
       "À la fin de son tour, gagne #b",
-      " de #yForce."
+      " de #yForce.",
+      "At the end of your turn, gain #b"
     ]
   },
   "Generic Strength Up Power": {
@@ -1044,10 +1045,10 @@
   "MasterRealityPower": {
     "NAME": "Maîtrise-réalité",
     "DESCRIPTIONS": [
-      "Au début de votre tour, ajoutez #b",
-      " #y",
-      "s dans votre main.",
-      "(TRANSLATION NOTE) The above is used to make: At the start of your turn, add #b3 #ySmite into your hand."
+      "Lorsque vous jouez une carte avec #yRetenue, infligez #b",
+      " dégâts à un ennemi aléatoire.",
+      "",
+      ""
     ]
   },
   "Retribution": {
@@ -1065,7 +1066,7 @@
     ]
   },
   "Controlled": {
-    "NAME": "Contrôlé",
+    "NAME": "Forteresse mentale",
     "DESCRIPTIONS": [
       "Lorsque vous changez de #yPosition, gagnez #b",
       " #yd'Armure."
@@ -1089,21 +1090,23 @@
   "Nirvana": {
     "NAME": "Nirvana",
     "DESCRIPTIONS": [
-      "Lorsque vous jouez une carte, #yAméliorez-la."
+      "Lorsque vous Scrutez, gagnez #b",
+      " #yd'Armure."
     ]
   },
   "WireheadingPower": {
-    "NAME": "Implant cérébral",
+    "NAME": "Prévoyance",
     "DESCRIPTIONS": [
-      "Au début de votre tour, #yScrutez ",
-      "."
+      "Au début de votre tour, #yScrutez #b",
+      " cartes."
     ]
   },
   "BattleHymn": {
     "NAME": "Hymne de bataille",
     "DESCRIPTIONS": [
-      "La première carte que vous piochez chaque tour voit son coût réduit de #b",
-      " ce tour."
+      "Au début de votre tour, ajoutez #b",
+      " #yGifles à votre main.",
+      " #yGifle à votre main."
     ]
   },
   "Grounded": {
@@ -1135,9 +1138,9 @@
     ]
   },
   "Adaptation": {
-    "NAME": "Adaptation",
+    "NAME": "Précipitation",
     "DESCRIPTIONS": [
-      "Lorsque vous changez de #yPosition, piochez #b",
+      "Lorsque vous entrez en #yColère, piochez #b",
       " carte.",
       " cartes."
     ]
@@ -1191,9 +1194,9 @@
   "Collect": {
     "NAME": "Collecte",
     "DESCRIPTIONS": [
-      "Au début de votre prochain tour, gagnez [W] [W] .",
+      "Au début de votre prochain tour, ajoutez un #yMiracle+ à votre main.",
       "Au début de vos #b",
-      " prochains tours, gagnez [W] [W] ."
+      " prochains tours, ajoutez un #yMiracle+ à votre main."
     ]
   },
   "Condense": {
@@ -1233,6 +1236,82 @@
     "NAME": "Simmering Rage",
     "DESCRIPTIONS": [
       "Au début de votre prochain tour, entrez en Colère."
+    ]
+  },
+  "OmnisciencePower": {
+    "NAME": "Omniscience",
+    "DESCRIPTIONS": [
+      "Lorsque vous #yScrutez, #yScrutez #b",
+      " cartes supplémentaires."
+    ]
+  },
+  "DevaForm": {
+    "NAME": "Deva",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, gagnez [W] ",
+      "Au début de votre tour, gagnez [W] #b",
+      " fois ",
+      "et augmentez ce gain de #b",
+      ".",
+      "TRANSLATE NOTE: At the start of your turn, gain [W] #b2 times and increase this by #b1."
+    ]
+  },
+  "WaveOfTheHandPower": {
+    "NAME": "Wave Of The Hand",
+    "DESCRIPTIONS": [
+      "Whenever you gain #yBlock, apply #b",
+      " #yWeak and #yVulnerable to ALL enemies."
+    ]
+  },
+  "WaveOfTheHandPower2": {
+    "NAME": "Wave Of The Hand2",
+    "DESCRIPTIONS": [
+      "Whenever you gain change #yStances, apply #b",
+      " #yWeak and #yVulnerable to ALL enemies."
+    ]
+  },
+  "EnergyDownPower": {
+    "NAME": "Fasting",
+    "DESCRIPTIONS": [
+      "At the start of your turn, lose ",
+      ""
+    ]
+  },
+  "DisciplinePower": {
+    "NAME": "Discipline",
+    "DESCRIPTIONS": [
+      "If you end your turn with unused [W]  , draw that many additional cards next turn."
+    ]
+  },
+  "FlickPower": {
+    "NAME": "Flick",
+    "DESCRIPTIONS": [
+      "When this enemy gets #yFlick #b",
+      "2 more times, it receives #b",
+      "1 more time, it receives #b",
+      " damage."
+    ]
+  },
+  "PathToVictoryPower": {
+    "NAME": "Path to Victory",
+    "DESCRIPTIONS": [
+      "Whenever you play #yPath #yto #yVictory, loses #b",
+      " HP."
+    ]
+  },
+  "LikeWaterPower": {
+    "NAME": "Like Water",
+    "DESCRIPTIONS": [
+      "At the end of your turn, if you are in #yCalm, gain #b",
+      " #yBlock."
+    ]
+  },
+  "Study": {
+    "NAME": "Study",
+    "DESCRIPTIONS": [
+      "At the end of your turn, shuffle #b",
+      " #yInsight into your draw pile.",
+      " #yInsights into your draw pile."
     ]
   }
 }

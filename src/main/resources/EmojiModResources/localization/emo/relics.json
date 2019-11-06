@@ -134,7 +134,7 @@
     "NAME": "Cloche d'appel",
     "FLAVOR": "Cette sombre cloche en fer a sonné 3 fois lorsque vous l'avez trouvée, mais elle est silencieuse depuis.",
     "DESCRIPTIONS": [
-      "Quand vous la ramassez, obtenez une #rMalédictions unique et #b3 reliques.",
+      "Quand vous la ramassez, obtenez une #rMalédiction unique et #b3 reliques.",
       "La cloche sonne...",
       "Passer les récompenses",
       "Fermer"
@@ -1482,6 +1482,22 @@
     "DESCRIPTIONS": [
       "Au début de votre troisième tour, gagnez #b",
       " #yd'Armure."
+    ]
+  },
+  "GoldenEye": {
+    "NAME": "Golden Eye",
+    "FLAVOR": "TODO",
+    "DESCRIPTIONS": [
+      "Whenever you #yScry, #yScry #b",
+      " addtional cards."
+    ]
+  },
+  "Damaru": {
+    "NAME": "Damaru",
+    "FLAVOR": "TODO. Don't forget to write stuff here, devs.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yMantra."
     ]
   }
 }

@@ -241,7 +241,8 @@
     "NAME": "Dévor'Heures",
     "DIALOG": [
       "~Ah...~ NL ~de~ ~la~ ~compagnie...~",
-      "~Quelle~ ~imprudence...~ NL @QUELLE@ @IMPRUDENCE@ @!@"
+      "~Quelle~ ~imprudence...~ NL @QUELLE@ @IMPRUDENCE@ @!@",
+      "~Je ne....~ ~vous ai....~ NL ~...jamais..~ NL ~..aimé...~"
     ]
   },
   "TheCollector": {
@@ -303,7 +304,8 @@
       "~Vous~ ~avez~ ~réussi...~",
       "@UNE@ @DÉFAITE@ @?@ NL @IMPOSSIBLE@ @!!@",
       "~MOUREZ~ ~.~ ~.~ ~.~",
-      "AFFRONTEZ MA COLÈRE !"
+      "AFFRONTEZ MA COLÈRE !",
+      "@THAT'S@ NL @MY@ @BELT!!@"
     ]
   },
   "Exploder": {

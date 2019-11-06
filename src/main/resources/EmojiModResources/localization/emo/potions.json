@@ -148,9 +148,9 @@
   "SneckoOil": {
     "NAME": "Huile de geckobra",
     "DESCRIPTIONS": [
-      "Devenez #yConfus. Piochez #b",
-      " cartes.",
-      " carte."
+      "Piochez #b",
+      " cartes. Rendez le coût des cartes de votre main aléatoire.",
+      ""
     ]
   },
   "SkillPotion": {
@@ -233,6 +233,88 @@
     "NAME": "Potion de position",
     "DESCRIPTIONS": [
       "Prenez la position #yCalme ou #yColère."
+    ]
+  },
+  "PotionOfCapacity": {
+    "NAME": "Potion de capacité",
+    "DESCRIPTIONS": [
+      "Gagnez #b",
+      " emplacements d'Orbe."
+    ]
+  },
+  "EssenceOfDarkness": {
+    "NAME": "Essence de ténèbres",
+    "DESCRIPTIONS": [
+      "#yCanalisez #b",
+      " #yOrbes #yObscurs pour chaque emplacement d'Orbe."
+    ]
+  },
+  "CunningPotion": {
+    "NAME": "Potion de ruse",
+    "DESCRIPTIONS": [
+      "Ajoutez #b",
+      " #ySurins+ à votre main."
+    ]
+  },
+  "ElixirPotion": {
+    "NAME": "Élixir",
+    "DESCRIPTIONS": [
+      "#yÉpuisez n'importe quel nombre de cartes de votre main."
+    ]
+  },
+  "BottledMiracle": {
+    "NAME": "Miracle embouteillé",
+    "DESCRIPTIONS": [
+      "Ajoutez #b",
+      " #yMiracles à votre main."
+    ]
+  },
+  "Ambrosia": {
+    "NAME": "Ambroisie",
+    "DESCRIPTIONS": [
+      "Entrez en #yDivinité."
+    ]
+  },
+  "HeartOfIron": {
+    "NAME": "Cœur de fer",
+    "DESCRIPTIONS": [
+      "Gagnez #b",
+      " de #yMétallisation."
+    ]
+  },
+  "DistilledChaos": {
+    "NAME": "Distilled Chaos",
+    "DESCRIPTIONS": [
+      "Play the top #b",
+      " cards of your draw pile."
+    ]
+  },
+  "LiquidMemories": {
+    "NAME": "Liquid Memories",
+    "DESCRIPTIONS": [
+      "Choose a card in your discard pile and return it to your hand. It costs #b0 this turn.",
+      "Choose #b ",
+      " cards in your discard pile and return them to your hand. They cost #b0 this turn."
+    ]
+  },
+  "CultistPotion": {
+    "NAME": "Cultist Potion",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yRitual."
+    ]
+  },
+  "ColorlessPotion": {
+    "NAME": "Colorless Potion",
+    "DESCRIPTIONS": [
+      "Choose #b1 of #b3 random #yColorless cards to add to your hand, it costs #b0 this turn.",
+      "Choose #b1 of #b3 random #yColorless cards and add #b2 copies to your hand, they cost #b0 this turn."
+    ]
+  },
+  "BlessingOfTheForge": {
+    "NAME": "Blessing of the Forge",
+    "DESCRIPTIONS": [
+      "Upgrade all cards in your hand."
     ]
   }
 }
