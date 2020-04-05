@@ -1,24 +1,12 @@
 package EmojiMod.patches.com.megacrit.cardcrawl.helpers.FontHelper;
 
-import EmojiMod.EmojiFontHelper;
 import EmojiMod.EmojiMod;
-import basemod.ReflectionHacks;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
-import com.evacipated.cardcrawl.modthespire.ReflectionHelper;
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
-import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
-import org.lwjgl.Sys;
-
-import java.lang.reflect.Method;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 //@SpirePatch(clz = FontHelper.class, method = "identifyOrb")
 //public class FontHelperPatches {
@@ -103,18 +91,31 @@ import java.util.regex.Pattern;
 //    }
 //}
 
-@SpirePatch(
+
+public class FontHelperPatches {
+
+    @SpirePatch(
         clz = FontHelper.class,
         method = "prepFont",
         paramtypez = {
                 FreeTypeFontGenerator.class,
                 float.class,
                 boolean.class
-        })
-public class FontHelperPatches {
-    public static BitmapFont Postfix(BitmapFont __result, FreeTypeFontGenerator g, float size, boolean isLinearFiltering) {
-        EmojiMod.logger.info("Postfixing prepFont");
-        EmojiMod.emojiSupport.AddEmojisToFont(__result);
-        return __result;
+        }
+    )
+    public static class AddEmojiToFontPatch {
+        public static BitmapFont Postfix(BitmapFont __result, FreeTypeFontGenerator g, float size, boolean isLinearFiltering) {
+            EmojiMod.logger.info("Postfixing prepFont");
+            EmojiMod.emojiSupport.AddEmojisToFont(__result);
+            return __result;
+        }
+    }
+
+    @SpirePatch(clz = FontHelper.class, method = "renderRotatedText")
+    public static class RenderRotatedTextPatch {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, float offsetX, float offsetY, float angle, boolean roundY, com.badlogic.gdx.graphics.Color c) {
+            String s = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+            msg[0] = s;
+        }
     }
 }
