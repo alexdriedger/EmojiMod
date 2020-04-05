@@ -768,7 +768,7 @@
     "UPGRADE_DESCRIPTION": "Ajoutez !M! cartes incolores aléatoires à votre main. NL Épuisement."
   },
   "Demon Form": {
-    "NAME": "[U+1F608] [U+1F4CB]",
+    "NAME": "\uD83D\uDE08 \uD83D\uDCCB",
     "DESCRIPTION": "Au début de chaque tour, gagnez !M! de Force."
   },
   "Fire Breathing": {

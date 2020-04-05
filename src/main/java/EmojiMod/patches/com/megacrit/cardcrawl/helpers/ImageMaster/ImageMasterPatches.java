@@ -1,6 +1,7 @@
 package EmojiMod.patches.com.megacrit.cardcrawl.helpers.ImageMaster;
 
 import EmojiMod.EmojiMod;
+import EmojiMod.EmojiSupport;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -15,6 +16,17 @@ public class ImageMasterPatches {
         if (fileHandle != null) {
             EmojiMod.logger.info("File handle for atlas loaded correctly");
         }
+
+        FileHandle newFileHandle = Gdx.files.internal(EmojiMod.getModID() + "Resources/images/emoji-support/emojis25.atlas");
+        if (fileHandle != null) {
+            EmojiMod.logger.info("File handle for atlas loaded correctly");
+        }
+
+        // New EmojiSupport
+        EmojiMod.emojiSupport = new EmojiSupport();
+        EmojiMod.emojiSupport.Load(newFileHandle);
+        EmojiMod.logger.info("Loaded emojis using new support system");
+
         EmojiMod.emojiAtlas = new TextureAtlas(fileHandle);
         if (EmojiMod.emojiAtlas != null) {
             EmojiMod.logger.info("Emoji atlas loaded correctly");

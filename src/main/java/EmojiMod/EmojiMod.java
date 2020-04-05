@@ -43,6 +43,8 @@ public class EmojiMod implements
     // TODO : Make a map of <emoji string identifier => AtlasRegion> so that the mod doesn't load all 2000+ emojis on start up and just uses the ones that are actually used
     // TODO : In `identifyOrb`, if the image isn't loaded into map, load it. else return texture from map
     // TODO : Figure out why sizing isn't working correctly
+
+    public static EmojiSupport emojiSupport;
     
     public EmojiMod() {
         logger.info("Subscribe to BaseMod hooks");

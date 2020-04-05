@@ -20,51 +20,51 @@ import java.lang.reflect.Method;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-@SpirePatch(clz = FontHelper.class, method = "identifyOrb")
-public class FontHelperPatches {
-
-    public static TextureAtlas.AtlasRegion Postfix(TextureAtlas.AtlasRegion result, String word) {
-        // Result is not null if the word was an energy icon
-        if (result != null) {
-            return result;
-        }
-
-//        String path128 = EmojiMod.getModID() + "Resources/images/noto-emoji-master/png/128/emoji_u1f6a3_1f3fc_200d_2642.png";
-
-//        TextureAtlas.AtlasRegion region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path128), 0, 0, 128, 128);
-//        if (EmojiMod.testRegion == null) {
-//            EmojiMod.logger.info("testRegion is null!!!!!!!!!!");
+//@SpirePatch(clz = FontHelper.class, method = "identifyOrb")
+//public class FontHelperPatches {
+//
+//    public static TextureAtlas.AtlasRegion Postfix(TextureAtlas.AtlasRegion result, String word) {
+//        // Result is not null if the word was an energy icon
+//        if (result != null) {
+//            return result;
 //        }
-        if (word.startsWith("[U+")) {
-            return findTexture(word);
-        }
-        return null;
-    }
-
-    public static TextureAtlas.AtlasRegion findTexture(String word) {
-        Pattern p = Pattern.compile("\\[U\\+(.*?)\\]");
-        Matcher m = p.matcher(word);
-        if (!m.find()) {
-            String errorMsg = "Find texture used on a expression that is not supported by EmojiMod";
-            EmojiMod.logger.error(errorMsg);
-            throw new RuntimeException(errorMsg);
-        }
-        String s = "emoji-u" + m.group(1);
-        s = s.toLowerCase();
-//        EmojiMod.logger.info("findTexture string to look for:\t" + s);
-        if (EmojiMod.cachedEmojis.containsKey(s)) {
-            return EmojiMod.cachedEmojis.get(s);
-        } else {
-            EmojiMod.logger.info("Loading emoji:\t" + s);
-            TextureAtlas.AtlasRegion region = EmojiMod.emojiAtlas.findRegion(s);
-            if (region == null) {
-                EmojiMod.logger.error("Emoji:\t" + s + " not loaded correctly!");
-            }
-            EmojiMod.cachedEmojis.put(s, region);
-            return region;
-        }
-    }
-}
+//
+////        String path128 = EmojiMod.getModID() + "Resources/images/noto-emoji-master/png/128/emoji_u1f6a3_1f3fc_200d_2642.png";
+//
+////        TextureAtlas.AtlasRegion region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path128), 0, 0, 128, 128);
+////        if (EmojiMod.testRegion == null) {
+////            EmojiMod.logger.info("testRegion is null!!!!!!!!!!");
+////        }
+//        if (word.startsWith("[U+")) {
+//            return findTexture(word);
+//        }
+//        return null;
+//    }
+//
+//    public static TextureAtlas.AtlasRegion findTexture(String word) {
+//        Pattern p = Pattern.compile("\\[U\\+(.*?)\\]");
+//        Matcher m = p.matcher(word);
+//        if (!m.find()) {
+//            String errorMsg = "Find texture used on a expression that is not supported by EmojiMod";
+//            EmojiMod.logger.error(errorMsg);
+//            throw new RuntimeException(errorMsg);
+//        }
+//        String s = "emoji-u" + m.group(1);
+//        s = s.toLowerCase();
+////        EmojiMod.logger.info("findTexture string to look for:\t" + s);
+//        if (EmojiMod.cachedEmojis.containsKey(s)) {
+//            return EmojiMod.cachedEmojis.get(s);
+//        } else {
+//            EmojiMod.logger.info("Loading emoji:\t" + s);
+//            TextureAtlas.AtlasRegion region = EmojiMod.emojiAtlas.findRegion(s);
+//            if (region == null) {
+//                EmojiMod.logger.error("Emoji:\t" + s + " not loaded correctly!");
+//            }
+//            EmojiMod.cachedEmojis.put(s, region);
+//            return region;
+//        }
+//    }
+//}
 
 //@SpirePatch(clz = FontHelper.class, method = "initialize")
 //public class FontHelperPatches {
@@ -102,3 +102,19 @@ public class FontHelperPatches {
 //        }
 //    }
 //}
+
+@SpirePatch(
+        clz = FontHelper.class,
+        method = "prepFont",
+        paramtypez = {
+                FreeTypeFontGenerator.class,
+                float.class,
+                boolean.class
+        })
+public class FontHelperPatches {
+    public static BitmapFont Postfix(BitmapFont __result, FreeTypeFontGenerator g, float size, boolean isLinearFiltering) {
+        EmojiMod.logger.info("Postfixing prepFont");
+        EmojiMod.emojiSupport.AddEmojisToFont(__result);
+        return __result;
+    }
+}

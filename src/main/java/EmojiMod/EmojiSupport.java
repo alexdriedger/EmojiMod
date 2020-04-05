@@ -59,6 +59,8 @@ import java.util.HashMap;
 
 public class EmojiSupport
 {
+    public EmojiSupport() {}
+
     public final static char START_CHAR = 0xB000;	// Starting replacement-chars (very rarely used range)
 
     public class EmojiRegionIndex {
