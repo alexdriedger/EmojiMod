@@ -444,8 +444,8 @@
     "UPGRADE_DESCRIPTION": "À la fin du tour, Retenez jusqu'à !M! cartes."
   },
   "Defend_R": {
-    "NAME": "\uD83D\uDEE1",
-    "DESCRIPTION": "!B! \uD83D\uDEE1"
+    "NAME": "\uD83D\uDE06",
+    "DESCRIPTION": "!B! \uD83D\uDE06 \uD83D\uDE06 \uD83D\uDE06 \uD83D\uDE06 !B! \uD83D\uDE06"
   },
   "Defend_G": {
     "NAME": "Défense",
@@ -797,7 +797,7 @@
   },
   "Strike_R": {
     "NAME": "\uD83D\uDD2A",
-    "DESCRIPTION": "!D!  \uD83D\uDD2A"
+    "DESCRIPTION": "!D! \uD83D\uDD2A"
   },
   "Strike_G": {
     "NAME": "Frappe",
