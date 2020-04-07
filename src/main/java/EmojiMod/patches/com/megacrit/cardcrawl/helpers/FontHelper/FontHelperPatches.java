@@ -8,90 +8,8 @@ import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 
-//@SpirePatch(clz = FontHelper.class, method = "identifyOrb")
-//public class FontHelperPatches {
-//
-//    public static TextureAtlas.AtlasRegion Postfix(TextureAtlas.AtlasRegion result, String word) {
-//        // Result is not null if the word was an energy icon
-//        if (result != null) {
-//            return result;
-//        }
-//
-////        String path128 = EmojiMod.getModID() + "Resources/images/noto-emoji-master/png/128/emoji_u1f6a3_1f3fc_200d_2642.png";
-//
-////        TextureAtlas.AtlasRegion region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path128), 0, 0, 128, 128);
-////        if (EmojiMod.testRegion == null) {
-////            EmojiMod.logger.info("testRegion is null!!!!!!!!!!");
-////        }
-//        if (word.startsWith("[U+")) {
-//            return findTexture(word);
-//        }
-//        return null;
-//    }
-//
-//    public static TextureAtlas.AtlasRegion findTexture(String word) {
-//        Pattern p = Pattern.compile("\\[U\\+(.*?)\\]");
-//        Matcher m = p.matcher(word);
-//        if (!m.find()) {
-//            String errorMsg = "Find texture used on a expression that is not supported by EmojiMod";
-//            EmojiMod.logger.error(errorMsg);
-//            throw new RuntimeException(errorMsg);
-//        }
-//        String s = "emoji-u" + m.group(1);
-//        s = s.toLowerCase();
-////        EmojiMod.logger.info("findTexture string to look for:\t" + s);
-//        if (EmojiMod.cachedEmojis.containsKey(s)) {
-//            return EmojiMod.cachedEmojis.get(s);
-//        } else {
-//            EmojiMod.logger.info("Loading emoji:\t" + s);
-//            TextureAtlas.AtlasRegion region = EmojiMod.emojiAtlas.findRegion(s);
-//            if (region == null) {
-//                EmojiMod.logger.error("Emoji:\t" + s + " not loaded correctly!");
-//            }
-//            EmojiMod.cachedEmojis.put(s, region);
-//            return region;
-//        }
-//    }
-//}
 
-//@SpirePatch(clz = FontHelper.class, method = "initialize")
-//public class FontHelperPatches {
-//
-////    @SpireInsertPatch(rloc = 424, localvars = "fontFile")
-////    public static void Insert(@ByRef FileHandle[] fontFile) {
-////        System.out.println("Postfixing FontHelper initialize");
-////        properPatch(fontFile);
-//////        otherPatch();
-////    }
-//
-//    private static void otherPatch() {
-//        FileHandle fileHandle = Gdx.files.internal(EmojiMod.getModID() + "Resources/font/emo/TwitterColorEmoji-SVGinOT.ttf");
-//        FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fileHandle);
-//        FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
-////        FreeTypeFontGenerator.FreeTypeBitmapFontData data = new FreeTypeFontGenerator.FreeTypeBitmapFontData();
-////        data.xChars = new char[] { '动' };
-////        data.capChars = new char[] { '动' };
-//        parameter.characters = "❤\uD83D\uDC49";
-//        parameter.size = 12;
-//        EmojiFontHelper.EMOJI_FONT = generator.generateFont(parameter); // font size 12 pixels
-//        generator.dispose();
-//    }
-//
-//    private static void properPatch(FileHandle[] fontFile) {
-//        fontFile[0] = Gdx.files.internal("font/emo/TwitterColorEmoji-SVGinOT.ttf");
-//
-//        try {
-//            Method method = FontHelper.class.getDeclaredMethod("prepFont", float.class, boolean.class);
-//            method.setAccessible(true);
-//            EmojiFontHelper.EMOJI_FONT = (BitmapFont) method.invoke(FontHelper.class, 24.0F, true);
-//            System.out.println("Set Emoji Font");
-//        } catch (Exception e) {
-//            System.out.println("Tried to use reflection on FontHelper");
-//        }
-//    }
-//}
-
-
+// Maybe need to patch FontHelper.getWidth(...) & FontHelper.getHeight(...)???
 public class FontHelperPatches {
 
     @SpirePatch(
@@ -112,10 +30,320 @@ public class FontHelperPatches {
     }
 
     @SpirePatch(clz = FontHelper.class, method = "renderRotatedText")
-    public static class RenderRotatedTextPatch {
+    public static class RenderRotatedText {
         public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, float offsetX, float offsetY, float angle, boolean roundY, com.badlogic.gdx.graphics.Color c) {
-            String s = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
-            msg[0] = s;
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
         }
     }
+
+    @SpirePatch(clz = FontHelper.class, method = "renderTipLeft")
+    public static class RenderTipLeft {
+        public static void Prefix(SpriteBatch sb, @ByRef String[] msg) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(clz = FontHelper.class, method = "renderFont")
+    public static class RenderFont {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, com.badlogic.gdx.graphics.Color c) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(
+            clz = FontHelper.class,
+            method = "renderWrappedText",
+            paramtypez = {
+                    SpriteBatch.class,
+                    BitmapFont.class,
+                    String.class,
+                    float.class,
+                    float.class,
+                    float.class,
+                    com.badlogic.gdx.graphics.Color.class,
+                    float.class
+            }
+    )
+    public static class RenderWrappedText {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, float width, com.badlogic.gdx.graphics.Color c, float scale) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(clz = FontHelper.class, method = "renderFontLeftDownAligned")
+    public static class RenderFontLeftDownAligned {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, com.badlogic.gdx.graphics.Color c) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(clz = FontHelper.class, method = "renderFontRightToLeft")
+    public static class RenderFontRightToLeft {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, com.badlogic.gdx.graphics.Color c) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(
+            clz = FontHelper.class,
+            method = "renderFontRightTopAligned",
+            paramtypez = {
+                    SpriteBatch.class,
+                    BitmapFont.class,
+                    String.class,
+                    float.class,
+                    float.class,
+                    com.badlogic.gdx.graphics.Color.class
+            }
+    )
+    public static class RenderFontRightTopAligned {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, com.badlogic.gdx.graphics.Color c) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(clz = FontHelper.class, method = "renderFontRightAligned")
+    public static class RenderFontRightAligned {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, com.badlogic.gdx.graphics.Color c) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(
+            clz = FontHelper.class,
+            method = "renderFontCentered",
+            paramtypez = {
+                    SpriteBatch.class,
+                    BitmapFont.class,
+                    String.class,
+                    float.class,
+                    float.class,
+                    com.badlogic.gdx.graphics.Color.class
+            }
+    )
+    public static class RenderFontCentered1 {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, com.badlogic.gdx.graphics.Color c) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(
+            clz = FontHelper.class,
+            method = "renderFontCentered",
+            paramtypez = {
+                    SpriteBatch.class,
+                    BitmapFont.class,
+                    String.class,
+                    float.class,
+                    float.class,
+                    com.badlogic.gdx.graphics.Color.class,
+                    float.class
+            }
+    )
+    public static class RenderFontCentered2 {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, com.badlogic.gdx.graphics.Color c, float scale) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(
+            clz = FontHelper.class,
+            method = "renderFontCentered",
+            paramtypez = {
+                    SpriteBatch.class,
+                    BitmapFont.class,
+                    String.class,
+                    float.class,
+                    float.class
+            }
+    )
+    public static class RenderFontCentered3 {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(
+            clz = FontHelper.class,
+            method = "renderFontRightTopAligned",
+            paramtypez = {
+                    SpriteBatch.class,
+                    BitmapFont.class,
+                    String.class,
+                    float.class,
+                    float.class,
+                    float.class,
+                    com.badlogic.gdx.graphics.Color.class
+            }
+    )
+    public static class RenderFontRightTopAligned2 {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, float scale, com.badlogic.gdx.graphics.Color c) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(
+            clz = FontHelper.class,
+            method = "renderSmartText",
+            paramtypez = {
+                    SpriteBatch.class,
+                    BitmapFont.class,
+                    String.class,
+                    float.class,
+                    float.class,
+                    float.class,
+                    float.class,
+                    com.badlogic.gdx.graphics.Color.class
+            }
+    )
+    public static class RenderSmartText {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, float lineWidth, float lineSpacing, com.badlogic.gdx.graphics.Color baseColor) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(clz = FontHelper.class, method = "renderDeckViewTip")
+    public static class RenderDeckViewTip {
+        public static void Prefix(SpriteBatch sb, @ByRef String[] msg, float y, com.badlogic.gdx.graphics.Color color) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(clz = FontHelper.class, method = "renderFontLeftTopAligned")
+    public static class RenderFontLeftTopAligned {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, com.badlogic.gdx.graphics.Color c) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(clz = FontHelper.class, method = "renderFontLeft")
+    public static class RenderFontLeft {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, com.badlogic.gdx.graphics.Color c) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(clz = FontHelper.class, method = "exampleNonWordWrappedText")
+    public static class ExampleNonWordWrappedText {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, com.badlogic.gdx.graphics.Color c, float widthMax, float lineSpacing) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(clz = FontHelper.class, method = "renderFontCenteredTopAligned")
+    public static class RenderFontCenteredTopAligned {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, com.badlogic.gdx.graphics.Color c) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(
+            clz = FontHelper.class,
+            method = "renderFontCenteredWidth",
+            paramtypez = {
+                    SpriteBatch.class,
+                    BitmapFont.class,
+                    String.class,
+                    float.class,
+                    float.class,
+                    com.badlogic.gdx.graphics.Color.class
+            }
+    )
+    public static class RenderFontCenteredWidth {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, com.badlogic.gdx.graphics.Color c) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(
+            clz = FontHelper.class,
+            method = "renderFontCenteredWidth",
+            paramtypez = {
+                    SpriteBatch.class,
+                    BitmapFont.class,
+                    String.class,
+                    float.class,
+                    float.class
+            }
+    )
+    public static class RenderFontCenteredWidth2 {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(
+            clz = FontHelper.class,
+            method = "renderFontCenteredHeight",
+            paramtypez = {
+                    SpriteBatch.class,
+                    BitmapFont.class,
+                    String.class,
+                    float.class,
+                    float.class,
+                    float.class,
+                    com.badlogic.gdx.graphics.Color.class
+            }
+    )
+    public static class RenderFontCenteredHeight {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, float lineWidth, com.badlogic.gdx.graphics.Color c) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(
+            clz = FontHelper.class,
+            method = "renderFontCenteredHeight",
+            paramtypez = {
+                    SpriteBatch.class,
+                    BitmapFont.class,
+                    String.class,
+                    float.class,
+                    float.class,
+                    float.class,
+                    com.badlogic.gdx.graphics.Color.class,
+                    float.class
+            }
+    )
+    public static class RenderFontCenteredHeight2 {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, float lineWidth, com.badlogic.gdx.graphics.Color c, float scale) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(
+            clz = FontHelper.class,
+            method = "renderFontCenteredHeight",
+            paramtypez = {
+                    SpriteBatch.class,
+                    BitmapFont.class,
+                    String.class,
+                    float.class,
+                    float.class,
+                    com.badlogic.gdx.graphics.Color.class
+            }
+    )
+    public static class RenderFontCenteredHeight3 {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y, com.badlogic.gdx.graphics.Color c) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
+    @SpirePatch(
+            clz = FontHelper.class,
+            method = "renderFontCenteredHeight",
+            paramtypez = {
+                    SpriteBatch.class,
+                    BitmapFont.class,
+                    String.class,
+                    float.class,
+                    float.class
+            }
+    )
+    public static class RenderFontCenteredHeight4 {
+        public static void Prefix(SpriteBatch sb, BitmapFont font, @ByRef String[] msg, float x, float y) {
+            msg[0] = EmojiMod.emojiSupport.FilterEmojis(msg[0]);
+        }
+    }
+
 }
