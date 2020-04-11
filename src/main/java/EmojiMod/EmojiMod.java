@@ -34,15 +34,6 @@ public class EmojiMod implements
     public static final Logger logger = LogManager.getLogger(EmojiMod.class.getName());
     private static String modID;
 
-    public static TextureAtlas emojiAtlas;
-    public static TextureAtlas.AtlasRegion testRegion;
-    public static Map<String, TextureAtlas.AtlasRegion> cachedEmojis = new HashMap<>();
-
-    // Format is U+{first code point}-{next code point}-{etc.}
-    // Example: U+1F3C-200D-2642 for https://emojipedia.org/man-surfing/
-    // Note: This should correspond to the code points defined on emojipedia
-    // Note: U+FE0F is ignored in naming https://emojipedia.org/variation-selector-16/
-
     public static EmojiSupport emojiSupport;
     
     public EmojiMod() {

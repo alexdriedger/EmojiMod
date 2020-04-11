@@ -9,7 +9,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 
 
-// Maybe need to patch FontHelper.getWidth(...) & FontHelper.getHeight(...)???
 public class FontHelperPatches {
 
     @SpirePatch(
@@ -23,7 +22,7 @@ public class FontHelperPatches {
     )
     public static class AddEmojiToFontPatch {
         public static BitmapFont Postfix(BitmapFont __result, FreeTypeFontGenerator g, float size, boolean isLinearFiltering) {
-            EmojiMod.logger.info("Postfixing prepFont");
+            EmojiMod.logger.info("Adding Emojis to a font");
             EmojiMod.emojiSupport.AddEmojisToFont(__result);
             return __result;
         }
