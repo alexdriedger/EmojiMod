@@ -17,7 +17,7 @@ public class ImageMasterPatches {
             EmojiMod.logger.info("File handle for atlas loaded correctly");
         }
 
-        FileHandle newFileHandle = Gdx.files.internal(EmojiMod.getModID() + "Resources/images/emoji-support/emojis25.atlas");
+        FileHandle newFileHandle = Gdx.files.internal(EmojiMod.getModID() + "Resources/images/emoji-support-multiple/multiple.atlas");
         if (fileHandle != null) {
             EmojiMod.logger.info("File handle for atlas loaded correctly");
         }

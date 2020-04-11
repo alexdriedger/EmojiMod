@@ -26,11 +26,14 @@ public class EmojiMod implements
         EditKeywordsSubscriber,
         PostDungeonInitializeSubscriber
 {
+
+    // TODO: Add images to pack (hopefully they are the same size as emojis)
+    // TODO: Use private use area for unicode for powers, relics, discord emotes, etc.
+    // TODO: Probably remove the need to change the language to emoji. Just change everything by default
     
     public static final Logger logger = LogManager.getLogger(EmojiMod.class.getName());
     private static String modID;
 
-    // TODO : Make texture atlas from emoji atlas. Intialize in ImageMaster initialize time
     public static TextureAtlas emojiAtlas;
     public static TextureAtlas.AtlasRegion testRegion;
     public static Map<String, TextureAtlas.AtlasRegion> cachedEmojis = new HashMap<>();
@@ -39,10 +42,6 @@ public class EmojiMod implements
     // Example: U+1F3C-200D-2642 for https://emojipedia.org/man-surfing/
     // Note: This should correspond to the code points defined on emojipedia
     // Note: U+FE0F is ignored in naming https://emojipedia.org/variation-selector-16/
-
-    // TODO : Make a map of <emoji string identifier => AtlasRegion> so that the mod doesn't load all 2000+ emojis on start up and just uses the ones that are actually used
-    // TODO : In `identifyOrb`, if the image isn't loaded into map, load it. else return texture from map
-    // TODO : Figure out why sizing isn't working correctly
 
     public static EmojiSupport emojiSupport;
     
