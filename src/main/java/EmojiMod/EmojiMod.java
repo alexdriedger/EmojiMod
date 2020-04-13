@@ -27,9 +27,11 @@ public class EmojiMod implements
         PostDungeonInitializeSubscriber
 {
 
-    // TODO: Add images to pack (hopefully they are the same size as emojis)
-    // TODO: Use private use area for unicode for powers, relics, discord emotes, etc.
-    // TODO: Probably remove the need to change the language to emoji. Just change everything by default
+    // TODO: Python script to append powers atlas to emoji atlas (+ Private Use Area encoding)
+    // TODO: Add relic assets to emoji texture package. Add discord emotes
+    // TODO: Remove the need to change the language to emoji. Just change everything by default
+    // TODO: Determine best way to allow cross mod compatibility for adding emojis translations (and emojis?)
+    // TODO: Adapt shorten the spire logic for emoji translation
     
     public static final Logger logger = LogManager.getLogger(EmojiMod.class.getName());
     private static String modID;
