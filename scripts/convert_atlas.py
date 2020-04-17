@@ -36,10 +36,7 @@ def convert_power_atlas(encoding_start_num: int) -> Tuple[int, Dict[str, str]]:
   encoding -= 1
   return encoding, mapping
 
-def convert_custom_atlas(encoding_start_num: int) -> Tuple[int, Dict[str, str]]:
-  output_file = "out/new_relics_blights.atlas"
-  input_file = "relics_blights.atlas"
-
+def convert_custom_atlas(encoding_start_num: int, input_file: str, output_file: str) -> Tuple[int, Dict[str, str]]:
   encoding = encoding_start_num
   mapping = dict()
 
@@ -71,8 +68,10 @@ def convert_custom_atlas(encoding_start_num: int) -> Tuple[int, Dict[str, str]]:
 def convert_all_atlases() -> None:
   start_encoding = int("0xF0000", 16)
   encoding, mapping_dict = convert_power_atlas(start_encoding)
-  encoding, relics_dict = convert_custom_atlas(encoding)
+  encoding, relics_dict = convert_custom_atlas(encoding, input_file="sts_assets.atlas", output_file="out/new_relics_blights.atlas")
+  encoding, other_assets_dict = convert_custom_atlas(encoding, input_file="other_assets.atlas", output_file="out/new_other_assets.atlas")
   mapping_dict.update(relics_dict)
+  mapping_dict.update(other_assets_dict)
   write_mapping_file(mapping_dict)
 
 def int_encoding_to_surrogate_pair(code_point: int) -> str:

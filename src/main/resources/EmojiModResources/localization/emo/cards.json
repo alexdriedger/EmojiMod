@@ -777,11 +777,11 @@
   },
   "Ghostly Armor": {
     "NAME": "Armure spectrale",
-    "DESCRIPTION": "Éthérée. NL Gagnez !B! d'Armure."
+    "DESCRIPTION": "5 \uDB80\uDDCA"
   },
   "Uppercut": {
-    "NAME": "Uppercut",
-    "DESCRIPTION": "Infligez !D! dégât(s). NL Appliquez !M! de Faiblesse. NL Appliquez !M! de Vulnérabilité."
+    "NAME": "\uDB80\uDD40",
+    "DESCRIPTION": "14 \uDB80\uDD4E \uDB80\uDE14"
   },
   "Mind Blast": {
     "NAME": "Détonation mentale",
@@ -1743,8 +1743,8 @@
     "DESCRIPTION": "Retenue. NL Infligez !D! dégâts. NL Lorsque cette carte est Retenue, diminuez son coût de 1 pour ce combat."
   },
   "Blasphemy": {
-    "NAME": "Blasphème",
-    "DESCRIPTION": "Entrez en Divinité. NL Mourrez au prochain tour.",
+    "NAME": "\uDB80\uDE5F",
+    "DESCRIPTION": "\uDB80\uDE5F ➡️ ☠️",
     "UPGRADE_DESCRIPTION": "Retain. NL Enter Divinity. NL Die next turn. NL Exhaust."
   },
   "Transcendence": {
