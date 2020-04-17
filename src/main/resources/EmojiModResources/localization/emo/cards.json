@@ -251,7 +251,7 @@
   },
   "Shrug It Off": {
     "NAME": "\uD83E\uDD37",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Piochez 1 carte."
+    "DESCRIPTION": "\uDB80\uDE5C \uD83D\uDEE1️ NL \uDB80\uDE60 \uDB80\uDCC4"
   },
   "Clash": {
     "NAME": "Conflit",
@@ -1743,8 +1743,8 @@
     "DESCRIPTION": "Retenue. NL Infligez !D! dégâts. NL Lorsque cette carte est Retenue, diminuez son coût de 1 pour ce combat."
   },
   "Blasphemy": {
-    "NAME": "\uDB80\uDE5F",
-    "DESCRIPTION": "\uDB80\uDE5F ➡️ ☠️",
+    "NAME": "\uDB80\uDE69",
+    "DESCRIPTION": "\uDB80\uDE69 ➡️ ☠️",
     "UPGRADE_DESCRIPTION": "Retain. NL Enter Divinity. NL Die next turn. NL Exhaust."
   },
   "Transcendence": {

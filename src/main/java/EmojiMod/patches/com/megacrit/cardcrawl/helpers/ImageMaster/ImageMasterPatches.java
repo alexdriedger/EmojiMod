@@ -13,7 +13,7 @@ public class ImageMasterPatches {
 
     public static void Postfix() {
         EmojiMod.logger.info("Loading emoji atlas");
-        FileHandle newFileHandle = Gdx.files.internal(EmojiMod.getModID() + "Resources/images/emoji-support-multiple/multiple.atlas");
+        FileHandle newFileHandle = Gdx.files.internal(EmojiMod.getModID() + "Resources/images/emoji-support-multiple/emoji.atlas");
         EmojiMod.emojiSupport = new EmojiSupport();
         EmojiMod.emojiSupport.Load(newFileHandle);
         EmojiMod.logger.info("Completed loading emoji atlas");
