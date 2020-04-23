@@ -1,6 +1,7 @@
 package EmojiMod.patches.com.megacrit.cardcrawl.cards.AbstractCard;
 
 import EmojiMod.EmojiMod;
+import EmojiMod.patches.com.megacrit.cardcrawl.RenderDescriptionExprEditor;
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -39,29 +40,13 @@ public class AbstractCardPatches {
 
     @SpirePatch(clz = AbstractCard.class, method = "renderDescription")
     public static class LineSpacingPatch {
-        public static boolean firstPatch = true;
-
+        public static final String RENDER_DESCRIPTION_REPLACEMENT =
+            "{ " +
+                "$7 = i * 2.50F * -font.getCapHeight() + draw_y - this.current_y + -3.0F;" +
+                "$_ = $proceed($$);" +
+            " }";
         public static ExprEditor Instrument() {
-            return new ExprEditor() {
-                @Override
-                public void edit(MethodCall m) throws CannotCompileException
-                {
-                    if (m.getClassName().equals("com.megacrit.cardcrawl.helpers.FontHelper") &&
-                            m.getMethodName().equals("renderRotatedText")) {
-                        if (firstPatch) {
-                            firstPatch = false;
-                            return;
-                        }
-                        EmojiMod.logger.info("Replacing renderRotatedText");
-                        m.replace(
-                    "{ " +
-                                "$7 = i * 2.50F * -font.getCapHeight() + draw_y - this.current_y + -6.0F;" +
-                                "$_ = $proceed($$);" +
-                            " }"
-                        );
-                    }
-                }
-            };
+            return new RenderDescriptionExprEditor(RENDER_DESCRIPTION_REPLACEMENT);
         }
 
     }
