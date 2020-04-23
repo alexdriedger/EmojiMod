@@ -17,7 +17,7 @@ public class SingleCardViewPopupPatches {
 
     public static final String RENDER_DESCRIPTION_REPLACEMENT =
         "{ " +
-            "$7 = i * 2.50F * -font.getCapHeight() + draw_y - this.current_y + -12.0F;" +
+            "$7 = i * 2.50F * -font.getCapHeight() + draw_y - this.current_y + -9.0F;" +
             "$_ = $proceed($$);" +
         " }";
 
@@ -28,7 +28,7 @@ public class SingleCardViewPopupPatches {
         }
     }
 
-    @SpirePatch(clz = AbstractCard.class, method = "renderDynamicVariable")
+    @SpirePatch(clz = SingleCardViewPopup.class, method = "renderDynamicVariable")
     public static class LineSpacingDynamicVarPatch {
         public static ExprEditor Instrument() {
             return new RenderDescriptionExprEditor(RENDER_DESCRIPTION_REPLACEMENT, false);
