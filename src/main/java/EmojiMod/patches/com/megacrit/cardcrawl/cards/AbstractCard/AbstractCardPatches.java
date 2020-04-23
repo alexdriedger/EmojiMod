@@ -2,18 +2,31 @@ package EmojiMod.patches.com.megacrit.cardcrawl.cards.AbstractCard;
 
 import EmojiMod.EmojiMod;
 import EmojiMod.patches.com.megacrit.cardcrawl.RenderDescriptionExprEditor;
-import com.evacipated.cardcrawl.modthespire.lib.ByRef;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import EmojiMod.patches.com.megacrit.cardcrawl.RenderDescriptionSpacingVariableLocator;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import javassist.CannotCompileException;
+import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
 import org.lwjgl.Sys;
 
+import java.util.ArrayList;
+
 public class AbstractCardPatches {
+
+    public static final String RENDER_DESCRIPTION_REPLACEMENT =
+        "{ " +
+            "$7 = i * 2.50F * -font.getCapHeight() + draw_y - this.current_y + -3.0F;" +
+            "$_ = $proceed($$);" +
+        " }";
 
     @SpirePatch(
             clz = AbstractCard.class,
@@ -40,16 +53,24 @@ public class AbstractCardPatches {
 
     @SpirePatch(clz = AbstractCard.class, method = "renderDescription")
     public static class LineSpacingPatch {
-        public static final String RENDER_DESCRIPTION_REPLACEMENT =
-            "{ " +
-                "$7 = i * 2.50F * -font.getCapHeight() + draw_y - this.current_y + -3.0F;" +
-                "$_ = $proceed($$);" +
-            " }";
         public static ExprEditor Instrument() {
-            return new RenderDescriptionExprEditor(RENDER_DESCRIPTION_REPLACEMENT);
+            return new RenderDescriptionExprEditor(RENDER_DESCRIPTION_REPLACEMENT, true);
         }
-
     }
 
+    @SpirePatch(clz = AbstractCard.class, method = "renderDynamicVariable")
+    public static class LineSpacingDynamicVarPatch {
+        public static ExprEditor Instrument() {
+            return new RenderDescriptionExprEditor(RENDER_DESCRIPTION_REPLACEMENT, false);
+        }
+    }
+
+    @SpirePatch(clz = AbstractCard.class, method = "renderDescription")
+    public static class SpacingVariablePatch {
+        @SpireInsertPatch(locator = RenderDescriptionSpacingVariableLocator.class, localvars = { "spacing "})
+        public static void Insert(AbstractCard __instance, SpriteBatch sb, @ByRef float[] spacing) {
+            spacing[0] = spacing[0] / 1.45F * 2.50F;
+        }
+    }
 
 }

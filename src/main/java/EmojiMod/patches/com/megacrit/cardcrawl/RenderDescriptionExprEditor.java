@@ -8,22 +8,23 @@ import javassist.expr.MethodCall;
 public class RenderDescriptionExprEditor extends ExprEditor {
 
     private boolean firstPatch;
-    private String replacementString;
+    private final String replacementString;
+    private final boolean skip;
 
-    public RenderDescriptionExprEditor(String replacementString) {
+    public RenderDescriptionExprEditor(String replacementString, boolean skipFirst) {
         this.firstPatch = true;
         this.replacementString = replacementString;
+        this.skip = skipFirst;
     }
 
     @Override
     public void edit(MethodCall m) throws CannotCompileException {
         if (m.getClassName().equals("com.megacrit.cardcrawl.helpers.FontHelper") &&
                 m.getMethodName().equals("renderRotatedText")) {
-            if (firstPatch) {
+            if (skip && firstPatch) {
                 firstPatch = false;
                 return;
             }
-            EmojiMod.logger.info("Replacing renderRotatedText in new expr");
             m.replace(replacementString);
         }
     }
