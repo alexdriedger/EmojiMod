@@ -1,0 +1,656 @@
+[
+  {
+    "KEYS": ["apply a debuff"],
+    "VALUE": "Mean"
+  },
+  {
+    "KEYS": ["to ALL enemies"],
+    "VALUE": "ENEMIES"
+  },
+  {
+    "KEYS": ["Lose (\\d+) HP", "lose (\\d+) HP"],
+    "VALUE": "ShortenTheSpireSpecialValue Ouch",
+    "SPECIAL": 1
+  },
+  {
+    "KEYS": ["Lose !M! HP", "lose !M! HP"],
+    "VALUE": "!M! Ouch"
+  },
+  {
+    "KEYS": ["lose HP"],
+    "VALUE": "Ouch"
+  },
+  {
+    "KEYS": ["kills an enemy"],
+    "VALUE": "Kill"
+  },
+  {
+    "KEYS": ["kills a non-minion enemy"],
+    "VALUE": "Kill Big"
+  },
+  {
+    "KEYS": ["(a|A)pply !M! ([^\\.\\s]+)"],
+    "VALUE": "ShortenTheSpireSpecialValue !M! Apply",
+    "SPECIAL": 2
+  },
+  {
+    "KEYS": ["(L|l)ose !M!"],
+    "VALUE": "!M! Not",
+    "SPECIAL": 2
+  },
+  {
+    "KEYS": ["non-"],
+    "VALUE": "Not "
+  },
+  {
+    "KEYS": ["(L|l)ose (\\d+)"],
+    "VALUE": "ShortenTheSpireSpecialValue Not",
+    "SPECIAL": 2
+  },
+  {
+    "KEYS": ["Apply ENEMIES"],
+    "VALUE": "ENEMIES"
+  },
+  {
+    "KEYS": ["(\\S*) !M! ENEMIES"],
+    "VALUE": "ENEMIES !M! ShortenTheSpireSpecialValue",
+    "SPECIAL": 1
+  },
+  {
+    "KEYS": ["Permanently", "permanently"],
+    "VALUE": "Forever"
+  },
+  {
+    "KEYS": ["for combat"],
+    "VALUE": "while fight"
+  },
+  {
+    "KEYS": ["\\b ENEMIES"],
+    "VALUE": " to ENEMIES"
+  },
+  {
+    "KEYS": ["ALL enemies"],
+    "VALUE": "ENEMIES"
+  },
+  {
+    "KEYS": ["Can only be played if "],
+    "VALUE": "No unless "
+  },
+  {
+    "KEYS": ["!M! additional", "!M! Additional"],
+    "VALUE": "+ !M!"
+  },
+  {
+    "KEYS": ["(\\d) additional", "(\\d) Additional"],
+    "VALUE": "+ ShortenTheSpireSpecialValue",
+    "SPECIAL": 1
+  },
+  {
+    "KEYS": ["Increase", "increase"],
+    "VALUE": "+"
+  },
+  {
+    "KEYS": ["Decrease this card's", "decrease this card's", "Lower this card's", "lower this card's", "Decrease", "decrease", "reduced", "reduces", "Reduced", "reduce", "Reduce"],
+    "VALUE": "-"
+  },
+  {
+    "KEYS": ["!M! less", "!M! less"],
+    "VALUE": "- !M!"
+  },
+  {
+    "KEYS": ["(\\d) less", "(\\d) less"],
+    "VALUE": "- ShortenTheSpireSpecialValue",
+    "SPECIAL": 1
+  },
+  {
+    "KEYS": ["in hand"],
+    "VALUE": "Hold"
+  },
+  {
+    "KEYS": ["in hand"],
+    "VALUE": "Hold"
+  },
+  {
+    "KEYS": ["in my hand", "hand"],
+    "VALUE": "Holding"
+  },
+  {
+    "KEYS": ["in my hand"],
+    "VALUE": "Holding"
+  },
+  {
+    "KEYS": ["\\bfor each ", "\\bFor each "],
+    "VALUE": "Per "
+  },
+  {
+    "KEYS": ["the enemy", "The enemy", "the Enemy", "enemy"],
+    "VALUE": "Bad guy"
+  },
+  {
+    "KEYS": [" Apply"],
+    "VALUE": ""
+  },
+  {
+    "KEYS": ["Apply ", "apply "],
+    "VALUE": " "
+  },
+  {
+    "KEYS": ["play an "],
+    "VALUE": " "
+  },
+  {
+    "KEYS": ["Exhaustive"],
+    "VALUE": "Poofing"
+  },
+  {
+    "KEYS": ["Exhausted", "Exhaust", "exhaust"],
+    "VALUE": "Poof"
+  },
+  {
+    "KEYS": ["Ethereal"],
+    "VALUE": "Poofy"
+  },
+  {
+    "KEYS": ["Intangible"],
+    "VALUE": "Spooky"
+  },
+  {
+    "KEYS": ["Startup"],
+    "VALUE": "Impatient"
+  },
+  {
+    "KEYS": [" Power card"],
+    "VALUE": " Power"
+  },
+  {
+    "KEYS": [" Attack card"],
+    "VALUE": " Attack"
+  },
+  {
+    "KEYS": [" Skill card"],
+    "VALUE": " Skill"
+  },
+  {
+    "KEYS": ["Artifact"],
+    "VALUE": "Shiny"
+  },
+  {
+    "KEYS": ["Unplayable"],
+    "VALUE": "No"
+  },
+  {
+    "KEYS": ["discard", "Discard"],
+    "VALUE": "Toss"
+  },
+  {
+    "KEYS": ["Shuffle ", "Add a ", "add a ", "Add ", "add "],
+    "VALUE": "Invite "
+  },
+  {
+    "KEYS": ["Double"],
+    "VALUE": "More"
+  },
+  {
+    "KEYS": ["Triple"],
+    "VALUE": "More More"
+  },
+  {
+    "KEYS": ["Strength"],
+    "VALUE": "Strong"
+  },
+  {
+    "KEYS": ["Focus"],
+    "VALUE": "Smart"
+  },
+  {
+    "KEYS": ["Dexterity"],
+    "VALUE": "Bendy"
+  },
+  {
+    "KEYS": ["Weak"],
+    "VALUE": "Puny"
+  },
+  {
+    "KEYS": ["Vulnerable"],
+    "VALUE": "Tender"
+  },
+  {
+    "KEYS": ["Frail"],
+    "VALUE": "Soft"
+  },
+  {
+    "KEYS": ["Innate"],
+    "VALUE": "Sticky"
+  },
+  {
+    "KEYS": ["copy of this card", "copy of that card", "copies of that card", "copy of it"],
+    "VALUE": "Clone"
+  },
+  {
+    "KEYS": ["draw card", "Draw card"],
+    "VALUE": "Draw"
+  },
+  {
+    "KEYS": ["this card is drawn"],
+    "VALUE": "draw this"
+  },
+  {
+    "KEYS": ["if this ", "If this ", "If you ", "if you ", "Upon " , "upon ", "Whenever you ", "whenever you ", "Whenever a ", "whenever a ", "Whenever an ", "whenever an ", "Whenever ", "whenever ", "Every time ", "every time "],
+    "VALUE": "When "
+  },
+  {
+    "KEYS": ["receive attack damage"],
+    "VALUE": "Hurt"
+  },
+  {
+    "KEYS": ["play a card"],
+    "VALUE": "Play"
+  },
+  {
+    "KEYS": ["play another card"],
+    "VALUE": "Play Other"
+  },
+  {
+    "KEYS": ["play a Skill"],
+    "VALUE": "Skill"
+  },
+  {
+    "KEYS": ["play a Power"],
+    "VALUE": "Power"
+  },
+  {
+    "KEYS": ["play an Attack"],
+    "VALUE": "Attack"
+  },
+  {
+    "KEYS": ["are attacked"],
+    "VALUE": "Oof"
+  },
+  {
+    "KEYS": ["you draw"],
+    "VALUE": "draw"
+  },
+  {
+    "KEYS": ["Attack deals unblocked damage"],
+    "VALUE": "do Hurt"
+  },
+  {
+    "KEYS": ["card is "],
+    "VALUE": ""
+  },
+  {
+    "KEYS": ["draw pile"],
+    "VALUE": "Waiting"
+  },
+  {
+    "KEYS": ["!M! cards\\.", "!M! card\\."],
+    "VALUE": "!M!."
+  },
+  {
+    "KEYS": ["!B! cards\\.", "!B! card\\."],
+    "VALUE": "!B!."
+  },
+  {
+    "KEYS": ["!D! cards\\.", "!D! card\\."],
+    "VALUE": "!D!."
+  },
+  {
+    "KEYS": ["(\\d) cards\\.", "(\\d) card\\."],
+    "VALUE": "ShortenTheSpireSpecialValue.",
+    "SPECIAL": 1
+  },
+  {
+    "KEYS": ["Draw !M! cards", "Draw !M! card"],
+    "VALUE": "Draw !M!"
+  },
+  {
+    "KEYS": ["Draw !B! cards", "Draw !B! card"],
+    "VALUE": "Draw !B!"
+  },
+  {
+    "KEYS": ["Draw !D! cards", "Draw !D! card"],
+    "VALUE": "Draw !D!"
+  },
+  {
+    "KEYS": ["Draw (\\d) cards", "Draw (\\d) card"],
+    "VALUE": "Draw ShortenTheSpireSpecialValue",
+    "SPECIAL": 1
+  },
+  {
+    "KEYS": ["Choose a "],
+    "VALUE": "Pick "
+  },
+  {
+    "KEYS": [" top card "],
+    "VALUE": " top "
+  },
+  {
+    "KEYS": ["a card in"],
+    "VALUE": "card in"
+  },
+  {
+    "KEYS": ["a card from"],
+    "VALUE": "card in"
+  },
+  {
+    "KEYS": ["onto the"],
+    "VALUE": "on"
+  },
+  {
+    "KEYS": ["all cards in", "every card in"],
+    "VALUE": "all"
+  },
+  {
+    "KEYS": ["trigger ", "Trigger "],
+    "VALUE": "Do "
+  },
+  {
+    "KEYS": ["passive ability"],
+    "VALUE": "Talent"
+  },
+  {
+    "KEYS": ["is an"],
+    "VALUE": "are"
+  },
+  {
+    "KEYS": [" into "],
+    "VALUE": " to "
+  },
+  {
+    "KEYS": ["to a random enemy", "a random enemy", "random enemy"],
+    "VALUE": "someone"
+  },
+  {
+    "KEYS": ["At the end of ", "at the end of "],
+    "VALUE": "End of "
+  },
+  {
+    "KEYS": ["At the start of", "at the start of"],
+    "VALUE": "Before"
+  },
+  {
+    "KEYS": ["\\bThis turn\\b", "\\bthis turn\\b", "\\bper turn\\b", "\\bPer turn\\b", "\\bthis round\\b", "\\bThis round\\b"],
+    "VALUE": "Now"
+  },
+  {
+    "KEYS": ["Each turn", "each turn"],
+    "VALUE": "Every Now"
+  },
+  {
+    "KEYS": ["your next turn", "Next turn"],
+    "VALUE": "Next Now"
+  },
+  {
+    "KEYS": ["unique"],
+    "VALUE": "special"
+  },
+  {
+    "KEYS": ["your turn", "Your turn"],
+    "VALUE": "Now"
+  },
+  {
+    "KEYS": ["have no"],
+    "VALUE": "Not"
+  },
+  {
+    "KEYS": ["Deal !D!", "deal !D!"],
+    "VALUE": "!D!"
+  },
+  {
+    "KEYS": ["you cannot play"],
+    "VALUE": "No"
+  },
+  {
+    "KEYS": ["deal !M!"],
+    "VALUE": "!M!"
+  },
+  {
+    "KEYS": ["Gain ", "gain "],
+    "VALUE": ""
+  },
+  {
+    "KEYS": ["Damage", "damage"],
+    "VALUE": "D"
+  },
+  {
+    "KEYS": ["Block"],
+    "VALUE": "B"
+  },
+  {
+    "KEYS": ["Channeled Orb"],
+    "VALUE": "Friend"
+  },
+  {
+    "KEYS": [" currently have Channeled"],
+    "VALUE": " Visiting"
+  },
+  {
+    "KEYS": ["Orb slot"],
+    "VALUE": "House"
+  },
+  {
+    "KEYS": [" have Channeled"],
+    "VALUE": " Visited"
+  },
+  {
+    "KEYS": ["Channel Orb that was just "],
+    "VALUE": "Come back Friend"
+  },
+  {
+    "KEYS": ["Friend Byed"],
+    "VALUE": "Byed Friend"
+  },
+  {
+    "KEYS": ["Channel "],
+    "VALUE": ""
+  },
+  {
+    "KEYS": ["Orb", "orb"],
+    "VALUE": "Friend"
+  },
+  {
+    "KEYS": ["Lightning"],
+    "VALUE": "Sparky"
+  },
+  {
+    "KEYS": ["Plasma"],
+    "VALUE": "Chargy"
+  },
+  {
+    "KEYS": ["Dark"],
+    "VALUE": "Edgy"
+  },
+  {
+    "KEYS": ["Glass"],
+    "VALUE": "Cracky"
+  },
+  {
+    "KEYS": ["Crystal"],
+    "VALUE": "Sparkly"
+  },
+  {
+    "KEYS": ["Evoke"],
+    "VALUE": "Bye"
+  },
+  {
+    "KEYS": ["Frost"],
+    "VALUE": "Icy"
+  },
+  {
+    "KEYS": [" do not "],
+    "VALUE": " No "
+  },
+  {
+    "KEYS": ["cost 0", "costs 0"],
+    "VALUE": "Free"
+  },
+  {
+    "KEYS": ["(.*?(?: |))(\\w+)( equal to )([^\\.]+)(.*)"],
+    "VALUE": "ShortenTheSpireMix",
+    "REORGANIZE": [1,4,3,2,5]
+  },
+  {
+    "KEYS": [" equal to "],
+    "VALUE": " "
+  },
+  {
+    "KEYS": [" intends to ", " Intends to "],
+    "VALUE": " want "
+  },
+  {
+    "KEYS": [" is played twice", " are played twice"],
+    "VALUE": " more"
+  },
+  {
+    "KEYS": [" double ", " doubling "],
+    "VALUE": " more "
+  },
+  {
+    "KEYS": ["(\\S+) affects this card"],
+    "VALUE": "Use ShortenTheSpireSpecialValue",
+    "SPECIAL": 1
+  },
+  {
+    "KEYS": ["There is no "],
+    "VALUE": "No "
+  },
+  {
+    "KEYS": ["escape from"],
+    "VALUE": "Escape"
+  },
+  {
+    "KEYS": ["Grave"],
+    "VALUE": "Slippery"
+  },
+  {
+    "KEYS": ["Soulbound"],
+    "VALUE": "Superglued"
+  },
+  {
+    "KEYS": ["temporary_hp", "Temporary_HP", "temporary_HP", "Temporary_hp"],
+    "VALUE": "Fake_Healthy"
+  },
+  {
+    "KEYS": ["Retain"],
+    "VALUE": "Keep"
+  },
+  {
+    "KEYS": ["Keeped"],
+    "VALUE": "Kept"
+  },
+  {
+    "KEYS": ["Autoplay"],
+    "VALUE": "Yes"
+  },
+  {
+    "KEYS": ["Deal ", "deal "],
+    "VALUE": "Do "
+  },
+  {
+    "KEYS": ["!M! random"],
+    "VALUE": "!M!"
+  },
+  {
+    "KEYS": ["A random "],
+    "VALUE": "Some "
+  },
+  {
+    "KEYS": [" (\\d+) random ", " X random ", " a random ", " random "],
+    "VALUE": " some "
+  },
+  {
+    "KEYS": [" Gold", " gold"],
+    "VALUE": " G"
+  },
+  {
+    "KEYS": [" containing "],
+    "VALUE": " that "
+  },
+  {
+    "KEYS": ["raise your Max HP", "raise Max HP"],
+    "VALUE": "Healthier"
+  },
+  {
+    "KEYS": ["Max HP"],
+    "VALUE": "Healthy"
+  },
+  {
+    "KEYS": [" transforme", " transform"],
+    "VALUE": " change"
+  },
+  {
+    "KEYS": [" removed "],
+    "VALUE": " go away "
+  },
+  {
+    "KEYS": [" any number of times"],
+    "VALUE": " a bunch"
+  },
+  {
+    "KEYS": [" cards "],
+    "VALUE": " card "
+  },
+  {
+    "KEYS": ["You cannot "],
+    "VALUE": "No "
+  },
+  {
+    "KEYS": [" any number "],
+    "VALUE": " bunch "
+  },
+  {
+    "KEYS": [" in combat"],
+    "VALUE": " here"
+  },
+  {
+    "KEYS": [" rest of combat"],
+    "VALUE": " whole fight"
+  },
+  {
+    "KEYS": [" this combat"],
+    "VALUE": " for whole fight"
+  },
+  {
+    "KEYS": [" combat"],
+    "VALUE": " whole fight"
+  },
+  {
+    "KEYS": ["\\bplay\\b"],
+    "VALUE": "use"
+  },
+  {
+    "KEYS": ["\\bThe ", "\\bthe "],
+    "VALUE": ""
+  },
+  {
+    "KEYS": ["^to Bad guy."],
+    "VALUE": "Choose Bad guy."
+  },
+  {
+    "KEYS": ["NL ([a-z])([^: ]*|\\w+[:.,]) "],
+    "VALUE": "NL ShortenTheSpireCapitalizeShortenTheSpireSpecialValue ",
+    "SPECIAL": 2
+  },
+  {
+    "KEYS": ["^([a-z])([^: ]*|\\w+[:.,]) "],
+    "VALUE": "ShortenTheSpireCapitalizeShortenTheSpireSpecialValue ",
+    "SPECIAL": 2
+  },
+  {
+    "KEYS": [" be "," your ", " way ", " a ", " an ", " the ", " there are ", " affects card ", " type of "],
+    "VALUE": " "
+  },
+  {
+    "KEYS": [" upgraded bunch"],
+    "VALUE": " upgrade a bunch"
+  },
+  {
+    "KEYS": ["^target's (\\w+ \\w+)"],
+    "VALUE": "Do ShortenTheSpireSpecialValue",
+    "SPECIAL": 1
+  },
+  {
+    "KEYS": ["\\ball enemies\\b"],
+    "VALUE": "ENEMIES"
+  }
+]

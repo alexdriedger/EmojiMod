@@ -1,0 +1,54 @@
+[
+  {
+    "KEYS": ["\\b.( |$)"],
+    "VALUE": "!"
+  },
+  {
+    "KEYS": ["#gRelic"],
+    "VALUE": "[#gShiny]"
+  },
+  {
+    "KEYS": ["#rBecome #rCursed"],
+    "VALUE": "#rGet #rBad -"
+  },
+  {
+    "KEYS": ["\\[Elegance\\]"],
+    "VALUE": "[Fancy]"
+  },
+  {
+    "KEYS": ["\\[Simplicity\\]"],
+    "VALUE": "[Not Fancy]"
+  },
+  {
+    "KEYS": ["\\[Leave\\]"],
+    "VALUE": "[Bye]"
+  },
+  {
+    "KEYS": ["\\[Donut\\]"],
+    "VALUE": "#g[Donut!!!!]"
+  },
+  {
+    "KEYS": ["\\[Locked\\]"],
+    "VALUE": "CANNOT!!!"
+  },
+  {
+    "KEYS": ["\\[Rob\\]"],
+    "VALUE": "[Be bad person]"
+  },
+  {
+    "KEYS": ["\\bRequires:"],
+    "VALUE": "Need..."
+  },
+  {
+    "KEYS": ["\\bUpgradeable Cards\\b"],
+    "VALUE": "Lame Card"
+  },
+  {
+    "KEYS": ["\\bChoose a Card to Upgrade\\b"],
+    "VALUE": "Upgrade Card"
+  },
+  {
+    "KEYS": ["Gold"],
+    "VALUE": "G"
+  }
+]

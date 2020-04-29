@@ -1,0 +1,158 @@
+[
+  {
+    "KEYS": ["\\b.( |$)"],
+    "VALUE": "!"
+  },
+  {
+    "KEYS": ["\\ba small hut\\b", "\\bbuilding\\b", "\\bthe hut\\b"],
+    "VALUE": "place"
+  },
+  {
+    "KEYS": ["\\bwhat appears to be a\\b"],
+    "VALUE": "a"
+  },
+  {
+    "KEYS": ["\\beerie\\b"],
+    "VALUE": "spooky"
+  },
+  {
+    "KEYS": ["\\bas you\\b"],
+    "VALUE": "when"
+  },
+  {
+    "KEYS": ["\\byou can find \\b"],
+    "VALUE": "there "
+  },
+  {
+    "KEYS": ["\\bforge\\b", "\\bthe furnace\\b"],
+    "VALUE": "fire thing"
+  },
+  {
+    "KEYS": ["\\bThe smithing tools\\b"],
+    "VALUE": "Hammer"
+  },
+  {
+    "KEYS": ["\\byet\\b"],
+    "VALUE": "but"
+  },
+  {
+    "KEYS": ["#r@burning@"],
+    "VALUE": "burny"
+  },
+  {
+    "KEYS": ["#r@scarring@", "#r~sharp~"],
+    "VALUE": "hurty"
+  },
+  {
+    "KEYS": ["\\bjump out at you\\b"],
+    "VALUE": "jump you"
+  },
+  {
+    "KEYS": ["\\ba fire roars\\b", "\\bthe flames\\b"],
+    "VALUE": "~#rhot~"
+  },
+  {
+    "KEYS": ["\\bYou feel on edge..."],
+    "VALUE": "Scary..."
+  },
+  {
+    "KEYS": ["\\bcan't shake a sudden feeling\\b"],
+    "VALUE": "feel a feeling"
+  },
+  {
+    "KEYS": ["\\bcovered with dust\\b"],
+    "VALUE": "dusty"
+  },
+  {
+    "KEYS": ["\\byour arms\\"],
+    "VALUE": "you"
+  },
+  {
+    "KEYS": ["\\brelic\\b"],
+    "VALUE": "#g~shiny~"
+  },
+  {
+    "KEYS": ["\\bornate\\b"],
+    "VALUE": "fancy"
+  },
+  {
+    "KEYS": ["\\bduck into\\b"],
+    "VALUE": "go"
+  },
+  {
+    "KEYS": ["\\bgo through\\b"],
+    "VALUE": "do"
+  },
+  {
+    "KEYS": ["\\bfinishing touches\\b"],
+    "VALUE": "finish"
+  },
+  {
+    "KEYS": ["\\bAs you\\b"],
+    "VALUE": "When"
+  },
+  {
+    "KEYS": ["\\byou come across ", "\\byou find"],
+    "VALUE": "see "
+  },
+  {
+    "KEYS": ["You come across "],
+    "VALUE": "See "
+  },
+  {
+    "KEYS": ["shimmering"],
+    "VALUE": "shiny"
+  },
+  {
+    "KEYS": ["flowing endlessly"],
+    "VALUE": "spurt"
+  },
+  {
+    "KEYS": ["While sneaking past"],
+    "VALUE": "When sneaky by"
+  },
+  {
+    "KEYS": ["group of shrouded figures"],
+    "VALUE": "spooky strangers"
+  },
+  {
+    "KEYS": ["doze off in a comfy chair"],
+    "VALUE": "sleep"
+  },
+  {
+    "KEYS": ["about an insect-controlling teenage girl who aspires to become a hero. The book is filled with creative uses of powers, combat strategies, and varying perspectives."],
+    "VALUE": "called ~Worm."
+  },
+  {
+    "KEYS": ["about a man who journeyed beyond the stars and found himself stuck on a desolate foreign planet. Ingenuity, luck, perseverance, and humor to retain his sanity were his tools to return home."],
+    "VALUE": "called ~The Martian~"
+  },
+  {
+    "KEYS": ["takes place in a giant isolated building underground as the outside conditions have become unbearable. The novel is mired with conspiracies, propaganda, and injustice. You ponder if similar dynamics are at play within the Spire."],
+    "VALUE": "called Wool."
+  },
+  {
+    "KEYS": ["Have you no shame"],
+    "VALUE": "Shaaaaameeeee"
+  },
+  {
+    "KEYS": ["~HAVE~ ~YOU~ ~NO~ ~SHAAAAAME"],
+    "VALUE": "~SHAAAAAAMMEEEEEEEEEEE"
+  },
+  {
+    "KEYS": ["You have some #pshame!"],
+    "VALUE": "#pShame."
+  },
+  {
+    "KEYS": ["\\ban abandoned\\b", "\\babandoned\\b"],
+    "VALUE": "spooky"
+  },
+  {
+    "KEYS": ["\\byour arsenal\\b", "\\banything of use\\b"],
+    "VALUE": "stuff"
+  },
+  {
+    "KEYS": ["\\ba\\b", "\\bdecide to\\b"],
+    "VALUE": " "
+  }
+]
