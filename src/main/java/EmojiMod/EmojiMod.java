@@ -1,6 +1,5 @@
 package EmojiMod;
 
-import EmojiMod.patches.com.megacrit.cardcrawl.core.Settings.SettingsPatch;
 import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -27,11 +26,10 @@ public class EmojiMod implements
         PostDungeonInitializeSubscriber
 {
 
-    // TODO: Python script to append powers atlas to emoji atlas (+ Private Use Area encoding)
-    // TODO: Add relic assets to emoji texture package. Add discord emotes
     // TODO: Remove the need to change the language to emoji. Just change everything by default
     // TODO: Determine best way to allow cross mod compatibility for adding emojis translations (and emojis?)
     // TODO: Adapt shorten the spire logic for emoji translation
+    // TODO: Add translation of [R] (etc.) to emoji value
     
     public static final Logger logger = LogManager.getLogger(EmojiMod.class.getName());
     private static String modID;
@@ -78,64 +76,13 @@ public class EmojiMod implements
 
         String path = getModID() + "Resources/localization/" + Settings.language.toString().toLowerCase() + "/";
         logger.info("receiveEditString path:\t" + path);
-
-        BaseMod.loadCustomStringsFile(UIStrings.class,
-                path + "EmojiMod-Language-Dropdown-Strings.json");
-
-//        if (Settings.language == SettingsPatch.EMO) {
-//            logger.info("Loading emoji localization files");
-//            BaseMod.loadCustomStringsFile(UIStrings.class,
-//                    path + "achievements.json");
-//            BaseMod.loadCustomStringsFile(UIStrings.class,
-//                    path + "blights.json");
-//            BaseMod.loadCustomStringsFile(UIStrings.class,
-//                    path + "cards.json");
-//            BaseMod.loadCustomStringsFile(UIStrings.class,
-//                    path + "characters.json");
-//            BaseMod.loadCustomStringsFile(UIStrings.class,
-//                    path + "credits.json");
-//            BaseMod.loadCustomStringsFile(UIStrings.class,
-//                    path + "events.json");
-//            BaseMod.loadCustomStringsFile(UIStrings.class,
-//                    path + "keywords.json");
-//            BaseMod.loadCustomStringsFile(UIStrings.class,
-//                    path + "monsters.json");
-//            BaseMod.loadCustomStringsFile(UIStrings.class,
-//                    path + "orbs.json");
-//            BaseMod.loadCustomStringsFile(UIStrings.class,
-//                    path + "potions.json");
-//            BaseMod.loadCustomStringsFile(UIStrings.class,
-//                    path + "powers.json");
-//            BaseMod.loadCustomStringsFile(UIStrings.class,
-//                    path + "relics.json");
-//            BaseMod.loadCustomStringsFile(UIStrings.class,
-//                    path + "run_mods.json");
-//            BaseMod.loadCustomStringsFile(UIStrings.class,
-//                    path + "score_bonuses.json");
-//            BaseMod.loadCustomStringsFile(UIStrings.class,
-//                    path + "stances.json");
-//            BaseMod.loadCustomStringsFile(UIStrings.class,
-//                    path + "tutorials.json");
-//            BaseMod.loadCustomStringsFile(UIStrings.class,
-//                    path + "ui.json");
-//        }
         
         logger.info("Done editing strings");
     }
     
     @Override
     public void receiveEditKeywords() {
-        
-        
-//        Gson gson = new Gson();
-//        String json = Gdx.files.internal(getModID() + "Resources/localization/eng/DefaultMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-//        com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
-//
-//        if (keywords != null) {
-//            for (Keyword keyword : keywords) {
-//                BaseMod.addKeyword(getModID().toLowerCase(), keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
-//            }
-//        }
+
     }
 
     @Override
