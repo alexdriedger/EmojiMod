@@ -24,14 +24,7 @@ public class SingleCardViewPopupPatches {
     @SpirePatch(clz = SingleCardViewPopup.class, method = "renderDescription")
     public static class LineSpacingPatch {
         public static ExprEditor Instrument() {
-            return new RenderDescriptionExprEditor(RENDER_DESCRIPTION_REPLACEMENT, true);
-        }
-    }
-
-    @SpirePatch(clz = SingleCardViewPopup.class, method = "renderDynamicVariable")
-    public static class LineSpacingDynamicVarPatch {
-        public static ExprEditor Instrument() {
-            return new RenderDescriptionExprEditor(RENDER_DESCRIPTION_REPLACEMENT, false);
+            return new RenderDescriptionExprEditor(RENDER_DESCRIPTION_REPLACEMENT, true, false);
         }
     }
 
