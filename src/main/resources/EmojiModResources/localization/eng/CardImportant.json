@@ -398,7 +398,7 @@
   },
   {
     "KEYS": ["you cannot play"],
-    "VALUE": "No"
+    "VALUE": "\uD83D\uDE45"
   },
   {
     "KEYS": ["deal !M!"],
@@ -410,11 +410,11 @@
   },
   {
     "KEYS": ["Damage", "damage"],
-    "VALUE": "D"
+    "VALUE": "⚔️"
   },
   {
     "KEYS": ["Block"],
-    "VALUE": "B"
+    "VALUE": "\uD83D\uDEE1️"
   },
   {
     "KEYS": ["Channeled Orb"],
