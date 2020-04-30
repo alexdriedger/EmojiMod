@@ -8,8 +8,21 @@ import javassist.expr.ExprEditor;
 
 public class RenderCustomDynamicVariablePatches {
 
-    @SpirePatch(clz = RenderCustomDynamicVariable.Inner.class, method = "myRenderDynamicVariable")
-    public static class ReplaceNumberWithEmojiPatch {
+    @SpirePatch(
+            clz = basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.RenderCustomDynamicVariable.Inner.class,
+            method = "myRenderDynamicVariable"
+    )
+    public static class ReplaceNumberWithEmojiAbstractCardPatch {
+        public static ExprEditor Instrument() {
+            return new ReplaceDynamicVariableExprEditor();
+        }
+    }
+
+    @SpirePatch(
+            clz = basemod.patches.com.megacrit.cardcrawl.screens.SingleCardViewPopup.RenderCustomDynamicVariable.Inner.class,
+            method = "myRenderDynamicVariable"
+    )
+    public static class ReplaceNumberWithEmojiSingleCardViewPopupPatch {
         public static ExprEditor Instrument() {
             return new ReplaceDynamicVariableExprEditor();
         }
