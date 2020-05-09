@@ -3,6 +3,9 @@ package EmojiMod.patches.com.megacrit.cardcrawl.screen.SingleCardViewPopup;
 import EmojiMod.EmojiMod;
 import EmojiMod.patches.com.megacrit.cardcrawl.RenderDescriptionExprEditor;
 import EmojiMod.patches.com.megacrit.cardcrawl.RenderDescriptionSpacingVariableLocator;
+import EmojiMod.util.EmojiMappingUtils;
+import basemod.ReflectionHacks;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
@@ -33,6 +36,19 @@ public class SingleCardViewPopupPatches {
         @SpireInsertPatch(locator = RenderDescriptionSpacingVariableLocator.class, localvars = { "spacing "})
         public static void Insert(SingleCardViewPopup __instance, SpriteBatch sb, @ByRef float[] spacing) {
             spacing[0] = spacing[0] / 1.53F * 2.50F;
+        }
+    }
+
+    @SpirePatch(clz = SingleCardViewPopup.class, method = "renderDescription")
+    public static class DescriptionWidthPatch {
+        @SpireInsertPatch(rloc = 20, localvars = {"start_x", "i", "font"})
+        public static void Insert(SingleCardViewPopup __instance, SpriteBatch sb, @ByRef float[] start_x, int i, BitmapFont font) {
+            AbstractCard c = (AbstractCard) ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
+            String[] tokens = c.description.get(i).getCachedTokenizedText();
+            float descWidth = EmojiMappingUtils.getStringWidthWithEmoji(c, tokens, font);
+            float current_x = (float) ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "current_x");
+            float drawScale = (float) ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "drawScale");
+            start_x[0] = current_x - descWidth * drawScale / 4.0F;
         }
     }
 

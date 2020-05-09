@@ -3,22 +3,18 @@ package EmojiMod.patches.com.megacrit.cardcrawl.cards.AbstractCard;
 import EmojiMod.EmojiMod;
 import EmojiMod.patches.com.megacrit.cardcrawl.RenderDescriptionExprEditor;
 import EmojiMod.patches.com.megacrit.cardcrawl.RenderDescriptionSpacingVariableLocator;
+import EmojiMod.util.EmojiMappingUtils;
+import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import javassist.CannotCompileException;
-import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
-import javassist.expr.MethodCall;
-import org.lwjgl.Sys;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AbstractCardPatches {
 
@@ -48,6 +44,16 @@ public class AbstractCardPatches {
         public static void Prefix(AbstractCard __instance, String id, @ByRef String[] name, String imgUrl, int cost, @ByRef String[] rawDescription, AbstractCard.CardType type, AbstractCard.CardColor color, AbstractCard.CardRarity rarity, AbstractCard.CardTarget target, DamageInfo.DamageType dType) {
             name[0] = EmojiMod.emojiSupport.FilterEmojis(name[0]);
             rawDescription[0] = EmojiMod.emojiSupport.FilterEmojis(rawDescription[0]);
+        }
+    }
+
+    @SpirePatch(clz = AbstractCard.class, method = "renderDescription")
+    public static class DescriptionWidthPatch {
+        @SpireInsertPatch(rloc = 25, localvars = {"start_x", "i", "font"})
+        public static void Insert(AbstractCard __instance, SpriteBatch sb, @ByRef float[] start_x, int i, BitmapFont font) {
+            String[] tokens = __instance.description.get(i).getCachedTokenizedText();
+            float descWidth = EmojiMappingUtils.getStringWidthWithEmoji(__instance, tokens, font);
+            start_x[0] = __instance.current_x - descWidth * __instance.drawScale / 2.0F;
         }
     }
 
