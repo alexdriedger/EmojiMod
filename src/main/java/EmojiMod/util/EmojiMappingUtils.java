@@ -15,7 +15,7 @@ public class EmojiMappingUtils {
     public static String[] emojiNumberMappings = { "\uDB80\uDE65", "\uDB80\uDE60", "\uDB80\uDE64", "\uDB80\uDE63", "\uDB80\uDE5E", "\uDB80\uDE5D", "\uDB80\uDE62", "\uDB80\uDE61", "\uDB80\uDE5C", "\uDB80\uDE5F" };
 
     public static String replaceIntWithEmoji(int num) {
-        String delim = "  ";
+        String delim = " ";
         if (num >= 999) {
             return "☠️" + delim;
         }
