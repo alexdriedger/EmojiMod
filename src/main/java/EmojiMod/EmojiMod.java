@@ -8,6 +8,7 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.EventStrings;
@@ -19,6 +20,7 @@ import EmojiMod.util.IDCheckDontTouchPls;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
@@ -33,9 +35,10 @@ public class EmojiMod implements
         PostDungeonInitializeSubscriber
 {
 
-    // TODO: Remove the need to change the language to emoji. Just change everything by default
     // TODO: Determine best way to allow cross mod compatibility for adding emojis translations (and emojis?)
-    // TODO: Adapt shorten the spire logic for emoji translation
+    // TODO: Remove / clean up shorten the spire logic for emoji translation
+    // TODO: Use Twitter number / # emojis for numbers (for readability)
+    // TODO: Do first pass of translations
     // TODO: Add translation of [R] (etc.) to emoji value
     
     public static final Logger logger = LogManager.getLogger(EmojiMod.class.getName());
@@ -94,6 +97,7 @@ public class EmojiMod implements
     private static ReplaceData[] cardWords;
     private static ReplaceData[] eventDescriptionWords;
     private static ReplaceData[] eventOptionWords;
+    private static Map<String, CardStrings> replacementCards;
 
 
     public static String assetPath(String partialPath)
@@ -110,14 +114,18 @@ public class EmojiMod implements
             String lang = getLangString();
 
             Gson gson = new Gson();
-            String json = Gdx.files.internal(assetPath("localization/" + lang + "/CardImportant.json")).readString(String.valueOf(StandardCharsets.UTF_8));
+            String json = Gdx.files.internal(assetPath("localization/" + lang + "/regex/CardImportant.json")).readString(String.valueOf(StandardCharsets.UTF_8));
             cardWords = gson.fromJson(json, ReplaceData[].class);
 
-            json = Gdx.files.internal(assetPath("localization/" + lang + "/EventDescriptionImportant.json")).readString(String.valueOf(StandardCharsets.UTF_8));
+            json = Gdx.files.internal(assetPath("localization/" + lang + "/regex/EventDescriptionImportant.json")).readString(String.valueOf(StandardCharsets.UTF_8));
             eventDescriptionWords = gson.fromJson(json, ReplaceData[].class);
 
-            json = Gdx.files.internal(assetPath("localization/" + lang + "/EventOptionImportant.json")).readString(String.valueOf(StandardCharsets.UTF_8));
+            json = Gdx.files.internal(assetPath("localization/" + lang + "/regex/EventOptionImportant.json")).readString(String.valueOf(StandardCharsets.UTF_8));
             eventOptionWords = gson.fromJson(json, ReplaceData[].class);
+
+            Type cardType = (new TypeToken<Map<String, CardStrings>>() {  }).getType();
+            json = Gdx.files.internal(assetPath("localization/" + lang + "/replacement/cards.json")).readString(String.valueOf(StandardCharsets.UTF_8));
+            replacementCards = gson.fromJson(json, cardType);
         }
         catch (Exception e)
         {
@@ -155,12 +163,37 @@ public class EmojiMod implements
         return "eng";
     }
 
+    private static void replaceCardString(Map<String, CardStrings> original, Map<String, CardStrings> replacements) {
+        for (Map.Entry<String, CardStrings> r : replacements.entrySet()) {
+            if (!original.containsKey(r.getKey())) {
+                original.put(r.getKey(), r.getValue());
+            } else {
+                CardStrings origCS = original.get(r.getKey());
+                CardStrings replaceCS = r.getValue();
+
+                if (replaceCS.NAME != null) {
+                    origCS.NAME = replaceCS.NAME;
+                }
+                if (replaceCS.DESCRIPTION != null) {
+                    origCS.DESCRIPTION = replaceCS.DESCRIPTION;
+                }
+                if (replaceCS.UPGRADE_DESCRIPTION != null) {
+                    origCS.UPGRADE_DESCRIPTION = replaceCS.UPGRADE_DESCRIPTION;
+                }
+                if (replaceCS.EXTENDED_DESCRIPTION != null) {
+                    origCS.EXTENDED_DESCRIPTION = replaceCS.EXTENDED_DESCRIPTION;
+                }
+            }
+        }
+    }
+
     @SuppressWarnings("unchecked")
     private static void EnglishImproveStrings(LocalizedStrings localizedStrings)
     {
         try
         {
             Map<String, CardStrings> cardStrings = (Map<String, CardStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "cards");
+            replaceCardString(cardStrings, replacementCards);
             if (cardStrings != null)
             {
                 for (CardStrings cardString : cardStrings.values())

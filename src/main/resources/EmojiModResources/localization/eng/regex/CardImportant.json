@@ -1,11 +1,15 @@
 [
   {
+    "KEYS": ["\\."],
+    "VALUE": ""
+  },
+  {
     "KEYS": ["apply a debuff"],
     "VALUE": "Mean"
   },
   {
     "KEYS": ["to ALL enemies"],
-    "VALUE": "ENEMIES"
+    "VALUE": "➡️ \uDB80\uDE34 \uDB80\uDE34 \uDB80\uDE34"
   },
   {
     "KEYS": ["Lose (\\d+) HP", "lose (\\d+) HP"],
@@ -30,7 +34,7 @@
   },
   {
     "KEYS": ["(a|A)pply !M! ([^\\.\\s]+)"],
-    "VALUE": "ShortenTheSpireSpecialValue !M! Apply",
+    "VALUE": "!M! ShortenTheSpireSpecialValue",
     "SPECIAL": 2
   },
   {
@@ -152,7 +156,7 @@
   },
   {
     "KEYS": ["Intangible"],
-    "VALUE": "Spooky"
+    "VALUE": "\uDB80\uDC45"
   },
   {
     "KEYS": ["Startup"],
@@ -172,7 +176,7 @@
   },
   {
     "KEYS": ["Artifact"],
-    "VALUE": "Shiny"
+    "VALUE": "\uDB80\uDC06"
   },
   {
     "KEYS": ["Unplayable"],
@@ -196,27 +200,27 @@
   },
   {
     "KEYS": ["Strength"],
-    "VALUE": "Strong"
+    "VALUE": "\uDB80\uDC7A"
   },
   {
     "KEYS": ["Focus"],
-    "VALUE": "Smart"
+    "VALUE": "\uDB80\uDC39"
   },
   {
     "KEYS": ["Dexterity"],
-    "VALUE": "Bendy"
+    "VALUE": "\uDB80\uDC25"
   },
   {
     "KEYS": ["Weak"],
-    "VALUE": "Puny"
+    "VALUE": "\uDB80\uDC88"
   },
   {
     "KEYS": ["Vulnerable"],
-    "VALUE": "Tender"
+    "VALUE": "\uDB80\uDC86"
   },
   {
     "KEYS": ["Frail"],
-    "VALUE": "Soft"
+    "VALUE": "\uDB80\uDC3B"
   },
   {
     "KEYS": ["Innate"],
@@ -301,20 +305,19 @@
   },
   {
     "KEYS": ["Draw !M! cards", "Draw !M! card"],
-    "VALUE": "Draw !M!"
+    "VALUE": "!M! \uD83D\uDCB3"
   },
   {
     "KEYS": ["Draw !B! cards", "Draw !B! card"],
-    "VALUE": "Draw !B!"
+    "VALUE": "!B! \uD83D\uDCB3"
   },
   {
     "KEYS": ["Draw !D! cards", "Draw !D! card"],
-    "VALUE": "Draw !D!"
+    "VALUE": "!D! \uD83D\uDCB3"
   },
   {
-    "KEYS": ["Draw (\\d) cards", "Draw (\\d) card"],
-    "VALUE": "Draw ShortenTheSpireSpecialValue",
-    "SPECIAL": 1
+    "KEYS": ["Draw 1 cards", "Draw 1 card"],
+    "VALUE": "\uDB80\uDE60 \uD83D\uDCB3"
   },
   {
     "KEYS": ["Choose a "],
@@ -450,15 +453,15 @@
   },
   {
     "KEYS": ["Lightning"],
-    "VALUE": "Sparky"
+    "VALUE": "\uDB80\uDD7C"
   },
   {
     "KEYS": ["Plasma"],
-    "VALUE": "Chargy"
+    "VALUE": "\uDB80\uDD7D"
   },
   {
     "KEYS": ["Dark"],
-    "VALUE": "Edgy"
+    "VALUE": "\uDB80\uDD7A"
   },
   {
     "KEYS": ["Glass"],
@@ -474,7 +477,7 @@
   },
   {
     "KEYS": ["Frost"],
-    "VALUE": "Icy"
+    "VALUE": "\uDB80\uDD7B"
   },
   {
     "KEYS": [" do not "],
@@ -560,7 +563,7 @@
   },
   {
     "KEYS": [" Gold", " gold"],
-    "VALUE": " G"
+    "VALUE": " \uDB80\uDD84"
   },
   {
     "KEYS": [" containing "],
