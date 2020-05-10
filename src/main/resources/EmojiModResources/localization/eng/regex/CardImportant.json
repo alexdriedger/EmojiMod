@@ -4,8 +4,16 @@
     "VALUE": ""
   },
   {
+    "KEYS": [" and "],
+    "VALUE": " ➕ "
+  },
+  {
+    "KEYS": ["poison", "Poison"],
+    "VALUE": "\uDB80\uDC64"
+  },
+  {
     "KEYS": ["apply a debuff"],
-    "VALUE": "Mean"
+    "VALUE": "\uDB80\uDCEB"
   },
   {
     "KEYS": ["to ALL enemies"],
@@ -13,24 +21,20 @@
   },
   {
     "KEYS": ["Lose (\\d+) HP", "lose (\\d+) HP"],
-    "VALUE": "ShortenTheSpireSpecialValue Ouch",
+    "VALUE": "ShortenTheSpireSpecialValue \uD83E\uDE78",
     "SPECIAL": 1
   },
   {
     "KEYS": ["Lose !M! HP", "lose !M! HP"],
-    "VALUE": "!M! Ouch"
+    "VALUE": "!M! 🩸"
   },
   {
     "KEYS": ["lose HP"],
-    "VALUE": "Ouch"
+    "VALUE": "🩸"
   },
   {
-    "KEYS": ["kills an enemy"],
-    "VALUE": "Kill"
-  },
-  {
-    "KEYS": ["kills a non-minion enemy"],
-    "VALUE": "Kill Big"
+    "KEYS": ["kills an enemy", "kills a non-minion enemy"],
+    "VALUE": "\uDB80\uDE34 \uDB80\uDE9F ☠️"
   },
   {
     "KEYS": ["(a|A)pply !M! ([^\\.\\s]+)"],
@@ -39,21 +43,12 @@
   },
   {
     "KEYS": ["(L|l)ose !M!"],
-    "VALUE": "!M! Not",
-    "SPECIAL": 2
-  },
-  {
-    "KEYS": ["non-"],
-    "VALUE": "Not "
+    "VALUE": "⬇️ !M!"
   },
   {
     "KEYS": ["(L|l)ose (\\d+)"],
-    "VALUE": "ShortenTheSpireSpecialValue Not",
+    "VALUE": "⬇️ ShortenTheSpireSpecialValue",
     "SPECIAL": 2
-  },
-  {
-    "KEYS": ["Apply ENEMIES"],
-    "VALUE": "ENEMIES"
   },
   {
     "KEYS": ["(\\S*) !M! ENEMIES"],

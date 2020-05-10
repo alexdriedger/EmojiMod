@@ -1,7 +1,5 @@
-# Default Mod Base - Quick Start
+#Emoji Mod
 
-This is a cloneable branch of the Default with all comments removed.
+Replaces the text in Slay the Spire with emojis! 😃
 
-You can use this to quickly start up a brand new mod.
-
-I assume you know what you are doing.
+Emojis are from [Google's Noto-Emoji](https://github.com/googlefonts/noto-emoji) and [Twitter's Twemoji](https://twemoji.twitter.com/) 
