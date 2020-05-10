@@ -36,7 +36,7 @@ def convert_power_atlas(encoding_start_num: int) -> Tuple[int, Dict[str, str]]:
         else:
           atlas_output_file.write(line)
   
-  encoding -= 1
+  encoding
   return encoding, mapping
 
 def convert_custom_atlas(encoding_start_num: int, input_file: str, output_file: str) -> Tuple[int, Dict[str, str]]:
@@ -67,7 +67,7 @@ def convert_custom_atlas(encoding_start_num: int, input_file: str, output_file: 
 
           encoding += 1
   
-  encoding -= 1
+  encoding
   return encoding, mapping
 
 def convert_all_atlases() -> None:

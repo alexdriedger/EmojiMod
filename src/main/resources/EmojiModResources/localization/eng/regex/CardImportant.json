@@ -9,19 +9,19 @@
   },
   {
     "KEYS": ["\\[R\\]"],
-    "VALUE": "\uDB80\uDEAC"
+    "VALUE": "\uDB80\uDEB0"
   },
   {
     "KEYS": ["\\[G\\]"],
-    "VALUE": "\uDB80\uDEAA"
+    "VALUE": "\uDB80\uDEAE"
   },
   {
     "KEYS": ["\\[B\\]"],
-    "VALUE": "\uDB80\uDEA9"
+    "VALUE": "\uDB80\uDEAD"
   },
   {
     "KEYS": ["\\[W\\]"],
-    "VALUE": "\uDB80\uDEAB"
+    "VALUE": "\uDB80\uDEAF"
   },
   {
     "KEYS": ["poison", "Poison"],
@@ -29,11 +29,11 @@
   },
   {
     "KEYS": ["apply a debuff"],
-    "VALUE": "\uDB80\uDCEB"
+    "VALUE": "\uDB80\uDCEC"
   },
   {
     "KEYS": ["to ALL enemies"],
-    "VALUE": "➡️ \uDB80\uDE34 \uDB80\uDE34 \uDB80\uDE34"
+    "VALUE": "➡️ \uDB80\uDE36 \uDB80\uDE36 \uDB80\uDE36"
   },
   {
     "KEYS": ["Lose (\\d+) HP", "lose (\\d+) HP"],
@@ -50,7 +50,7 @@
   },
   {
     "KEYS": ["kills an enemy", "kills a non-minion enemy"],
-    "VALUE": "\uDB80\uDE34 \uDB80\uDE9F ☠️"
+    "VALUE": "\uDB80\uDE36 \uDB80\uDEA2 ☠️"
   },
   {
     "KEYS": ["(a|A)pply !M! ([^\\.\\s]+)"],
@@ -67,25 +67,16 @@
     "SPECIAL": 2
   },
   {
-    "KEYS": ["(\\S*) !M! ENEMIES"],
-    "VALUE": "ENEMIES !M! ShortenTheSpireSpecialValue",
-    "SPECIAL": 1
-  },
-  {
     "KEYS": ["Permanently", "permanently"],
-    "VALUE": "Forever"
+    "VALUE": "♾️"
   },
   {
     "KEYS": ["for combat"],
     "VALUE": "while fight"
   },
   {
-    "KEYS": ["\\b ENEMIES"],
-    "VALUE": " to ENEMIES"
-  },
-  {
     "KEYS": ["ALL enemies"],
-    "VALUE": "ENEMIES"
+    "VALUE": "\uDB80\uDE36 \uDB80\uDE36 \uDB80\uDE36"
   },
   {
     "KEYS": ["Can only be played if "],
@@ -93,53 +84,53 @@
   },
   {
     "KEYS": ["!M! additional", "!M! Additional"],
-    "VALUE": "+ !M!"
+    "VALUE": "➕ !M!"
   },
   {
     "KEYS": ["(\\d) additional", "(\\d) Additional"],
-    "VALUE": "+ ShortenTheSpireSpecialValue",
+    "VALUE": "➕ ShortenTheSpireSpecialValue",
     "SPECIAL": 1
   },
   {
     "KEYS": ["Increase", "increase"],
-    "VALUE": "+"
+    "VALUE": "➕"
   },
   {
     "KEYS": ["Decrease this card's", "decrease this card's", "Lower this card's", "lower this card's", "Decrease", "decrease", "reduced", "reduces", "Reduced", "reduce", "Reduce"],
-    "VALUE": "-"
+    "VALUE": "➖"
   },
   {
     "KEYS": ["!M! less", "!M! less"],
-    "VALUE": "- !M!"
+    "VALUE": "➖ !M!"
   },
   {
     "KEYS": ["(\\d) less", "(\\d) less"],
-    "VALUE": "- ShortenTheSpireSpecialValue",
+    "VALUE": "➖ ShortenTheSpireSpecialValue",
     "SPECIAL": 1
   },
   {
     "KEYS": ["in hand"],
-    "VALUE": "Hold"
+    "VALUE": "\uD83D\uDD90️"
   },
   {
     "KEYS": ["in hand"],
-    "VALUE": "Hold"
+    "VALUE": "\uD83D\uDD90️"
   },
   {
     "KEYS": ["in my hand", "hand"],
-    "VALUE": "Holding"
+    "VALUE": "\uD83D\uDD90️"
   },
   {
     "KEYS": ["in my hand"],
-    "VALUE": "Holding"
+    "VALUE": "\uD83D\uDD90️"
   },
   {
     "KEYS": ["\\bfor each ", "\\bFor each "],
-    "VALUE": "Per "
+    "VALUE": "✖️ "
   },
   {
     "KEYS": ["the enemy", "The enemy", "the Enemy", "enemy"],
-    "VALUE": "Bad guy"
+    "VALUE": "\uDB80\uDE36"
   },
   {
     "KEYS": [" Apply"],
@@ -328,7 +319,7 @@
   },
   {
     "KEYS": ["Draw 1 cards", "Draw 1 card"],
-    "VALUE": "\uDB80\uDE60 \uD83D\uDCB3"
+    "VALUE": "\uDB80\uDEA7 \uD83D\uDCB3"
   },
   {
     "KEYS": ["Choose a "],
@@ -464,15 +455,15 @@
   },
   {
     "KEYS": ["Lightning"],
-    "VALUE": "\uDB80\uDD7C"
-  },
-  {
-    "KEYS": ["Plasma"],
     "VALUE": "\uDB80\uDD7D"
   },
   {
+    "KEYS": ["Plasma"],
+    "VALUE": "\uDB80\uDD7E"
+  },
+  {
     "KEYS": ["Dark"],
-    "VALUE": "\uDB80\uDD7A"
+    "VALUE": "\uDB80\uDD7B"
   },
   {
     "KEYS": ["Glass"],
@@ -488,7 +479,7 @@
   },
   {
     "KEYS": ["Frost"],
-    "VALUE": "\uDB80\uDD7B"
+    "VALUE": "\uDB80\uDD7C"
   },
   {
     "KEYS": [" do not "],
@@ -574,7 +565,7 @@
   },
   {
     "KEYS": [" Gold", " gold"],
-    "VALUE": " \uDB80\uDD84"
+    "VALUE": " \uDB80\uDD85"
   },
   {
     "KEYS": [" containing "],
