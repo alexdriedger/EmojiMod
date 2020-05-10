@@ -13960,3 +13960,37 @@ f02a9
   orig: 72, 72
   offset: 0, 0
   index: -1
+
+x_b.png
+size: 512,256
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+f02a9
+  rotate: false
+  xy: 132, 75
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+f02aa
+  rotate: false
+  xy: 2, 75
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+f02ab
+  rotate: false
+  xy: 262, 75
+  size: 114, 128
+  orig: 114, 128
+  offset: 0, 0
+  index: -1
+f02ac
+  rotate: false
+  xy: 2, 2
+  size: 73, 71
+  orig: 73, 71
+  offset: 0, 0
+  index: -1

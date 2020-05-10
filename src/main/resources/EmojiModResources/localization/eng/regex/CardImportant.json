@@ -8,6 +8,22 @@
     "VALUE": " ➕ "
   },
   {
+    "KEYS": ["\\[R\\]"],
+    "VALUE": "\uDB80\uDEAC"
+  },
+  {
+    "KEYS": ["\\[G\\]"],
+    "VALUE": "\uDB80\uDEAA"
+  },
+  {
+    "KEYS": ["\\[B\\]"],
+    "VALUE": "\uDB80\uDEA9"
+  },
+  {
+    "KEYS": ["\\[W\\]"],
+    "VALUE": "\uDB80\uDEAB"
+  },
+  {
     "KEYS": ["poison", "Poison"],
     "VALUE": "\uDB80\uDC64"
   },
