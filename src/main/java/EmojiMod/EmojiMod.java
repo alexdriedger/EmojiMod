@@ -31,8 +31,7 @@ import static com.megacrit.cardcrawl.core.Settings.GameLanguage.ENG;
 
 @SpireInitializer
 public class EmojiMod implements
-        EditStringsSubscriber,
-        PostDungeonInitializeSubscriber
+        EditStringsSubscriber
 {
 
     // TODO: Determine best way to allow cross mod compatibility for adding emojis translations (and emojis?)
@@ -45,28 +44,21 @@ public class EmojiMod implements
     private static String modID;
 
     public static EmojiSupport emojiSupport;
+
+    public static Settings.GameLanguage[] SupportedLanguages = {
+            ENG
+    };
+
+    private static ReplaceData[] cardWords;
+    private static ReplaceData[] eventDescriptionWords;
+    private static ReplaceData[] eventOptionWords;
+    private static Map<String, CardStrings> replacementCards;
     
     public EmojiMod() {
-        logger.info("Subscribe to BaseMod hooks");
+        modID = "EmojiMod";
+        logger.info(modID + " subscribing to BaseMod hooks");
         BaseMod.subscribe(this);
-        setModID("EmojiMod");
-        logger.info("Done subscribing");
-    }
-    
-    public static void setModID(String ID) {
-        Gson coolG = new Gson();
-        
-        InputStream in = EmojiMod.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json");
-        IDCheckDontTouchPls EXCEPTION_STRINGS = coolG.fromJson(new InputStreamReader(in, StandardCharsets.UTF_8), IDCheckDontTouchPls.class);
-        logger.info("You are attempting to set your mod ID as: " + ID);
-        if (ID.equals(EXCEPTION_STRINGS.DEFAULTID)) {
-            throw new RuntimeException(EXCEPTION_STRINGS.EXCEPTION);
-        } else if (ID.equals(EXCEPTION_STRINGS.DEVID)) {
-            modID = EXCEPTION_STRINGS.DEFAULTID;
-        } else {
-            modID = ID;
-        }
-        logger.info("Success! ID is " + modID);
+        logger.info(modID + " done subscribing");
     }
     
     public static String getModID() {
@@ -75,94 +67,64 @@ public class EmojiMod implements
     
     @SuppressWarnings("unused")
     public static void initialize() {
-        logger.info("========================= Initializing Emoji Mod. =========================");
-        EmojiMod defaultmod = new EmojiMod();
-        logger.info("========================= /Emoji Mod Initialized. Hello :)./ =========================");
-    }
-
-    @Override
-    public void receivePostDungeonInitialize() {
-        logger.info("postDungeonInitialize");
-        logger.info("Game Language is:\t" + Settings.language.toString());
+        logger.info("========================= Initializing Emoji Mod :) :D :0 =========================");
+        EmojiMod emojiMod = new EmojiMod();
+        logger.info("========================= Emoji Mod Initialized. Hello :) =========================");
     }
 
     public static String makeID(String idText) {
         return getModID() + ":" + idText;
     }
 
-    public static Settings.GameLanguage[] SupportedLanguages = {
-        ENG
-    };
-
-    private static ReplaceData[] cardWords;
-    private static ReplaceData[] eventDescriptionWords;
-    private static ReplaceData[] eventOptionWords;
-    private static Map<String, CardStrings> replacementCards;
-
-
-    public static String assetPath(String partialPath)
-    {
-        return "EmojiModResources/" + partialPath;
+    private static String loadJson(String path) {
+        return Gdx.files.internal(path).readString(String.valueOf(StandardCharsets.UTF_8));
     }
 
     @Override
     public void receiveEditStrings() {
-        //Load important words
-
-        try
-        {
+        try {
             String lang = getLangString();
+            String regexPath = "EmojiModResources/localization/" + lang + "/regex/";
+            String replacePath = "EmojiModResources/localization/" + lang + "/replacement/";
 
             Gson gson = new Gson();
-            String json = Gdx.files.internal(assetPath("localization/" + lang + "/regex/CardImportant.json")).readString(String.valueOf(StandardCharsets.UTF_8));
-            cardWords = gson.fromJson(json, ReplaceData[].class);
-
-            json = Gdx.files.internal(assetPath("localization/" + lang + "/regex/EventDescriptionImportant.json")).readString(String.valueOf(StandardCharsets.UTF_8));
-            eventDescriptionWords = gson.fromJson(json, ReplaceData[].class);
-
-            json = Gdx.files.internal(assetPath("localization/" + lang + "/regex/EventOptionImportant.json")).readString(String.valueOf(StandardCharsets.UTF_8));
-            eventOptionWords = gson.fromJson(json, ReplaceData[].class);
+            cardWords = gson.fromJson(loadJson(regexPath + "CardImportant.json"), ReplaceData[].class);
+            eventDescriptionWords = gson.fromJson(loadJson(regexPath + "EventDescriptionImportant.json"), ReplaceData[].class);
+            eventOptionWords = gson.fromJson(loadJson(regexPath + "EventOptionImportant.json"), ReplaceData[].class);
 
             Type cardType = (new TypeToken<Map<String, CardStrings>>() {  }).getType();
-            json = Gdx.files.internal(assetPath("localization/" + lang + "/replacement/cards.json")).readString(String.valueOf(StandardCharsets.UTF_8));
-            replacementCards = gson.fromJson(json, cardType);
+            replacementCards = gson.fromJson(loadJson(replacePath + "cards.json"), cardType);
         }
-        catch (Exception e)
-        {
+        catch (Exception e) {
             logger.error("Failed to load important strings.");
         }
-
-        //Load pre-defined modified strings
     }
 
-    public static void PostLoadLocalizationStrings(LocalizedStrings localizedStrings)
-    {
+    public static void PostLoadLocalizationStrings(LocalizedStrings localizedStrings) {
         logger.info("Improving strings.");
-        switch (Settings.language)
-        {
-            case ENG:
-                EnglishImproveStrings(localizedStrings);
-                break;
-            default:
-                //Nothing at all. This is kind of unnecessary but I put it in anyways.
-                break;
+        if (Settings.language == ENG) {
+            EnglishImproveStrings(localizedStrings);
+        } else {
+            logger.error("Unsupported language for EmojiMod. English must be loaded as the language");
         }
-        logger.info("Yes");
     }
 
 
-    private String getLangString()
-    {
-        for (Settings.GameLanguage lang : SupportedLanguages)
-        {
-            if (lang.equals(Settings.language))
-            {
+    private String getLangString() {
+        for (Settings.GameLanguage lang : SupportedLanguages) {
+            if (lang.equals(Settings.language)) {
                 return Settings.language.name().toLowerCase();
             }
         }
         return "eng";
     }
 
+    /**
+     * Replaces any parts of card strings in the base game with replacements.
+     * This is used to provide direct translations for card names and descriptions when regex does not cover it
+     * @param original CardStrings in the base game
+     * @param replacements CardStrings to replace base game CardStrings
+     */
     private static void replaceCardString(Map<String, CardStrings> original, Map<String, CardStrings> replacements) {
         for (Map.Entry<String, CardStrings> r : replacements.entrySet()) {
             if (!original.containsKey(r.getKey())) {
@@ -188,50 +150,23 @@ public class EmojiMod implements
     }
 
     @SuppressWarnings("unchecked")
-    private static void EnglishImproveStrings(LocalizedStrings localizedStrings)
-    {
-        try
-        {
+    private static void EnglishImproveStrings(LocalizedStrings localizedStrings) {
+        try {
             Map<String, CardStrings> cardStrings = (Map<String, CardStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "cards");
             replaceCardString(cardStrings, replacementCards);
-            if (cardStrings != null)
-            {
-                for (CardStrings cardString : cardStrings.values())
-                {
+            if (cardStrings != null) {
+                for (CardStrings cardString : cardStrings.values()) {
                     EnglishHeckStrings(cardString);
                 }
 
                 ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "cards", cardStrings);
             }
-
-            /*
-            Map<String, EventStrings> eventStrings = (Map<String, EventStrings>)ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "events");
-            if (eventStrings != null)
-            {
-                for (EventStrings eventString : eventStrings.values())
-                {
-                    EnglishHeckStrings(eventString);
-                }
-                ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "events", eventStrings);
-            }*/
         }
-        catch (Exception e)
-        {
+        catch (Exception e) {
             logger.error("Error while hecking strings - " + e.getMessage());
         }
-
-
-
-        /*Map<String, RelicStrings> relicStrings = (Map<String, RelicStrings>)ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "relics");
-        if (relicStrings != null)
-        {
-            for (RelicStrings relicString : relicStrings.values())
-            {
-                EnglishHeckStrings(relicString);
-            }
-            ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "relics", relicStrings);
-        }*/
     }
+
     private static void EnglishHeckStrings(CardStrings cardStrings)
     {
         if (cardStrings.DESCRIPTION != null)
@@ -257,41 +192,31 @@ public class EmojiMod implements
     private static String EnglishDestroyCardString(String spireString)
     {
         String returnString = spireString;
-        for (ReplaceData data : cardWords)
-        {
-            for (String phrase : data.KEYS)
-            {
-                if (data.VALUE == null)
-                {
+        for (ReplaceData data : cardWords) {
+            for (String phrase : data.KEYS) {
+                if (data.VALUE == null) {
                     data.VALUE = "";
                 }
                 String replacement = returnString.replaceAll(phrase, data.VALUE);
-                if (replacement.contains("ShortenTheSpireSpecialValue"))
-                {
+                if (replacement.contains("ShortenTheSpireSpecialValue")) {
                     Matcher matches = Pattern.compile(phrase).matcher(returnString);
-                    while (matches.find())
-                    {
+                    while (matches.find()) {
                         replacement = replacement.replaceFirst("ShortenTheSpireSpecialValue", matches.group(data.SPECIAL));
                     }
                 }
-                if (replacement.contains("ShortenTheSpireMix"))
-                {
+                if (replacement.contains("ShortenTheSpireMix")) {
                     Matcher matches = Pattern.compile(phrase).matcher(returnString);
-                    if (matches.find())
-                    {
+                    if (matches.find()) {
                         String replacementReplacement = "";
-                        for (int i : data.REORGANIZE)
-                        {
+                        for (int i : data.REORGANIZE) {
                             replacementReplacement = replacementReplacement.concat(matches.group(i));
                         }
                         replacement = replacement.replace("ShortenTheSpireMix", replacementReplacement);
                     }
                 }
-                if (replacement.contains("ShortenTheSpireCapitalize"))
-                {
+                if (replacement.contains("ShortenTheSpireCapitalize")) {
                     Matcher matches = Pattern.compile(phrase).matcher(returnString);
-                    if (matches.find())
-                    {
+                    if (matches.find()) {
                         replacement = replacement.replace("ShortenTheSpireCapitalize", matches.group(1).toUpperCase());
                     }
                 }
@@ -302,24 +227,18 @@ public class EmojiMod implements
         return returnString;
     }
 
-    private static String EnglishDestroyString(String spireString, ReplaceData[] replacementData)
-    {
+    private static String EnglishDestroyString(String spireString, ReplaceData[] replacementData) {
         String returnString = spireString;
 
-        for (ReplaceData data : replacementData)
-        {
-            for (String phrase : data.KEYS)
-            {
-                if (data.VALUE == null)
-                {
+        for (ReplaceData data : replacementData) {
+            for (String phrase : data.KEYS) {
+                if (data.VALUE == null) {
                     data.VALUE = "";
                 }
                 String replacement = returnString.replaceAll(phrase, data.VALUE);
-                if (replacement.contains("ShortenTheSpireSpecialValue"))
-                {
+                if (replacement.contains("ShortenTheSpireSpecialValue")) {
                     Matcher matches = Pattern.compile(phrase).matcher(returnString);
-                    while (matches.find())
-                    {
+                    while (matches.find()) {
                         replacement = replacement.replaceFirst("ShortenTheSpireSpecialValue", matches.group(data.SPECIAL));
                     }
                 }
