@@ -18,16 +18,4 @@ public class DescriptionLinePatch {
             text[0] = EmojiMod.emojiSupport.FilterEmojis(text[0]);
         }
     }
-    @SpirePatch(clz = DescriptionLine.class, method = "tokenize")
-    public static class DoubleSpacePatch {
-        public static String[] Postfix(String desc) {
-            Pattern p = Pattern.compile("(\\s+)");
-            Matcher m = p.matcher(desc);
-            String[] tokenized = desc.split("(\\s+)");
-            for (int i = 0; m.find(); i++) {
-                tokenized[i] = tokenized[i] + m.group(1);
-            }
-            return tokenized;
-        }
-    }
 }
