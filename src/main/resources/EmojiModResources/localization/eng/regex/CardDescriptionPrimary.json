@@ -71,7 +71,7 @@
     "VALUE": "while fight"
   },
   {
-    "KEYS": ["ALL enemies"],
+    "KEYS": ["ALL enemies", "\\ball enemies\\b"],
     "VALUE": "\uDB80\uDE36 \uDB80\uDE36 \uDB80\uDE36"
   },
   {
@@ -111,10 +111,6 @@
   {
     "KEYS": ["\\bfor each ", "\\bFor each "],
     "VALUE": "✖️ "
-  },
-  {
-    "KEYS": ["the enemy", "The enemy", "the Enemy", "enemy"],
-    "VALUE": "\uDB80\uDE36"
   },
   {
     "KEYS": [" Apply"],
@@ -329,7 +325,7 @@
   },
   {
     "KEYS": ["to a random enemy", "a random enemy", "random enemy"],
-    "VALUE": "someone"
+    "VALUE": "➡️ \uDB80\uDE06 \uDB80\uDE36"
   },
   {
     "KEYS": ["At the end of ", "at the end of "],
@@ -617,8 +613,8 @@
     "SPECIAL": 1
   },
   {
-    "KEYS": ["\\ball enemies\\b"],
-    "VALUE": "ENEMIES"
+    "KEYS": ["the enemy", "The enemy", "the Enemy", "enemy"],
+    "VALUE": "\uDB80\uDE36"
   },
   {
     "KEYS": ["\\."],
