@@ -4,8 +4,6 @@ import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.files.FileHandle;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
@@ -14,16 +12,11 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.LocalizedStrings;
-import com.megacrit.cardcrawl.localization.UIStrings;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import EmojiMod.util.IDCheckDontTouchPls;
 
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -54,7 +47,7 @@ public class EmojiMod implements
 
     public static EmojiSupport emojiSupport;
 
-    private static ReplaceData[] cardWords;
+    private static ReplaceData[] cardDescriptionWords;
     private static ReplaceData[] eventDescriptionWords;
     private static ReplaceData[] eventOptionWords;
     private static Map<String, CardStrings> replacementCards;
@@ -96,7 +89,7 @@ public class EmojiMod implements
             String replacePath = "EmojiModResources/localization/" + lang + "/replacement/";
 
             Gson gson = new Gson();
-            cardWords = gson.fromJson(loadJson(regexPath + "CardImportant.json"), ReplaceData[].class);
+            cardDescriptionWords = gson.fromJson(loadJson(regexPath + "CardDescriptionPrimary.json"), ReplaceData[].class);
             eventDescriptionWords = gson.fromJson(loadJson(regexPath + "EventDescriptionImportant.json"), ReplaceData[].class);
             eventOptionWords = gson.fromJson(loadJson(regexPath + "EventOptionImportant.json"), ReplaceData[].class);
 
@@ -108,10 +101,10 @@ public class EmojiMod implements
         }
     }
 
-    public static void PostLoadLocalizationStrings(LocalizedStrings localizedStrings) {
+    public static void PostLoadLocalizationStrings() {
         logger.info("Improving strings.");
         if (Settings.language == ENG) {
-            EnglishImproveStrings(localizedStrings);
+            EnglishImproveStrings();
         } else {
             logger.error("Unsupported language for EmojiMod. English must be loaded as the language");
         }
@@ -149,20 +142,15 @@ public class EmojiMod implements
     }
 
     @SuppressWarnings("unchecked")
-    private static void EnglishImproveStrings(LocalizedStrings localizedStrings) {
-        try {
-            Map<String, CardStrings> cardStrings = (Map<String, CardStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "cards");
-            replaceCardString(cardStrings, replacementCards);
-            if (cardStrings != null) {
-                for (CardStrings cardString : cardStrings.values()) {
-                    EnglishHeckStrings(cardString, cardWords);
-                }
-
-                ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "cards", cardStrings);
+    private static void EnglishImproveStrings() {
+        Map<String, CardStrings> cardStrings = (Map<String, CardStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "cards");
+        replaceCardString(cardStrings, replacementCards);
+        if (cardStrings != null) {
+            for (CardStrings cardString : cardStrings.values()) {
+                EnglishHeckStrings(cardString, cardDescriptionWords);
             }
-        }
-        catch (Exception e) {
-            logger.error("Error while hecking strings - " + e.getMessage());
+
+            ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "cards", cardStrings);
         }
     }
 

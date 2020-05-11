@@ -11,12 +11,11 @@ import javassist.CtBehavior;
 public class PostLoadLocalizationPatch {
     //get hecked I hardcoded it and didn't make a subscriber
     @SpireInsertPatch(
-            locator = Locator.class,
-            localvars = {"languagePack"}
+            locator = Locator.class
     )
-    public static void PostLocalization(CardCrawlGame __instance, LocalizedStrings languagePack)
+    public static void PostLocalization(CardCrawlGame __instance)
     {
-        EmojiMod.PostLoadLocalizationStrings(languagePack);
+        EmojiMod.PostLoadLocalizationStrings();
     }
 
     private static class Locator extends SpireInsertLocator

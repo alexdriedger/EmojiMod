@@ -275,11 +275,6 @@
     "VALUE": "\uDB80\uDCC5"
   },
   {
-    "KEYS": ["(\\d) cards\\.", "(\\d) card\\."],
-    "VALUE": "ShortenTheSpireSpecialValue.",
-    "SPECIAL": 1
-  },
-  {
     "KEYS": ["Draw !M! cards", "Draw !M! card"],
     "VALUE": "!M! \uD83D\uDCB3"
   },
