@@ -1,9 +1,5 @@
 [
   {
-    "KEYS": ["\\."],
-    "VALUE": ""
-  },
-  {
     "KEYS": [" and "],
     "VALUE": " ➕ "
   },
@@ -185,12 +181,14 @@
     "VALUE": ""
   },
   {
-    "KEYS": ["Double"],
-    "VALUE": "More"
+    "KEYS": ["[d|D]ouble ([^.]+)"],
+    "VALUE": "ShortenTheSpireSpecialValue ✖️ \uDB80\uDEAB",
+    "SPECIAL": 1
   },
   {
-    "KEYS": ["Triple"],
-    "VALUE": "More More"
+    "KEYS": ["[t|T]riple ([^.]+)"],
+    "VALUE": "ShortenTheSpireSpecialValue ✖️ \uDB80\uDEAA",
+    "SPECIAL": 1
   },
   {
     "KEYS": ["Strength"],
@@ -223,10 +221,6 @@
   {
     "KEYS": ["copy of this card", "copy of that card", "copies of that card", "copy of it"],
     "VALUE": "Clone"
-  },
-  {
-    "KEYS": ["draw card", "Draw card"],
-    "VALUE": "Draw"
   },
   {
     "KEYS": ["this card is drawn"],
@@ -281,18 +275,6 @@
     "VALUE": "\uDB80\uDCC5"
   },
   {
-    "KEYS": ["!M! cards\\.", "!M! card\\."],
-    "VALUE": "!M!."
-  },
-  {
-    "KEYS": ["!B! cards\\.", "!B! card\\."],
-    "VALUE": "!B!."
-  },
-  {
-    "KEYS": ["!D! cards\\.", "!D! card\\."],
-    "VALUE": "!D!."
-  },
-  {
     "KEYS": ["(\\d) cards\\.", "(\\d) card\\."],
     "VALUE": "ShortenTheSpireSpecialValue.",
     "SPECIAL": 1
@@ -310,8 +292,9 @@
     "VALUE": "!D! \uD83D\uDCB3"
   },
   {
-    "KEYS": ["Draw 1 cards", "Draw 1 card"],
-    "VALUE": "\uDB80\uDEA7 \uD83D\uDCB3"
+    "KEYS": ["[d|D]raw (\\d) card[s]?"],
+    "VALUE": "ShortenTheSpireSpecialValue \uD83D\uDCB3",
+    "SPECIAL": 1
   },
   {
     "KEYS": ["Choose a "],
@@ -492,11 +475,7 @@
   },
   {
     "KEYS": [" is played twice", " are played twice"],
-    "VALUE": " more"
-  },
-  {
-    "KEYS": [" double ", " doubling "],
-    "VALUE": " more "
+    "VALUE": " "
   },
   {
     "KEYS": ["(\\S+) affects this card"],
@@ -581,7 +560,7 @@
   },
   {
     "KEYS": [" cards "],
-    "VALUE": " card "
+    "VALUE": " \uD83D\uDCB3 "
   },
   {
     "KEYS": ["You cannot "],
@@ -630,7 +609,7 @@
     "SPECIAL": 2
   },
   {
-    "KEYS": [" be "," your ", " way ", " a ", " an ", " the ", " there are ", " affects card ", " type of "],
+    "KEYS": [" be "," your ", "Your", " way ", " a ", " an ", " the ", " there are ", " affects card ", " type of "],
     "VALUE": " "
   },
   {
@@ -645,5 +624,49 @@
   {
     "KEYS": ["\\ball enemies\\b"],
     "VALUE": "ENEMIES"
+  },
+  {
+    "KEYS": ["\\."],
+    "VALUE": ""
+  },
+  {
+    "KEYS": ["0"],
+    "VALUE": "\uDB80\uDEAC"
+  },
+  {
+    "KEYS": ["1"],
+    "VALUE": "\uDB80\uDEA7"
+  },
+  {
+    "KEYS": ["2"],
+    "VALUE": "\uDB80\uDEAB"
+  },
+  {
+    "KEYS": ["3"],
+    "VALUE": "\uDB80\uDEAA"
+  },
+  {
+    "KEYS": ["4"],
+    "VALUE": "\uDB80\uDEA4"
+  },
+  {
+    "KEYS": ["5"],
+    "VALUE": "\uDB80\uDEA3"
+  },
+  {
+    "KEYS": ["6"],
+    "VALUE": "\uDB80\uDEA9"
+  },
+  {
+    "KEYS": ["7"],
+    "VALUE": "\uDB80\uDEA8"
+  },
+  {
+    "KEYS": ["8"],
+    "VALUE": "\uDB80\uDEA1"
+  },
+  {
+    "KEYS": ["9"],
+    "VALUE": "\uDB80\uDEA6"
   }
 ]

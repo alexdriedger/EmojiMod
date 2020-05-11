@@ -16,14 +16,7 @@ public class PostLoadLocalizationPatch {
     )
     public static void PostLocalization(CardCrawlGame __instance, LocalizedStrings languagePack)
     {
-        for (Settings.GameLanguage lang : EmojiMod.SupportedLanguages)
-        {
-            if (lang.equals(Settings.language))
-            {
-                EmojiMod.PostLoadLocalizationStrings(languagePack);
-                break;
-            }
-        }
+        EmojiMod.PostLoadLocalizationStrings(languagePack);
     }
 
     private static class Locator extends SpireInsertLocator
