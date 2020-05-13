@@ -24,6 +24,10 @@
     "VALUE": "\uDB80\uDC64"
   },
   {
+    "KEYS": ["!M! times\\."],
+    "VALUE": "✖️ !M!"
+  },
+  {
     "KEYS": ["apply a debuff"],
     "VALUE": "\uDB80\uDCEC"
   },
@@ -121,8 +125,8 @@
     "VALUE": " "
   },
   {
-    "KEYS": ["play an "],
-    "VALUE": " "
+    "KEYS": ["\\b[p|P]lay\\b"],
+    "VALUE": "▶️"
   },
   {
     "KEYS": ["Exhaustive"],
@@ -145,16 +149,20 @@
     "VALUE": "Impatient"
   },
   {
-    "KEYS": [" Power card"],
-    "VALUE": " Power"
+    "KEYS": ["non-Attack"],
+    "VALUE": "⛔\uDB80\uDDDC"
   },
   {
-    "KEYS": [" Attack card"],
-    "VALUE": " Attack"
+    "KEYS": ["Power"],
+    "VALUE": "\uDB80\uDD1A"
   },
   {
-    "KEYS": [" Skill card"],
-    "VALUE": " Skill"
+    "KEYS": ["Attack"],
+    "VALUE": "\uDB80\uDDDC"
+  },
+  {
+    "KEYS": ["Skill"],
+    "VALUE": "\uDB80\uDDFA"
   },
   {
     "KEYS": ["Artifact"],
@@ -173,7 +181,7 @@
     "VALUE": "➡️"
   },
   {
-    "KEYS": ["Shuffle [[a|an] ]?", "Add [[a|an] ]?"],
+    "KEYS": ["Shuffle ((a|an) )?", "Add ((a|an) )?"],
     "VALUE": ""
   },
   {
@@ -232,23 +240,11 @@
   },
   {
     "KEYS": ["play a card"],
-    "VALUE": "Play"
+    "VALUE": "▶️ \uD83D\uDCB3"
   },
   {
     "KEYS": ["play another card"],
-    "VALUE": "Play Other"
-  },
-  {
-    "KEYS": ["play a Skill"],
-    "VALUE": "Skill"
-  },
-  {
-    "KEYS": ["play a Power"],
-    "VALUE": "Power"
-  },
-  {
-    "KEYS": ["play an Attack"],
-    "VALUE": "Attack"
+    "VALUE": "▶️ \uD83D\uDCB3"
   },
   {
     "KEYS": ["are attacked"],
@@ -466,7 +462,7 @@
   },
   {
     "KEYS": [" is played twice", " are played twice"],
-    "VALUE": " "
+    "VALUE": "▶️ ✖️ \uDB80\uDEAB"
   },
   {
     "KEYS": ["(\\S+) affects this card"],
@@ -503,11 +499,11 @@
   },
   {
     "KEYS": ["Autoplay"],
-    "VALUE": "Yes"
+    "VALUE": "▶️"
   },
   {
     "KEYS": ["Deal ", "deal "],
-    "VALUE": "Do "
+    "VALUE": " "
   },
   {
     "KEYS": ["!M! random"],
@@ -550,7 +546,7 @@
     "VALUE": " a bunch"
   },
   {
-    "KEYS": [" cards "],
+    "KEYS": [" card[s]? "],
     "VALUE": " \uD83D\uDCB3 "
   },
   {
@@ -576,10 +572,6 @@
   {
     "KEYS": [" combat"],
     "VALUE": " whole fight"
-  },
-  {
-    "KEYS": ["\\bplay\\b"],
-    "VALUE": "use"
   },
   {
     "KEYS": ["\\bThe ", "\\bthe "],
@@ -613,7 +605,15 @@
     "SPECIAL": 1
   },
   {
-    "KEYS": ["the enemy", "The enemy", "the Enemy", "enemy"],
+    "KEYS": ["\\*Shiv[s]?"],
+    "VALUE": "\uD83D\uDDE1️"
+  },
+  {
+    "KEYS": ["\\b[l|L]ose[s]?\\b"],
+    "VALUE": "⬇️"
+  },
+  {
+    "KEYS": ["[e|E]nemy('s)?"],
     "VALUE": "\uDB80\uDE36"
   },
   {
