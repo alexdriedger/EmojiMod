@@ -41,6 +41,16 @@ public class EmojiMod implements
         start of your turn
         end of your turn
          */
+    // TODO: Emojis to get
+    /*
+        boomerang
+        lungs
+        ninja
+        hook
+        window
+        Letter X
+     */
+    // TODO: Use shiv, repto dagger, jax, book of stabbing, nob, wizard etc. for naming
     
     public static final Logger logger = LogManager.getLogger(EmojiMod.class.getName());
     private static String modID;

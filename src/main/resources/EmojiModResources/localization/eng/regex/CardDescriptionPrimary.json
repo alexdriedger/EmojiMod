@@ -28,6 +28,11 @@
     "VALUE": "✖️ !M!"
   },
   {
+    "KEYS": ["(\\d) times\\."],
+    "VALUE": "✖️ ShortenTheSpireSpecialValue",
+    "SPECIAL": 1
+  },
+  {
     "KEYS": ["apply a debuff"],
     "VALUE": "\uDB80\uDCEC"
   },
@@ -173,7 +178,7 @@
     "VALUE": "⛔"
   },
   {
-    "KEYS": ["discard pile", "discard", "Discard"],
+    "KEYS": ["discard pile", "[d|D]iscard", "[d|D]iscarded"],
     "VALUE": "\uDB80\uDCC4"
   },
   {
@@ -288,8 +293,12 @@
     "VALUE": "Pick "
   },
   {
-    "KEYS": [" top card "],
-    "VALUE": " top "
+    "KEYS": [" top of your "],
+    "VALUE": " top your "
+  },
+  {
+    "KEYS": [" top "],
+    "VALUE": " ⬆️ "
   },
   {
     "KEYS": ["a card in"],
@@ -324,32 +333,32 @@
     "VALUE": "➡️ \uDB80\uDE06 \uDB80\uDE36"
   },
   {
-    "KEYS": ["At the end of ", "at the end of "],
-    "VALUE": "End of "
+    "KEYS": ["card[s]? at random"],
+    "VALUE": "\uDB80\uDE06 \uD83D\uDCB3"
   },
   {
-    "KEYS": ["At the start of", "at the start of"],
-    "VALUE": "Before"
+    "KEYS": ["[a|A]t the start of your next turn", "next turn"],
+    "VALUE": "⏩⏰"
   },
   {
-    "KEYS": ["\\bThis turn\\b", "\\bthis turn\\b", "\\bper turn\\b", "\\bPer turn\\b", "\\bthis round\\b", "\\bThis round\\b"],
-    "VALUE": "Now"
+    "KEYS": ["[a|A]t the start of your turn", "[a|A]t the start of each turn"],
+    "VALUE": "↪️ ⏰"
   },
   {
-    "KEYS": ["Each turn", "each turn"],
-    "VALUE": "Every Now"
+    "KEYS": ["[a|A]t the end of your turn", "[a|A]t the end of"],
+    "VALUE": "⏰ ↩️"
   },
   {
-    "KEYS": ["your next turn", "Next turn"],
-    "VALUE": "Next Now"
+    "KEYS": ["this turn"],
+    "VALUE": ""
+  },
+  {
+    "KEYS": ["your turn", "each turn"],
+    "VALUE": ""
   },
   {
     "KEYS": ["unique"],
     "VALUE": "special"
-  },
-  {
-    "KEYS": ["your turn", "Your turn"],
-    "VALUE": "Now"
   },
   {
     "KEYS": ["have no"],
@@ -388,8 +397,8 @@
     "VALUE": " Visiting"
   },
   {
-    "KEYS": ["Orb slot"],
-    "VALUE": "House"
+    "KEYS": ["Orb slot[s]?"],
+    "VALUE": "\uDB80\uDD09"
   },
   {
     "KEYS": [" have Channeled"],
@@ -466,7 +475,7 @@
   },
   {
     "KEYS": ["(\\S+) affects this card"],
-    "VALUE": "Use ShortenTheSpireSpecialValue",
+    "VALUE": "▶️ ShortenTheSpireSpecialValue",
     "SPECIAL": 1
   },
   {
@@ -506,16 +515,8 @@
     "VALUE": " "
   },
   {
-    "KEYS": ["!M! random"],
-    "VALUE": "!M!"
-  },
-  {
-    "KEYS": ["A random "],
-    "VALUE": "Some "
-  },
-  {
-    "KEYS": [" (\\d+) random ", " X random ", " a random ", " random "],
-    "VALUE": " some "
+    "KEYS": ["random", "randomly"],
+    "VALUE": "\uDB80\uDE06"
   },
   {
     "KEYS": [" Gold", " gold"],
@@ -527,11 +528,11 @@
   },
   {
     "KEYS": ["raise your Max HP", "raise Max HP"],
-    "VALUE": "Healthier"
+    "VALUE": "⬆️ ❤️"
   },
   {
     "KEYS": ["Max HP"],
-    "VALUE": "Healthy"
+    "VALUE": "❤️"
   },
   {
     "KEYS": [" transforme", " transform"],
@@ -606,7 +607,23 @@
   },
   {
     "KEYS": ["\\*Shiv[s]?"],
-    "VALUE": "\uD83D\uDDE1️"
+    "VALUE": "\uDB80\uDE7A"
+  },
+  {
+    "KEYS": ["Mantra"],
+    "VALUE": "\uDB80\uDC4D"
+  },
+  {
+    "KEYS": ["[e|E]nter"],
+    "VALUE": "➡️"
+  },
+  {
+    "KEYS": ["Divinity"],
+    "VALUE": "\uDB80\uDE6B"
+  },
+  {
+    "KEYS": ["Die"],
+    "VALUE": "\uDB80\uDC2B"
   },
   {
     "KEYS": ["\\b[l|L]ose[s]?\\b"],
