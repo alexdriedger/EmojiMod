@@ -46,7 +46,7 @@
     "SPECIAL": 1
   },
   {
-    "KEYS": ["Lose !M! HP", "lose !M! HP"],
+    "KEYS": ["[l|L]ose !M! HP"],
     "VALUE": "!M! 🩸"
   },
   {
@@ -158,11 +158,11 @@
     "VALUE": "\uDB80\uDD1A"
   },
   {
-    "KEYS": ["Attack"],
+    "KEYS": ["Attack[s]?"],
     "VALUE": "\uDB80\uDDDC"
   },
   {
-    "KEYS": ["Skill"],
+    "KEYS": ["Skill[s]?"],
     "VALUE": "\uDB80\uDDFA"
   },
   {
@@ -174,7 +174,7 @@
     "VALUE": "⛔"
   },
   {
-    "KEYS": ["discard pile", "[d|D]iscard", "[d|D]iscarded"],
+    "KEYS": ["discard pile", "[d|D]iscarded", "[d|D]iscard"],
     "VALUE": "\uDB80\uDCC4"
   },
   {
@@ -182,7 +182,7 @@
     "VALUE": "➡️"
   },
   {
-    "KEYS": ["Shuffle ((a|an) )?", "Add ((a|an) )?"],
+    "KEYS": ["[s|S]huffle ((a|an) )?", "Add ((a|an) )?"],
     "VALUE": ""
   },
   {
@@ -216,6 +216,26 @@
     "VALUE": "\uDB80\uDC86"
   },
   {
+    "KEYS": ["Wrath"],
+    "VALUE": "\uD83D\uDE21"
+  },
+  {
+    "KEYS": ["Calm"],
+    "VALUE": "\uD83E\uDDD8"
+  },
+  {
+    "KEYS": ["Exit your Stance"],
+    "VALUE": "\uD83C\uDFCB️ ➡️"
+  },
+  {
+    "KEYS": ["Stance[s]?"],
+    "VALUE": "\uD83C\uDFCB️"
+  },
+  {
+    "KEYS": ["Lock-On"],
+    "VALUE": "\uDB80\uDC49"
+  },
+  {
     "KEYS": ["Frail"],
     "VALUE": "\uDB80\uDC3B"
   },
@@ -237,11 +257,11 @@
   },
   {
     "KEYS": ["play a card"],
-    "VALUE": "▶️ \uD83D\uDCB3"
+    "VALUE": "▶️ \uD83C\uDCCF"
   },
   {
     "KEYS": ["play another card"],
-    "VALUE": "▶️ \uD83D\uDCB3"
+    "VALUE": "▶️ \uD83C\uDCCF"
   },
   {
     "KEYS": ["you draw"],
@@ -257,24 +277,24 @@
   },
   {
     "KEYS": ["Draw !M! cards", "Draw !M! card"],
-    "VALUE": "!M! \uD83D\uDCB3"
+    "VALUE": "!M! \uD83C\uDCCF"
   },
   {
     "KEYS": ["Draw !B! cards", "Draw !B! card"],
-    "VALUE": "!B! \uD83D\uDCB3"
+    "VALUE": "!B! \uD83C\uDCCF"
   },
   {
     "KEYS": ["Draw !D! cards", "Draw !D! card"],
-    "VALUE": "!D! \uD83D\uDCB3"
+    "VALUE": "!D! \uD83C\uDCCF"
   },
   {
     "KEYS": ["[d|D]raw (\\d) card[s]?"],
-    "VALUE": "ShortenTheSpireSpecialValue \uD83D\uDCB3",
+    "VALUE": "ShortenTheSpireSpecialValue \uD83C\uDCCF",
     "SPECIAL": 1
   },
   {
-    "KEYS": ["Choose a "],
-    "VALUE": "⛏️ "
+    "KEYS": ["Choose"],
+    "VALUE": "⛏️"
   },
   {
     "KEYS": [" top of your "],
@@ -306,11 +326,11 @@
   },
   {
     "KEYS": ["card[s]? at random"],
-    "VALUE": "\uDB80\uDE06 \uD83D\uDCB3"
+    "VALUE": "\uDB80\uDE06 \uD83C\uDCCF"
   },
   {
-    "KEYS": ["[a|A]t the start of your next turn", "next turn"],
-    "VALUE": "⏩⏰"
+    "KEYS": ["[a|A]t the start of your next turn", "[n|N]ext turn[,]?"],
+    "VALUE": "⏩ ⏰"
   },
   {
     "KEYS": ["[a|A]t the start of your turn", "[a|A]t the start of each turn"],
@@ -321,7 +341,7 @@
     "VALUE": "⏰ ↩️"
   },
   {
-    "KEYS": ["this turn"],
+    "KEYS": ["[t|T]his turn[,]?"],
     "VALUE": ""
   },
   {
@@ -345,6 +365,14 @@
     "VALUE": "!M!"
   },
   {
+    "KEYS": ["Scry !M!"],
+    "VALUE": "!M! \uD83D\uDC40"
+  },
+  {
+    "KEYS": ["Scry"],
+    "VALUE": "\uD83D\uDC40"
+  },
+  {
     "KEYS": ["Gain ", "gain "],
     "VALUE": ""
   },
@@ -361,15 +389,15 @@
     "VALUE": "\uDB80\uDD09"
   },
   {
-    "KEYS": ["Evoke"],
+    "KEYS": ["Evoke your next [o|O]rb", "Evoke[d]?"],
     "VALUE": "\uDB80\uDD09 \uD83D\uDCA5"
   },
   {
-    "KEYS": ["Channel "],
+    "KEYS": ["Channel ", "Channeled "],
     "VALUE": ""
   },
   {
-    "KEYS": ["Orb", "orb"],
+    "KEYS": ["[o|O]rb[s]?"],
     "VALUE": "\uDB80\uDD09"
   },
   {
@@ -410,6 +438,10 @@
     "VALUE": "▶️ ✖️ \uDB80\uDEAB"
   },
   {
+    "KEYS": ["twice"],
+    "VALUE": "✖️ \uDB80\uDEAB"
+  },
+  {
     "KEYS": ["(\\S+) affects this card"],
     "VALUE": "▶️ ShortenTheSpireSpecialValue",
     "SPECIAL": 1
@@ -423,7 +455,7 @@
     "VALUE": "⏱️ ❤️"
   },
   {
-    "KEYS": ["Retain", "Keeped"],
+    "KEYS": ["Retained", "Retain", "Keeped"],
     "VALUE": "\uD83E\uDD17"
   },
   {
@@ -452,7 +484,7 @@
   },
   {
     "KEYS": [" card[s]?"],
-    "VALUE": " \uD83D\uDCB3 "
+    "VALUE": " \uD83C\uDCCF"
   },
   {
     "KEYS": ["You cannot "],
@@ -481,12 +513,20 @@
     "SPECIAL": 2
   },
   {
-    "KEYS": [" be "," your ", "Your", " way ", " a ", " an ", " the ", " there are ", " affects card ", " type of "],
+    "KEYS": [" be "," your ", "Your", " way ", " a ", " an ", " the ", " there are ", " affects card ", " type of ", " [t|T]hey "],
     "VALUE": " "
   },
   {
-    "KEYS": ["upgrade"],
-    "VALUE": "⬆️"
+    "KEYS": ["[h|H]eal !M! HP"],
+    "VALUE": "!M! \uD83D\uDC96"
+  },
+  {
+    "KEYS": ["[h|H]eal"],
+    "VALUE": "\uD83D\uDC96"
+  },
+  {
+    "KEYS": ["Upgrade[d]?"],
+    "VALUE": "\uD83D\uDD28"
   },
   {
     "KEYS": ["^target's (\\w+ \\w+)"],
@@ -494,12 +534,68 @@
     "SPECIAL": 1
   },
   {
+    "KEYS": [" or "],
+    "VALUE": "\uD83D\uDEF6"
+  },
+  {
     "KEYS": ["\\*Shiv[s]?"],
     "VALUE": "\uDB80\uDE7A"
   },
   {
+    "KEYS": ["\\*Insight"],
+    "VALUE": "\uD83D\uDD75️"
+  },
+  {
+    "KEYS": ["\\*Smite"],
+    "VALUE": "\uD83D\uDE20"
+  },
+  {
+    "KEYS": ["\\*Miracle[s]?"],
+    "VALUE": "\uD83D\uDE07"
+  },
+  {
+    "KEYS": ["\\*Safety"],
+    "VALUE": "\uD83D\uDC77 \uD83D\uDC4D"
+  },
+  {
+    "KEYS": ["\\*Expunger"],
+    "VALUE": "✖️ \uD83E\uDDFD"
+  },
+  {
+    "KEYS": ["\\*Through \\*Violence"],
+    "VALUE": "➡️ ⚔️ ➡️"
+  },
+  {
+    "KEYS": ["\\*Wound[s]?"],
+    "VALUE": "\uD83E\uDE79"
+  },
+  {
+    "KEYS": ["Status"],
+    "VALUE": "\uDB80\uDD5E"
+  },
+  {
+    "KEYS": ["\\*Burn"],
+    "VALUE": "\uD83D\uDD25"
+  },
+  {
+    "KEYS": ["\\*Void"],
+    "VALUE": "⚫"
+  },
+  {
+    "KEYS": ["\\*Dazed"],
+    "VALUE": "\uD83D\uDCAB"
+  },
+  {
+    "KEYS": ["Curse"],
+    "VALUE": "\uDB80\uDCAC"
+  },
+  {
     "KEYS": ["Mantra"],
     "VALUE": "\uDB80\uDC4D"
+  },
+  {
+    "KEYS": ["Energy"],
+    "VALUE": "\uD83D\uDD0B"
   },
   {
     "KEYS": ["[e|E]nter"],
@@ -520,6 +616,14 @@
   {
     "KEYS": ["[e|E]nemy('s)?"],
     "VALUE": "\uDB80\uDE36"
+  },
+  {
+    "KEYS": ["draw"],
+    "VALUE": "✒️"
+  },
+  {
+    "KEYS": ["it\\."],
+    "VALUE": ""
   },
   {
     "KEYS": ["\\."],
