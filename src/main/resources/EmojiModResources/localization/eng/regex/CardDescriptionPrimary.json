@@ -77,7 +77,7 @@
   },
   {
     "KEYS": ["for combat"],
-    "VALUE": "while fight"
+    "VALUE": "⏱️ \uD83E\uDD4A"
   },
   {
     "KEYS": ["ALL enemies", "\\ball enemies\\b"],
@@ -85,7 +85,7 @@
   },
   {
     "KEYS": ["Can only be played if "],
-    "VALUE": "No unless "
+    "VALUE": "\uD83D\uDC4D ▶️ \uD83E\uDD37 "
   },
   {
     "KEYS": ["!M! additional", "!M! Additional"],
@@ -148,10 +148,6 @@
   {
     "KEYS": ["Intangible"],
     "VALUE": "\uDB80\uDC45"
-  },
-  {
-    "KEYS": ["Startup"],
-    "VALUE": "Impatient"
   },
   {
     "KEYS": ["non-Attack"],
@@ -225,23 +221,19 @@
   },
   {
     "KEYS": ["Innate"],
-    "VALUE": "Sticky"
+    "VALUE": "\uD83E\uDDE0"
   },
   {
     "KEYS": ["copy of this card", "copy of that card", "copies of that card", "copy of it"],
-    "VALUE": "Clone"
-  },
-  {
-    "KEYS": ["this card is drawn"],
-    "VALUE": "draw this"
+    "VALUE": "\uD83E\uDD33"
   },
   {
     "KEYS": ["if this ", "If this ", "If you ", "if you ", "Upon " , "upon ", "Whenever you ", "whenever you ", "Whenever a ", "whenever a ", "Whenever an ", "whenever an ", "Whenever ", "whenever ", "Every time ", "every time "],
-    "VALUE": "When "
+    "VALUE": "\uD83E\uDD37 "
   },
   {
-    "KEYS": ["receive attack damage"],
-    "VALUE": "Hurt"
+    "KEYS": ["receive attack damage", "are attacked", "Attack deals unblocked damage"],
+    "VALUE": "\uD83D\uDD2A \uD83E\uDE78"
   },
   {
     "KEYS": ["play a card"],
@@ -252,16 +244,8 @@
     "VALUE": "▶️ \uD83D\uDCB3"
   },
   {
-    "KEYS": ["are attacked"],
-    "VALUE": "Oof"
-  },
-  {
     "KEYS": ["you draw"],
-    "VALUE": "draw"
-  },
-  {
-    "KEYS": ["Attack deals unblocked damage"],
-    "VALUE": "do Hurt"
+    "VALUE": "✒️"
   },
   {
     "KEYS": ["card is "],
@@ -290,7 +274,7 @@
   },
   {
     "KEYS": ["Choose a "],
-    "VALUE": "Pick "
+    "VALUE": "⛏️ "
   },
   {
     "KEYS": [" top of your "],
@@ -301,11 +285,7 @@
     "VALUE": " ⬆️ "
   },
   {
-    "KEYS": ["a card in"],
-    "VALUE": "card in"
-  },
-  {
-    "KEYS": ["a card from"],
+    "KEYS": ["a card in", "a card from"],
     "VALUE": "card in"
   },
   {
@@ -314,19 +294,11 @@
   },
   {
     "KEYS": ["all cards in", "every card in"],
-    "VALUE": "all"
+    "VALUE": ""
   },
   {
-    "KEYS": ["trigger ", "Trigger "],
-    "VALUE": "Do "
-  },
-  {
-    "KEYS": ["passive ability"],
-    "VALUE": "Talent"
-  },
-  {
-    "KEYS": ["is an"],
-    "VALUE": "are"
+    "KEYS": ["[t|T]rigger the passive ability of"],
+    "VALUE": "\uD83D\uDCA2 \uDB80\uDD09"
   },
   {
     "KEYS": ["to a random enemy", "a random enemy", "random enemy"],
@@ -357,12 +329,8 @@
     "VALUE": ""
   },
   {
-    "KEYS": ["unique"],
-    "VALUE": "special"
-  },
-  {
     "KEYS": ["have no"],
-    "VALUE": "Not"
+    "VALUE": "⛔"
   },
   {
     "KEYS": ["Deal !D!", "deal !D!"],
@@ -389,28 +357,12 @@
     "VALUE": "\uD83D\uDEE1️"
   },
   {
-    "KEYS": ["Channeled Orb"],
-    "VALUE": "Friend"
-  },
-  {
-    "KEYS": [" currently have Channeled"],
-    "VALUE": " Visiting"
-  },
-  {
-    "KEYS": ["Orb slot[s]?"],
+    "KEYS": ["Orb slot[s]?", "Channeled Orb"],
     "VALUE": "\uDB80\uDD09"
   },
   {
-    "KEYS": [" have Channeled"],
-    "VALUE": " Visited"
-  },
-  {
-    "KEYS": ["Channel Orb that was just "],
-    "VALUE": "Come back Friend"
-  },
-  {
-    "KEYS": ["Friend Byed"],
-    "VALUE": "Byed Friend"
+    "KEYS": ["Evoke"],
+    "VALUE": "\uDB80\uDD09 \uD83D\uDCA5"
   },
   {
     "KEYS": ["Channel "],
@@ -418,7 +370,7 @@
   },
   {
     "KEYS": ["Orb", "orb"],
-    "VALUE": "Friend"
+    "VALUE": "\uDB80\uDD09"
   },
   {
     "KEYS": ["Lightning"],
@@ -433,28 +385,12 @@
     "VALUE": "\uDB80\uDD7B"
   },
   {
-    "KEYS": ["Glass"],
-    "VALUE": "Cracky"
-  },
-  {
-    "KEYS": ["Crystal"],
-    "VALUE": "Sparkly"
-  },
-  {
-    "KEYS": ["Evoke"],
-    "VALUE": "Bye"
-  },
-  {
     "KEYS": ["Frost"],
     "VALUE": "\uDB80\uDD7C"
   },
   {
-    "KEYS": [" do not "],
-    "VALUE": " No "
-  },
-  {
     "KEYS": ["cost 0", "costs 0"],
-    "VALUE": "Free"
+    "VALUE": "\uD83D\uDD0B \uDB80\uDEA2 \uDB80\uDEAC"
   },
   {
     "KEYS": ["(.*?(?: |))(\\w+)( equal to )([^\\.]+)(.*)"],
@@ -463,11 +399,11 @@
   },
   {
     "KEYS": [" equal to "],
-    "VALUE": " "
+    "VALUE": " \uDB80\uDEA2 "
   },
   {
-    "KEYS": [" intends to ", " Intends to "],
-    "VALUE": " want "
+    "KEYS": ["[i|I]f the enemy intends to [a|A]ttack"],
+    "VALUE": "\uDB80\uDE36 \uDB80\uDEA2 \uDB80\uDE20"
   },
   {
     "KEYS": [" is played twice", " are played twice"],
@@ -479,32 +415,16 @@
     "SPECIAL": 1
   },
   {
-    "KEYS": ["There is no "],
-    "VALUE": "No "
-  },
-  {
-    "KEYS": ["escape from"],
-    "VALUE": "Escape"
-  },
-  {
     "KEYS": ["Grave"],
-    "VALUE": "Slippery"
-  },
-  {
-    "KEYS": ["Soulbound"],
-    "VALUE": "Superglued"
+    "VALUE": "\uDB80\uDC2B"
   },
   {
     "KEYS": ["temporary_hp", "Temporary_HP", "temporary_HP", "Temporary_hp"],
-    "VALUE": "Fake_Healthy"
+    "VALUE": "⏱️ ❤️"
   },
   {
-    "KEYS": ["Retain"],
-    "VALUE": "Keep"
-  },
-  {
-    "KEYS": ["Keeped"],
-    "VALUE": "Kept"
+    "KEYS": ["Retain", "Keeped"],
+    "VALUE": "\uD83E\uDD17"
   },
   {
     "KEYS": ["Autoplay"],
@@ -523,10 +443,6 @@
     "VALUE": " \uDB80\uDD85"
   },
   {
-    "KEYS": [" containing "],
-    "VALUE": " that "
-  },
-  {
     "KEYS": ["raise your Max HP", "raise Max HP"],
     "VALUE": "⬆️ ❤️"
   },
@@ -535,52 +451,24 @@
     "VALUE": "❤️"
   },
   {
-    "KEYS": [" transforme", " transform"],
-    "VALUE": " change"
-  },
-  {
-    "KEYS": [" removed "],
-    "VALUE": " go away "
-  },
-  {
-    "KEYS": [" any number of times"],
-    "VALUE": " a bunch"
-  },
-  {
-    "KEYS": [" card[s]? "],
+    "KEYS": [" card[s]?"],
     "VALUE": " \uD83D\uDCB3 "
   },
   {
     "KEYS": ["You cannot "],
-    "VALUE": "No "
+    "VALUE": "⛔ "
   },
   {
-    "KEYS": [" any number "],
-    "VALUE": " bunch "
-  },
-  {
-    "KEYS": [" in combat"],
-    "VALUE": " here"
-  },
-  {
-    "KEYS": [" rest of combat"],
-    "VALUE": " whole fight"
-  },
-  {
-    "KEYS": [" this combat"],
-    "VALUE": " for whole fight"
+    "KEYS": [" in combat", " rest of combat", " this combat"],
+    "VALUE": " ➡️\uD83E\uDD4A"
   },
   {
     "KEYS": [" combat"],
-    "VALUE": " whole fight"
+    "VALUE": " \uD83E\uDD4A"
   },
   {
     "KEYS": ["\\bThe ", "\\bthe "],
     "VALUE": ""
-  },
-  {
-    "KEYS": ["^to Bad guy."],
-    "VALUE": "Choose Bad guy."
   },
   {
     "KEYS": ["NL ([a-z])([^: ]*|\\w+[:.,]) "],
@@ -597,8 +485,8 @@
     "VALUE": " "
   },
   {
-    "KEYS": [" upgraded bunch"],
-    "VALUE": " upgrade a bunch"
+    "KEYS": ["upgrade"],
+    "VALUE": "⬆️"
   },
   {
     "KEYS": ["^target's (\\w+ \\w+)"],
