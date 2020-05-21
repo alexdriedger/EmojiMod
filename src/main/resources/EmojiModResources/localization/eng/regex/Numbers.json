@@ -1,0 +1,46 @@
+[
+  {
+    "KEYS": ["\\+"],
+    "VALUE": "➕"
+  },
+  {
+    "KEYS": ["0"],
+    "VALUE": "\uDB80\uDEAC"
+  },
+  {
+    "KEYS": ["1"],
+    "VALUE": "\uDB80\uDEA7"
+  },
+  {
+    "KEYS": ["2"],
+    "VALUE": "\uDB80\uDEAB"
+  },
+  {
+    "KEYS": ["3"],
+    "VALUE": "\uDB80\uDEAA"
+  },
+  {
+    "KEYS": ["4"],
+    "VALUE": "\uDB80\uDEA4"
+  },
+  {
+    "KEYS": ["5"],
+    "VALUE": "\uDB80\uDEA3"
+  },
+  {
+    "KEYS": ["6"],
+    "VALUE": "\uDB80\uDEA9"
+  },
+  {
+    "KEYS": ["7"],
+    "VALUE": "\uDB80\uDEA8"
+  },
+  {
+    "KEYS": ["8"],
+    "VALUE": "\uDB80\uDEA1"
+  },
+  {
+    "KEYS": ["9"],
+    "VALUE": "\uDB80\uDEA6"
+  }
+]

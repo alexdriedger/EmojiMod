@@ -654,6 +654,10 @@
     "VALUE": "✒️"
   },
   {
+    "KEYS": ["right arrow"],
+    "VALUE": "➡️"
+  },
+  {
     "KEYS": ["it\\."],
     "VALUE": ""
   },

@@ -1,0 +1,875 @@
+{
+  "A Thousand Cuts": {
+    "NAME": "1000\ud83e\ude79"
+  },
+  "Accuracy": {
+    "NAME": "\u2b06\ufe0f\ud83c\udfaf"
+  },
+  "Acrobatics": {
+    "NAME": "\ud83e\uddd7"
+  },
+  "Adrenaline": {
+    "NAME": "\ud83d\udc89\u2757"
+  },
+  "After Image": {
+    "NAME": "\ud83d\uddbc\ufe0f\u27a1\ufe0f"
+  },
+  "Aggregate": {
+    "NAME": "\ud83d\udcd7\ud83d\udcd8\ud83d\udcd9\u27a1\ufe0f\ud83d\udcda"
+  },
+  "Alpha": {
+    "NAME": "\ud83c\udd70\ufe0f"
+  },
+  "Amplify": {
+    "NAME": "\ud83d\udd09\u27a1\ufe0f\ud83d\udd0a"
+  },
+  "Anger": {
+    "NAME": "\ud83d\ude24"
+  },
+  "Apotheosis": {
+    "NAME": ":awakened_one:\u27a1\ufe0f:awakened_one_revived:"
+  },
+  "Armaments": {
+    "NAME": "\ud83e\uddbe"
+  },
+  "Backflip": {
+    "NAME": "\ud83e\udd38"
+  },
+  "Backstab": {
+    "NAME": "\ud83d\udeb6\u2b05\ufe0f\ud83d\udde1\ufe0f"
+  },
+  "Ball Lightning": {
+    "NAME": "\u26bd\u26a1"
+  },
+  "Bandage Up": {
+    "NAME": "\ud83e\ude79\u2b06\ufe0f"
+  },
+  "Bane": {
+    "NAME": "\ud83e\uddb9"
+  },
+  "Barrage": {
+    "NAME": ":rock:rock:rock:\u27a1\ufe0f:cultist"
+  },
+  "Barricade": {
+    "NAME": "\ud83e\uddf1\ud83e\uddf1\ud83e\uddf1 "
+  },
+  "Bash": {
+    "NAME": "\ud83d\udd28"
+  },
+  "Battle Trance": {
+    "NAME": "\u2694\ufe0f\ud83e\uddde"
+  },
+  "Beam Cell": {
+    "NAME": "\ud83c\udfd7\ufe0f\ud83e\udda0"
+  },
+  "Berserk": {
+    "NAME": "\ud83d\udca2\ud83d\udc79\ud83d\udca2"
+  },
+  "Beta": {
+    "NAME": "\ud83c\udd71\ufe0f"
+  },
+  "Biased Cognition": {
+    "NAME": "\u26d4\u2696\ufe0f\ud83e\udde0"
+  },
+  "Bite": {
+    "NAME": "\ud83e\udddb\ud83d\udc44"
+  },
+  "Blade Dance": {
+    "NAME": "\ud83d\udde1\ufe0f\ud83d\udd7a"
+  },
+  "Blasphemy": {
+    "NAME": ":pogchamp:"
+  },
+  "Blind": {
+    "NAME": "\u26d4\ud83d\udc41\ufe0f"
+  },
+  "Blizzard": {
+    "NAME": "\u2744\ufe0f\u2744\ufe0f\u2744\ufe0f\u2744\ufe0f"
+  },
+  "Blood for Blood": {
+    "NAME": "\ud83e\ude784\ud83e\ude78"
+  },
+  "Bloodletting": {
+    "NAME": "\ud83e\ude78\ud83e\ude78\ud83e\ude78"
+  },
+  "Bludgeon": {
+    "NAME": ":axed:"
+  },
+  "Blur": {
+    "NAME": "\u26d4\ud83d\udc53"
+  },
+  "Body Slam": {
+    "NAME": "\ud83e\uddf1\ud83c\udfc3\ud83d\udca8"
+  },
+  "Bouncing Flask": {
+    "NAME": "\ud83e\uddea\u2195\ufe0f\ud83e\uddea\u2195\ufe0f\ud83e\uddea\u2195\ufe0f"
+  },
+  "Brilliance": {
+    "NAME": "\ud83e\udd13\ud83c\udfc6\ud83c\udfc5\ud83d\udcaf"
+  },
+  "Brutality": {
+    "NAME": ":anger_skull:"
+  },
+  "Buffer": {
+    "NAME": "\u26a0\ufe0f"
+  },
+  "Bullet Time": {
+    "NAME": "\ud83d\udd2b\u23f1\ufe0f"
+  },
+  "Burn": {
+    "NAME": "\ud83d\udd25"
+  },
+  "Burning Pact": {
+    "NAME": "\ud83d\udd25\ud83e\uddfe"
+  },
+  "Burst": {
+    "NAME": "\ud83d\udca5"
+  },
+  "Calculated Gamble": {
+    "NAME": "\ud83e\uddee\ud83c\udfb0"
+  },
+  "Caltrops": {
+    "NAME": "\ud83d\udd87\ufe0f\ud83d\udd87\ufe0f\ud83d\udd87\ufe0f"
+  },
+  "Capacitor": {
+    "NAME": "\u27a1\ufe0f\ud83d\udd0b\u2b05\ufe0f"
+  },
+  "Carnage": {
+    "NAME": "\ud83e\udd96\ud83e\udd96\ud83e\udd96"
+  },
+  "Catalyst": {
+    "NAME": ":poison:\u27a1\ufe0f\u267e\ufe0f"
+  },
+  "Chaos": {
+    "NAME": "\ud83e\uddb9\u2795\ud83e\udde8"
+  },
+  "Chill": {
+    "NAME": "\u2744\ufe0f"
+  },
+  "Choke": {
+    "NAME": "\ud83d\ude35"
+  },
+  "Chrysalis": {
+    "NAME": "\ud83d\udd2e"
+  },
+  "Clash": {
+    "NAME": "\ud83d\udde1\ufe0f\ud83c\udd9a\ud83d\udde1\ufe0f"
+  },
+  "Cleave": {
+    "NAME": "\ud83e\ude93"
+  },
+  "Clothesline": {
+    "NAME": "\ud83d\udc55\ud83d\udc56\ud83d\udc5a\ud83d\udc59\ud83d\udc56\ud83d\udc57"
+  },
+  "Clumsy": {
+    "NAME": "\ud83d\ude43"
+  },
+  "Cold Snap": {
+    "NAME": "\u2744\ufe0f\ud83d\udc4c"
+  },
+  "Collect": {
+    "NAME": "\ud83e\udd32"
+  },
+  "Combust": {
+    "NAME": "\ud83e\udd2f\ud83d\udca5"
+  },
+  "Compile Driver": {
+    "NAME": "\ud83d\udcdd\ud83d\ude97"
+  },
+  "Concentrate": {
+    "NAME": "\ud83e\udd14\ud83d\udcad"
+  },
+  "Conclude": {
+    "NAME": "\ud83d\udcd6\u27a1\ufe0f\ud83d\udcd5"
+  },
+  "Consecrate": {
+    "NAME": "\ud83d\udd4d"
+  },
+  "Consume": {
+    "NAME": "\ud83c\udf7d\ufe0f\ud83c\udf7d\ufe0f\ud83c\udf7d\ufe0f"
+  },
+  "Coolheaded": {
+    "NAME": "\u2744\ufe0f\ud83d\ude00"
+  },
+  "Core Surge": {
+    "NAME": ":battery:\ud83c\udf0a"
+  },
+  "Corpse Explosion": {
+    "NAME": "\u26b0\ufe0f\ud83d\udca5"
+  },
+  "Corruption": {
+    "NAME": "\ud83d\ude00\u27a1\ufe0f\ud83d\ude08"
+  },
+  "Creative AI": {
+    "NAME": "\ud83c\udfa8\ud83e\udd16"
+  },
+  "Crescendo": {
+    "NAME": "\ud83c\udfb6\u27a1\ufe0f\ud83c\udfb6\ud83c\udfb6\ud83c\udfb6"
+  },
+  "Dagger Spray": {
+    "NAME": ":repto_dagger:\ud83d\udca6"
+  },
+  "Dagger Throw": {
+    "NAME": ":repto_dagger:\ud83c\udfaf"
+  },
+  "Dark Embrace": {
+    "NAME": "\ud83c\udf19\ud83e\udd17"
+  },
+  "Dark Shackles": {
+    "NAME": "\ud83c\udf1a\ud83d\udc6e\u26d3\ufe0f"
+  },
+  "Darkness": {
+    "NAME": "\ud83c\udf1a"
+  },
+  "Dash": {
+    "NAME": "\ud83c\udfc3\ud83d\udca8"
+  },
+  "Dazed": {
+    "NAME": "\ud83d\udcab"
+  },
+  "Deadly Poison": {
+    "NAME": "\u2620\ufe0f:poison:"
+  },
+  "Decay": {
+    "NAME": "\u2622\ufe0f"
+  },
+  "Deep Breath": {
+    "NAME": ":lungs:"
+  },
+  "Deflect": {
+    "NAME": "\ud83d\udd30"
+  },
+  "Defragment": {
+    "NAME": "\u26d4\ud83d\udcbe"
+  },
+  "Demon Form": {
+    "NAME": "\ud83d\ude08\ud83d\udccb"
+  },
+  "Devotion": {
+    "NAME": "\ud83e\uddce\ud83d\ude4f\ud83e\uddce"
+  },
+  "Die Die Die": {
+    "NAME": "\u2620\ufe0f\u2620\ufe0f\u2620\ufe0f"
+  },
+  "Disarm": {
+    "NAME": "\u26d4\ud83d\udcaa"
+  },
+  "Discovery": {
+    "NAME": "\ud83d\udd2c"
+  },
+  "Distraction": {
+    "NAME": "\ud83d\udc3f\ufe0f"
+  },
+  "Dodge and Roll": {
+    "NAME": "\ud83c\udfc3\u2795\ud83d\ude44"
+  },
+  "Doom and Gloom": {
+    "NAME": "\ud83c\udf1a\u2795\ud83d\ude14"
+  },
+  "Doppelganger": {
+    "NAME": "\ud83d\udc6f"
+  },
+  "Double Energy": {
+    "NAME": "\ud83d\udd0b\u2716\ufe0f2"
+  },
+  "Double Tap": {
+    "NAME": "\ud83d\udeb0\u2716\ufe0f2"
+  },
+  "Doubt": {
+    "NAME": ":thonking:"
+  },
+  "Dramatic Entrance": {
+    "NAME": "\ud83e\ude82"
+  },
+  "Dropkick": {
+    "NAME": "\ud83d\udca7\ud83e\uddb5"
+  },
+  "Dual Wield": {
+    "NAME": "\u2694\ufe0f\u2694\ufe0f"
+  },
+  "Dualcast": {
+    "NAME": "\ud83e\uddd9\u2716\ufe0f2"
+  },
+  "Echo Form": {
+    "NAME": "\ud83e\udd87\ud83d\udccb"
+  },
+  "Electrodynamics": {
+    "NAME": "\u26a1\u26a1\u26a1"
+  },
+  "Endless Agony": {
+    "NAME": "\u267e\ufe0f\ud83d\ude35"
+  },
+  "Enlightenment": {
+    "NAME": "\ud83c\udfeb\ud83d\udd2d\ud83d\udd2c\u2697\ufe0f"
+  },
+  "Entrench": {
+    "NAME": ":shovel::shovel::shovel:"
+  },
+  "Envenom": {
+    "NAME": "\ud83d\udc0d:poison:"
+  },
+  "Eruption": {
+    "NAME": "\ud83c\udf0b"
+  },
+  "Escape Plan": {
+    "NAME": "\ud83d\uddfa\ufe0f"
+  },
+  "Establishment": {
+    "NAME": "\ud83d\udd74\ufe0f"
+  },
+  "Evaluate": {
+    "NAME": "\ud83d\udd0e:thonking:"
+  },
+  "Eviscerate": {
+    "NAME": ":axed:axed:axed:"
+  },
+  "Evolve": {
+    "NAME": "\ud83e\uddec"
+  },
+  "Exhume": {
+    "NAME": "\u26b0\ufe0f\u27a1\ufe0f\ud83d\ude07"
+  },
+  "Expertise": {
+    "NAME": "\ud83d\udd75\ufe0f\ud83d\udc4c"
+  },
+  "Expunger": {
+    "NAME": "\u2716\ufe0f\ud83e\uddfd"
+  },
+  "Fasting": {
+    "NAME": "\u26d4\ud83c\udf54"
+  },
+  "Feed": {
+    "NAME": "\ud83d\ude0b\ud83c\udf74\u27a1\ufe0f\ud83e\udd69\ud83e\udd53\ud83e\udd66\ud83e\udd68\ud83c\udf45"
+  },
+  "Feel No Pain": {
+    "NAME": "\ud83d\udd90\ufe0f\u26d4\ud83e\udd15"
+  },
+  "Fiend Fire": {
+    "NAME": ":cultist: \ud83d\udd25"
+  },
+  "Finesse": {
+    "NAME": "\ud83c\udfa9"
+  },
+  "Finisher": {
+    "NAME": ":granddab:"
+  },
+  "Fire Breathing": {
+    "NAME": "\ud83d\udc44\ud83d\udd25"
+  },
+  "Fission": {
+    "NAME": "\u269b\ufe0f\u27a1\ufe0f\u269b\ufe0f\u269b\ufe0f"
+  },
+  "Flame Barrier": {
+    "NAME": "\ud83d\udd25\ud83e\uddf1\ud83d\udd25"
+  },
+  "Flash of Steel": {
+    "NAME": "\ud83d\udcf8\ud83d\udd2a"
+  },
+  "Flechettes": {
+    "NAME": "\ud83c\udfaf\ud83d\udd2b"
+  },
+  "Flex": {
+    "NAME": "\ud83d\udcaa"
+  },
+  "Flying Knee": {
+    "NAME": "\u2708\ufe0f\ud83e\uddb5"
+  },
+  "Footwork": {
+    "NAME": "\ud83e\uddb6\ud83d\udc77"
+  },
+  "Force Field": {
+    "NAME": "\ud83e\udd1c\ud83c\udfde\ufe0f"
+  },
+  "Forethought": {
+    "NAME": "\ud83d\udcad\ud83d\udcad\ud83d\udcad\ud83d\udcad"
+  },
+  "FTL": {
+    "NAME": "\u23e9\u23e9\ud83d\udca1"
+  },
+  "Fusion": {
+    "NAME": "\u269b\ufe0f\u2795\u269b\ufe0f\u27a1\ufe0f\ud83d\udca5"
+  },
+  "Genetic Algorithm": {
+    "NAME": "\ud83e\uddec\ud83d\udcbb"
+  },
+  "Ghostly Armor": {
+    "NAME": "\ud83d\udc7b\u26d1\ufe0f"
+  },
+  "Glacier": {
+    "NAME": "\ud83c\udfd4\ufe0f\u2744\ufe0f"
+  },
+  "Glass Knife": {
+    "NAME": "\ud83d\udd0e\ud83d\udd2a"
+  },
+  "Go for the Eyes": {
+    "NAME": "\u27a1\ufe0f\ud83d\udc41\ufe0f\ud83d\udc41\ufe0f"
+  },
+  "Good Instincts": {
+    "NAME": "\ud83d\udc4d\ud83e\udd38"
+  },
+  "Grand Finale": {
+    "NAME": "\ud83c\udf8a\ud83c\udf89\ud83c\udf8a"
+  },
+  "Halt": {
+    "NAME": "\ud83d\uded1"
+  },
+  "Havoc": {
+    "NAME": ":rock2:"
+  },
+  "Headbutt": {
+    "NAME": "\ud83d\ude00\ud83c\udf51"
+  },
+  "Heatsinks": {
+    "NAME": "\ud83d\udd25\ud83d\udeb0\ud83d\udeb0"
+  },
+  "Heavy Blade": {
+    "NAME": "\ud83c\udfcb\ufe0f\ud83d\udde1\ufe0f"
+  },
+  "Heel Hook": {
+    "NAME": "\ud83e\uddb6:hook:"
+  },
+  "Hello World": {
+    "NAME": "\ud83d\udc4b\ud83c\udf0e"
+  },
+  "Hemokinesis": {
+    "NAME": "\ud83e\ude78\u2694\ufe0f"
+  },
+  "Hologram": {
+    "NAME": "\ud83d\udcbb\ud83d\udc53"
+  },
+  "Hyperbeam": {
+    "NAME": ":hyperserpant:"
+  },
+  "Immolate": {
+    "NAME": "\ud83d\udd25\ud83d\udd25\ud83d\udd25"
+  },
+  "Impatience": {
+    "NAME": "\ud83d\ude24\u23f0"
+  },
+  "Impervious": {
+    "NAME": "\ud83d\ude00\ud83d\udc4d\ud83d\udee1\ufe0f\ud83d\udd2b"
+  },
+  "Indignation": {
+    "NAME": "\ud83d\ude21\ud83e\udd2c\ud83d\ude21"
+  },
+  "Infernal Blade": {
+    "NAME": "\ud83d\udd25\ud83d\udde1\ufe0f"
+  },
+  "Infinite Blades": {
+    "NAME": "\u267e\ufe0f\ud83d\udde1\ufe0f"
+  },
+  "Inflame": {
+    "NAME": "\u27a1\ufe0f\ud83d\udd25"
+  },
+  "Injury": {
+    "NAME": "\ud83c\udff9\ud83e\ude79"
+  },
+  "Insight": {
+    "NAME": "\ud83d\udd75\ufe0f"
+  },
+  "Intimidate": {
+    "NAME": "\ud83d\ude21\ud83d\ude31\ud83d\ude31\ud83d\ude31"
+  },
+  "Iron Wave": {
+    "NAME": "\u26cf\ufe0f\ud83c\udf0a"
+  },
+  "J.A.X.": {
+    "NAME": "\ud83d\udc89\ud83d\udcaa"
+  },
+  "Juggernaut": {
+    "NAME": "\u26d1\ufe0f\ud83d\ude00\ud83d\udee1\ufe0f"
+  },
+  "Leap": {
+    "NAME": "\ud83e\udd98"
+  },
+  "Leg Sweep": {
+    "NAME": "\ud83e\uddb5\ud83e\uddf9"
+  },
+  "Limit Break": {
+    "NAME": "\u2716\ufe0f\u27a1\ufe0f\u267e\ufe0f\ud83d\udc94"
+  },
+  "Loop": {
+    "NAME": "\u267e\ufe0f"
+  },
+  "Machine Learning": {
+    "NAME": "\ud83d\udcbb\ud83c\udfeb"
+  },
+  "Madness": {
+    "NAME": "\ud83e\udd2a"
+  },
+  "Magnetism": {
+    "NAME": "\ud83e\uddf2"
+  },
+  "Malaise": {
+    "NAME": "\ud83e\udd12"
+  },
+  "Master of Strategy": {
+    "NAME": "\ud83d\udcaf\u265f\ufe0f"
+  },
+  "Masterful Stab": {
+    "NAME": "\ud83d\udc4c\ud83d\udde1\ufe0f"
+  },
+  "Mayhem": {
+    "NAME": ":coolhis:"
+  },
+  "Meditate": {
+    "NAME": "\ud83e\uddd8"
+  },
+  "Melter": {
+    "NAME": "\ud83d\udd25\u2744\ufe0f"
+  },
+  "Metallicize": {
+    "NAME": "\ud83d\udcaa\u27a1\ufe0f\ud83e\uddbe"
+  },
+  "Metamorphosis": {
+    "NAME": "\ud83d\udc1b\u27a1\ufe0f\ud83e\udd8b"
+  },
+  "Meteor Strike": {
+    "NAME": "\u2604\ufe0f\u2694\ufe0f"
+  },
+  "Mind Blast": {
+    "NAME": "\ud83e\udde0\ud83d\udca5"
+  },
+  "Miracle": {
+    "NAME": "\ud83d\ude07"
+  },
+  "Multi-Cast": {
+    "NAME": "\ud83e\uddd9\u2716\ufe0f\u267e\ufe0f"
+  },
+  "Necronomicurse": {
+    "NAME": ":cursed:"
+  },
+  "Neutralize": {
+    "NAME": "\u2622\ufe0f\u27a1\ufe0f\ud83d\udc4d"
+  },
+  "Nirvana": {
+    "NAME": "\ud83e\uddd8\ud83d\udc4d"
+  },
+  "Normality": {
+    "NAME": "\ud83d\ude42"
+  },
+  "Noxious Fumes": {
+    "NAME": "\ud83c\udf2c\ud83e\udd22"
+  },
+  "Offering": {
+    "NAME": "\ud83d\udcb0\ud83e\udd1d"
+  },
+  "Omega": {
+    "NAME": "\ud83c\udd7e\ufe0f"
+  },
+  "Omniscience": {
+    "NAME": "\ud83e\udde0\u267e\ufe0f"
+  },
+  "Outmaneuver": {
+    "NAME": "\ud83c\udfc3\ud83e\udd38\ud83e\uddd7"
+  },
+  "Pain": {
+    "NAME": "\ud83d\ude2b"
+  },
+  "Panacea": {
+    "NAME": "\u2695\ufe0f"
+  },
+  "Panache": {
+    "NAME": "\u2694\ufe0f\u2716\ufe0f5"
+  },
+  "Parasite": {
+    "NAME": "\ud83e\udd9f"
+  },
+  "Perfected Strike": {
+    "NAME": "\ud83d\udc4c\u2694\ufe0f"
+  },
+  "Perseverance": {
+    "NAME": "\ud83d\ude2c"
+  },
+  "Phantasmal Killer": {
+    "NAME": "\ud83d\udc7b\u2620\ufe0f"
+  },
+  "Poisoned Stab": {
+    "NAME": ":poison:\u2694\ufe0f"
+  },
+  "Pommel Strike": {
+    "NAME": "\ud83e\udd4a\u2694\ufe0f"
+  },
+  "Power Through": {
+    "NAME": "\ud83d\udd0b\u27a1\ufe0f"
+  },
+  "Pray": {
+    "NAME": "\ud83d\ude4f"
+  },
+  "Predator": {
+    "NAME": "\ud83e\udd96"
+  },
+  "Prepared": {
+    "NAME": "\ud83d\udccb"
+  },
+  "Pride": {
+    "NAME": "\ud83e\uddd0"
+  },
+  "Prostrate": {
+    "NAME": "\ud83e\uddce"
+  },
+  "Protect": {
+    "NAME": "\ud83d\udee1\ufe0f\ud83d\udd30\ud83d\udee1\ufe0f"
+  },
+  "Pummel": {
+    "NAME": "\ud83e\udd4a"
+  },
+  "Purity": {
+    "NAME": "\ud83e\uddd6"
+  },
+  "Quick Slash": {
+    "NAME": "\u23e9\ud83d\udde1\ufe0f"
+  },
+  "Rage": {
+    "NAME": "\ud83e\udd2c"
+  },
+  "Ragnarok": {
+    "NAME": "\ud83c\udf0e\u27a1\ufe0f\ud83c\udf0b\ud83d\udca3"
+  },
+  "Rainbow": {
+    "NAME": "\ud83c\udf08"
+  },
+  "Rampage": {
+    "NAME": "\ud83d\udc0f\ud83d\udcc3"
+  },
+  "Reaper": {
+    "NAME": "\ud83d\udc80\ud83e\ude78\ud83c\udfe5"
+  },
+  "Reboot": {
+    "NAME": "\ud83e\udd7e\u21a9\ufe0f"
+  },
+  "Rebound": {
+    "NAME": "\ud83c\udfc0\ud83d\uddd1\ufe0f"
+  },
+  "Reckless Charge": {
+    "NAME": "\ud83d\ude1c\ud83c\udfc7"
+  },
+  "Recycle": {
+    "NAME": "\u267b\ufe0f"
+  },
+  "Reflex": {
+    "NAME": "\ud83e\uddb5\ud83d\udd28"
+  },
+  "Regret": {
+    "NAME": "\ud83d\ude1e"
+  },
+  "Reinforced Body": {
+    "NAME": "\ud83d\udee1\ufe0f\ud83e\uddcd\ud83d\udee1\ufe0f"
+  },
+  "Reprogram": {
+    "NAME": "\ud83d\udda5\ufe0f\u21a9\ufe0f"
+  },
+  "Rip and Tear": {
+    "NAME": "\u26b0\ufe0f\u2795\ud83d\udc41\ufe0f\ud83d\udca7"
+  },
+  "Rupture": {
+    "NAME": "\ud83d\udd2a\ud83d\udc94\ud83e\ude78\ud83e\ude78\ud83e\ude78"
+  },
+  "Sadistic Nature": {
+    "NAME": "\ud83d\ude08\ud83c\udf33"
+  },
+  "Safety": {
+    "NAME": "\ud83d\udc77\ud83d\udc4d"
+  },
+  "Sanctity": {
+    "NAME": "\ud83d\uded0"
+  },
+  "Scrape": {
+    "NAME": "\ud83d\udc3e\ud83d\udc3e\ud83d\udc3e"
+  },
+  "Scrawl": {
+    "NAME": "\u2712\ufe0f\u2712\ufe0f\u2712\ufe0f"
+  },
+  "Searing Blow": {
+    "NAME": "\ud83d\udd25\ud83c\udf2c\ufe0f"
+  },
+  "Second Wind": {
+    "NAME": "2\ud83d\udca8"
+  },
+  "Secret Technique": {
+    "NAME": "\ud83e\udd2b\ud83e\udd3a"
+  },
+  "Secret Weapon": {
+    "NAME": "\ud83e\udd2b\ud83d\udd2b"
+  },
+  "Seeing Red": {
+    "NAME": "\ud83d\udc53\ud83d\udd34"
+  },
+  "Seek": {
+    "NAME": "\ud83d\udc41\ufe0f"
+  },
+  "Self Repair": {
+    "NAME": "\ud83d\ude4e\ud83d\udd27"
+  },
+  "Sentinel": {
+    "NAME": "\ud83d\udc40\ud83d\udee1\ufe0f"
+  },
+  "Setup": {
+    "NAME": "\ud83c\udfd0\u2b06\ufe0f"
+  },
+  "Sever Soul": {
+    "NAME": "\ud83d\udd2a\ud83d\udc7b"
+  },
+  "Shame": {
+    "NAME": "\ud83d\ude30"
+  },
+  "Shiv": {
+    "NAME": ":shiv:"
+  },
+  "Shockwave": {
+    "NAME": "\ud83d\ude31\ud83c\udf0a"
+  },
+  "Shrug It Off": {
+    "NAME": "\ud83e\udd37"
+  },
+  "Skewer": {
+    "NAME": "\ud83c\udf62"
+  },
+  "Skim": {
+    "NAME": "\ud83d\udea3"
+  },
+  "Slice": {
+    "NAME": "\ud83c\udf55"
+  },
+  "Slimed": {
+    "NAME": ":slime:"
+  },
+  "Smite": {
+    "NAME": "\ud83d\ude20"
+  },
+  "Spot Weakness": {
+    "NAME": "\ud83d\udc40:weak_power:"
+  },
+  "Stack": {
+    "NAME": "\ud83d\udcda"
+  },
+  "Static Discharge": {
+    "NAME": "\u26a1\ud83d\udca6"
+  },
+  "Storm": {
+    "NAME": "\u26c8\ufe0f\u26c8\ufe0f\u26c8\ufe0f"
+  },
+  "Storm of Steel": {
+    "NAME": "\u26c8\ufe0f\ud83d\udd2a"
+  },
+  "Streamline": {
+    "NAME": "\ud83d\udee5\ufe0f"
+  },
+  "Study": {
+    "NAME": "\ud83c\udfeb\ud83c\udf92\ud83d\udcda\u270f\ufe0f\ud83e\udd13"
+  },
+  "Sucker Punch": {
+    "NAME": "\ud83e\udd1c\ud83e\udd74"
+  },
+  "Sunder": {
+    "NAME": "\u26a1\u2601\ufe0f\u26a1"
+  },
+  "Survivor": {
+    "NAME": "\ud83c\udfe5\ud83d\udc4d"
+  },
+  "Sweeping Beam": {
+    "NAME": "\ud83e\uddf9\ud83c\udfd7\ufe0f"
+  },
+  "Swift Strike": {
+    "NAME": "\u23e9\u2694\ufe0f"
+  },
+  "Swivel": {
+    "NAME": "\u21aa\ufe0f\u21a9\ufe0f"
+  },
+  "Sword Boomerang": {
+    "NAME": "\ud83d\udde1\ufe0f\u21a9\ufe0f"
+  },
+  "Tactician": {
+    "NAME": "\u265f\ufe0f\ud83d\uddfa\ufe0f"
+  },
+  "Tantrum": {
+    "NAME": "\ud83d\udc76\ud83d\ude24"
+  },
+  "Tempest": {
+    "NAME": "\u26a1\ud83c\udf2a\ufe0f\u26a1"
+  },
+  "Terror": {
+    "NAME": "\ud83d\udc79"
+  },
+  "The Bomb": {
+    "NAME": "\ud83d\udca3\ud83d\udca3\ud83d\udca3"
+  },
+  "Thinking Ahead": {
+    "NAME": "\ud83e\udde0\u27a1\ufe0f"
+  },
+  "Thunder Strike": {
+    "NAME": "\u26a1\u2694\ufe0f"
+  },
+  "Thunderclap": {
+    "NAME": "\ud83c\udf29\ufe0f\ud83d\udc4f"
+  },
+  "Tools of the Trade": {
+    "NAME": "\ud83e\uddf0\ud83d\udd28\u2692\ufe0f\u26cf\ufe0f\ud83e\uddf0"
+  },
+  "Transmutation": {
+    "NAME": ":rock:\u27a1\ufe0f\ud83d\udc51"
+  },
+  "Trip": {
+    "NAME": "\ud83c\udf4c\u2795\ud83d\udeb6"
+  },
+  "True Grit": {
+    "NAME": "\ud83e\udd20"
+  },
+  "Turbo": {
+    "NAME": "\ud83c\udfce\ufe0f\ud83d\udca8"
+  },
+  "Twin Strike": {
+    "NAME": "\u2694\ufe0f\u2716\ufe0f2\ufe0f"
+  },
+  "Unload": {
+    "NAME": "\ud83d\udd2b\ud83d\udd2b\ud83d\udd2b"
+  },
+  "Uppercut": {
+    "NAME": "\u2b06\ufe0f\ud83e\ude79"
+  },
+  "Vault": {
+    "NAME": "\ud83d\udea7\ud83c\udfc3\u200d\u2642\ufe0f"
+  },
+  "Vigilance": {
+    "NAME": "\ud83d\udd6f\ufe0f:spire_spear:"
+  },
+  "Violence": {
+    "NAME": ":omeganob:"
+  },
+  "Void": {
+    "NAME": "\u26ab"
+  },
+  "Wallop": {
+    "NAME": "\ud83d\udd28\ud83e\ude93"
+  },
+  "Warcry": {
+    "NAME": "\ud83d\udca2\ud83e\udd2c\ud83d\udca2"
+  },
+  "Weave": {
+    "NAME": "\ud83e\uddf5"
+  },
+  "Whirlwind": {
+    "NAME": "\ud83c\udf2a\ufe0f"
+  },
+  "White Noise": {
+    "NAME": "\u26aa\ud83d\udd0a"
+  },
+  "Wild Strike": {
+    "NAME": "\ud83d\udc17\u2694\ufe0f"
+  },
+  "Wish": {
+    "NAME": "\ud83c\udf20"
+  },
+  "Worship": {
+    "NAME": "\ud83d\ude4f\ud83e\uddce"
+  },
+  "Wound": {
+    "NAME": "\ud83e\ude79"
+  },
+  "Writhe": {
+    "NAME": "\ud83d\ude16"
+  },
+  "Zap": {
+    "NAME": "\u26a1"
+  }
+}

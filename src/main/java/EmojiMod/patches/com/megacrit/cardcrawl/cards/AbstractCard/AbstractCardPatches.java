@@ -11,6 +11,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.Settings;
 import javassist.expr.ExprEditor;
 
 import java.util.ArrayList;
@@ -53,7 +54,7 @@ public class AbstractCardPatches {
         public static void Insert(AbstractCard __instance, SpriteBatch sb, @ByRef float[] start_x, int i, BitmapFont font) {
             String[] tokens = __instance.description.get(i).getCachedTokenizedText();
             float descWidth = EmojiMappingUtils.getStringWidthWithEmoji(__instance, tokens, font);
-            start_x[0] = __instance.current_x - descWidth * __instance.drawScale / 2.0F;
+            start_x[0] = __instance.current_x - descWidth * __instance.drawScale / 2.0F - 5.0F * Settings.scale;
         }
     }
 
@@ -69,6 +70,16 @@ public class AbstractCardPatches {
         @SpireInsertPatch(locator = RenderDescriptionSpacingVariableLocator.class, localvars = { "spacing "})
         public static void Insert(AbstractCard __instance, SpriteBatch sb, @ByRef float[] spacing) {
             spacing[0] = spacing[0] / 1.45F * 2.50F;
+        }
+    }
+
+    @SpirePatch(clz = AbstractCard.class, method = "initialize")
+    public static class DescriptionWidthStaticVarPatch {
+        public static void Postfix() {
+            float ORIGINAL_DESC_BOX_WIDTH = Settings.BIG_TEXT_MODE ? (AbstractCard.IMG_WIDTH * 0.95F) : (AbstractCard.IMG_WIDTH * 0.79F);
+            float newWidth = ORIGINAL_DESC_BOX_WIDTH * .7F;
+            EmojiMod.logger.info("Original desc box: " + ORIGINAL_DESC_BOX_WIDTH + "\tNew desc box: " + newWidth);
+            ReflectionHacks.setPrivateStaticFinal(AbstractCard.class, "DESC_BOX_WIDTH", newWidth);
         }
     }
 

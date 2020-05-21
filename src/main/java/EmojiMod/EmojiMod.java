@@ -8,6 +8,8 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.red.Bash;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.EventStrings;
@@ -30,15 +32,6 @@ public class EmojiMod implements
 
     // TODO: Determine best way to allow cross mod compatibility for adding emojis translations (and emojis?)
     // TODO: Set langPackDir (LocalizedStrings) to be english so that the emojis load even if the game language is not english
-    // TODO: Emojis to get
-    /*
-        boomerang
-        lungs
-        ninja
-        hook
-        window
-        Letter X
-     */
     
     public static final Logger logger = LogManager.getLogger(EmojiMod.class.getName());
     private static String modID;
@@ -46,9 +39,11 @@ public class EmojiMod implements
     public static EmojiSupport emojiSupport;
 
     private static ReplaceData[] cardDescriptionWords;
+    private static ReplaceData[] numberRP;
     private static ReplaceData[] eventDescriptionWords;
     private static ReplaceData[] eventOptionWords;
-    private static Map<String, CardStrings> replacementCards;
+    private static Map<String, CardStrings> replacementCardNames;
+    private static Map<String, CardStrings> replacementCardNameAndDescriptions;
     
     public EmojiMod() {
         modID = "EmojiMod";
@@ -88,11 +83,13 @@ public class EmojiMod implements
 
             Gson gson = new Gson();
             cardDescriptionWords = gson.fromJson(loadJson(regexPath + "CardDescriptionPrimary.json"), ReplaceData[].class);
+            numberRP = gson.fromJson(loadJson(regexPath + "Numbers.json"), ReplaceData[].class);
             eventDescriptionWords = gson.fromJson(loadJson(regexPath + "EventDescriptionImportant.json"), ReplaceData[].class);
             eventOptionWords = gson.fromJson(loadJson(regexPath + "EventOptionImportant.json"), ReplaceData[].class);
 
             Type cardType = (new TypeToken<Map<String, CardStrings>>() {  }).getType();
-            replacementCards = gson.fromJson(loadJson(replacePath + "cards.json"), cardType);
+            replacementCardNames = gson.fromJson(loadJson(replacePath + "CardNames.json"), cardType);
+            replacementCardNameAndDescriptions = gson.fromJson(loadJson(replacePath + "CardNameAndDescriptions.json"), cardType);
         }
         catch (JsonSyntaxException e) {
             logger.error("Failed to load regex strings for emoji translation from json.");
@@ -142,7 +139,8 @@ public class EmojiMod implements
     @SuppressWarnings("unchecked")
     private static void EnglishImproveStrings() {
         Map<String, CardStrings> cardStrings = (Map<String, CardStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "cards");
-        replaceCardString(cardStrings, replacementCards);
+        replaceCardString(cardStrings, replacementCardNames);
+        replaceCardString(cardStrings, replacementCardNameAndDescriptions);
         if (cardStrings != null) {
             for (CardStrings cardString : cardStrings.values()) {
                 EnglishHeckStrings(cardString, cardDescriptionWords);
@@ -154,6 +152,9 @@ public class EmojiMod implements
 
     private static void EnglishHeckStrings(CardStrings cardStrings, ReplaceData[] rd)
     {
+        if (cardStrings.NAME != null)
+            cardStrings.NAME = EnglishDestroyString(cardStrings.NAME, numberRP);
+
         if (cardStrings.DESCRIPTION != null)
             cardStrings.DESCRIPTION = EnglishDestroyString(cardStrings.DESCRIPTION, rd);
 

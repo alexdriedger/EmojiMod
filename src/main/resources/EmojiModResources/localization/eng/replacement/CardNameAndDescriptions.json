@@ -1,0 +1,28 @@
+{
+  "Cleave": {
+    "DESCRIPTION": "!D! ⚔️ NL ➡️ \uDB80\uDE36 \uDB80\uDE36 \uDB80\uDE36"
+  },
+  "Thunderclap": {
+    "DESCRIPTION": "Deal !D! damage NL apply 1 Vulnerable NL to ALL enemies."
+  },
+  "Body Slam": {
+    "DESCRIPTION": "\uDB80\uDEA5 \uD83D\uDEE1️ ⚔️"
+  },
+  "Demon Form": {
+    "DESCRIPTION": "!M! \uDB80\uDC21."
+  },
+  "Blasphemy": {
+    "NAME": "\uDB80\uDE6B"
+  },
+  "Doubt": {
+    "NAME": "\uDB80\uDE97"
+  },
+  "Anger": {
+    "DESCRIPTION": "Deal !D! damage. NL \uD83D\uDE24 into your discard pile."
+  },
+  "Armaments": {
+    "NAME": "\uD83E\uDDBE",
+    "DESCRIPTION": "Gain !B! Block. NL Upgrade card right arrow combat.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Upgrade all cards in your hand the rest of combat."
+  }
+}
