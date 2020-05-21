@@ -78,6 +78,7 @@ def convert_all_atlases() -> None:
   encoding, other_assets_dict = convert_custom_atlas(encoding, input_file="in/other_assets.atlas", output_file="temp/new_other_assets.atlas")
   encoding, x_a_dict = convert_custom_atlas(encoding, input_file="in/x_a.atlas", output_file="temp/x_a.atlas")
   encoding, x_b_dict = convert_custom_atlas(encoding, input_file="in/x_b.atlas", output_file="temp/x_b.atlas")
+  encoding, x_c_dict = convert_custom_atlas(encoding, input_file="in/x_c.atlas", output_file="temp/x_c.atlas")
 
   # Merge all atlases into one atlas to copy into EmojiMod Resources
   update_main_atlas()
@@ -87,6 +88,7 @@ def convert_all_atlases() -> None:
   mapping_dict.update(other_assets_dict)
   mapping_dict.update(x_a_dict)
   mapping_dict.update(x_b_dict)
+  mapping_dict.update(x_c_dict)
   write_mapping_file(mapping_dict)
 
 def update_main_atlas() -> None:

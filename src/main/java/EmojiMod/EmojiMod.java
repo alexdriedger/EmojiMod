@@ -29,18 +29,7 @@ public class EmojiMod implements
 {
 
     // TODO: Determine best way to allow cross mod compatibility for adding emojis translations (and emojis?)
-    // TODO: Do first pass of translations
     // TODO: Set langPackDir (LocalizedStrings) to be english so that the emojis load even if the game language is not english
-    // TODO: Get better phrases for:
-        /*
-        for combat
-        if
-        when
-        Innate
-        copy of this card
-        start of your turn
-        end of your turn
-         */
     // TODO: Emojis to get
     /*
         boomerang
@@ -50,7 +39,6 @@ public class EmojiMod implements
         window
         Letter X
      */
-    // TODO: Use shiv, repto dagger, jax, book of stabbing, nob, wizard etc. for naming
     
     public static final Logger logger = LogManager.getLogger(EmojiMod.class.getName());
     private static String modID;

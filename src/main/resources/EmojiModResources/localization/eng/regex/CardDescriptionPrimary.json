@@ -28,6 +28,14 @@
     "VALUE": "✖️ !M!"
   },
   {
+    "KEYS": ["X times"],
+    "VALUE": "✖️ \uDB80\uDEB6"
+  },
+  {
+    "KEYS": [" X "],
+    "VALUE": " \uDB80\uDEB6 "
+  },
+  {
     "KEYS": ["(\\d) times\\."],
     "VALUE": "✖️ ShortenTheSpireSpecialValue",
     "SPECIAL": 1
@@ -234,6 +242,26 @@
   {
     "KEYS": ["Lock-On"],
     "VALUE": "\uDB80\uDC49"
+  },
+  {
+    "KEYS": ["\\*Mark"],
+    "VALUE": "\uDB80\uDC65"
+  },
+  {
+    "KEYS": ["\\*Beta"],
+    "VALUE": "\uDB80\uDEB4"
+  },
+  {
+    "KEYS": ["\\*Omega"],
+    "VALUE": "\uDB80\uDEB5"
+  },
+  {
+    "KEYS": ["\\*Plated \\*Armor", "Plated Armor"],
+    "VALUE": "\uD83C\uDF7D️ \uD83D\uDEE1️"
+  },
+  {
+    "KEYS": ["Colorless"],
+    "VALUE": "⚪"
   },
   {
     "KEYS": ["Frail"],
@@ -491,6 +519,10 @@
     "VALUE": "⛔ "
   },
   {
+    "KEYS": ["Cannot be removed from your deck", "There is no escape from this Curse"],
+    "VALUE": "⛔ \uDB80\uDDD1"
+  },
+  {
     "KEYS": [" in combat", " rest of combat", " this combat"],
     "VALUE": " ➡️\uD83E\uDD4A"
   },
@@ -535,7 +567,7 @@
   },
   {
     "KEYS": [" or "],
-    "VALUE": "\uD83D\uDEF6"
+    "VALUE": " \uD83D\uDEF6 "
   },
   {
     "KEYS": ["\\*Shiv[s]?"],
