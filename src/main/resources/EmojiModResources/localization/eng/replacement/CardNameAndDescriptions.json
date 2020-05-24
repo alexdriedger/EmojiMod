@@ -24,5 +24,776 @@
     "NAME": "\uD83E\uDDBE",
     "DESCRIPTION": "Gain !B! Block. NL Upgrade card right arrow combat.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Upgrade all cards in your hand the rest of combat."
+  },
+  "Defend_B": {
+    "NAME": "\uD83D\uDEE1️"
+  },
+  "Defend_G": {
+    "NAME": "\uD83D\uDEE1️"
+  },
+  "Defend_R": {
+    "NAME": "\uD83D\uDEE1️"
+  },
+  "Defend_P": {
+    "NAME": "\uD83D\uDEE1️"
+  },
+  "Strike_B": {
+    "NAME": "⚔️"
+  },
+  "Strike_G": {
+    "NAME": "⚔️"
+  },
+  "Strike_R": {
+    "NAME": "⚔️"
+  },
+  "Strike_P": {
+    "NAME": "⚔️"
+  },
+  "Havoc": {
+    "NAME": "\uDB80\uDE6F",
+    "DESCRIPTION": "Play the top draw pile card NL and Exhaust it."
+  },
+  "Clash": {
+    "DESCRIPTION": "Can only be played if NL every card in your hand \uDB80\uDEA2 Attack. NL Deal !D! damage."
+  },
+  "Sword Boomerang": {
+    "NAME": "\uD83D\uDDE1️\uDB80\uDEB1"
+  },
+  "Warcry": {
+    "DESCRIPTION": "Draw !M! card. NL hand card right arrow top of your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! card. NL hand card right arrow top of your draw pile. NL Exhaust."
+  },
+  "Headbutt": {
+    "DESCRIPTION": "Deal !D! damage. NL discard pile card right arrow top of your draw pile."
+  },
+  "Perfected Strike": {
+    "NAME": "\uD83D\uDCAF⚔️",
+    "DESCRIPTION": "Deal !D! damage. NL increase !M! times NL draw pile card equal damage",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL increase !M! times NL draw pile card equal damage"
+  },
+  "Fiend Fire": {
+    "NAME": "\uDB80\uDE36\ud83d\udd25"
+  },
+  "Entrench": {
+    "NAME": "\uDB80\uDDC0\uDB80\uDDC0\uDB80\uDDC0"
+  },
+  "Spot Weakness": {
+    "NAME": "\ud83d\udc40\uDB80\uDC88"
+  },
+  "Shockwave": {
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable NL to ALL enemies. NL Exhaust."
+  },
+  "Evolve": {
+    "DESCRIPTION": "Whenever you draw a Status card, NL draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Whenever you draw a Status card, NL draw !M! cards."
+  },
+  "Blood for Blood": {
+    "DESCRIPTION": "[R] 1 less NL times lose HP this combat NL Deal !D! damage."
+  },
+  "Whirlwind": {
+    "DESCRIPTION": "Deal !D! damage X times NL to ALL enemies."
+  },
+  "Dropkick": {
+    "DESCRIPTION": "Deal !D! damage. NL when the enemy equal Vulnerable, NL gain [R] and draw 1 card."
+  },
+  "Infernal Blade": {
+    "DESCRIPTION": "Add a random Attack into your hand. NL costs 0 this turn. NL Exhaust."
+  },
+  "Flame Barrier": {
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, NL deal !M! damage right arrow enemy."
+  },
+  "Searing Blow": {
+    "DESCRIPTION": "Deal !D! damage. NL When Upgrade infinity."
+  },
+  "Sever Soul": {
+    "DESCRIPTION": "Exhaust non-Attack hand card. NL Deal !D! damage."
+  },
+  "Rupture": {
+    "DESCRIPTION": "Whenever card equal lose HP, NL gain 1 Strength."
+  },
+  "Combust": {
+    "DESCRIPTION": "At the end of your turn, lose 1 HP and deal !M! damage NL to ALL enemies."
+  },
+  "Fire Breathing": {
+    "DESCRIPTION": "Whenever you draw a Status or NL Curse card, deal !M! damage NL to ALL enemies."
+  },
+  "Battle Trance": {
+    "DESCRIPTION": "Draw !M! cards. NL You cannot draw cards this turn."
+  },
+  "Rampage": {
+    "DESCRIPTION": "Deal !D! damage. NL Increase !M! card damage NL this combat."
+  },
+  "Intimidate": {
+    "DESCRIPTION": "Apply !M! Weak NL to ALL enemies. NL Exhaust."
+  },
+  "Second Wind": {
+    "DESCRIPTION": "Exhaust non-Attack hand cards NL Gain !B! Block for each card Exhausted."
+  },
+  "Brutality": {
+    "NAME": "\uDB80\uDE1C",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, lose 1 HP and NL draw 1 card."
+  },
+  "Bludgeon": {
+    "NAME": "\uDB80\uDE20"
+  },
+  "Barricade": {
+    "DESCRIPTION": "Block \uD83D\uDC4D infinity"
+  },
+  "Exhume": {
+    "DESCRIPTION": "exhaust card right arrow hand. NL Exhaust."
+  },
+  "Juggernaut": {
+    "DESCRIPTION": "Whenever you gain Block, deal !M! damage NL to a random enemy."
+  },
+  "Immolate": {
+    "DESCRIPTION": "Deal !D! damage NL to ALL enemies. NL Add a *Burn into your discard pile."
+  },
+  "Double Tap": {
+    "DESCRIPTION": "your Attack is played twice.",
+    "UPGRADE_DESCRIPTION": "your !M! Attacks are played twice."
+  },
+  "Reaper": {
+    "DESCRIPTION": "Deal !D! damage NL to ALL enemies. NL Heal equal ⛔ \uD83D\uDEE1️ damage. NL Exhaust."
+  },
+  "Feed": {
+    "DESCRIPTION": "Deal !D! damage. NL When Fatal, NL increase !M! Max HP NL Exhaust."
+  },
+  "Poisoned Stab": {
+    "NAME": "\uDB80\uDC64\u2694\ufe0f"
+  },
+  "Dagger Spray": {
+    "NAME": "\uDB80\uDE6D\ud83d\udca6",
+    "DESCRIPTION": "Deal !D! damage NL to ALL enemies NL twice."
+  },
+  "Dagger Throw": {
+    "NAME": "\uDB80\uDE6D\ud83c\udfaf"
+  },
+  "Cloak And Dagger": {
+    "NAME": "\uD83E\uDDE5➕\uDB80\uDE6D"
+  },
+  "PiercingWail": {
+    "NAME": "\uD83D\uDDE1️\uD83D\uDE2D",
+    "DESCRIPTION": "ALL enemies NL lose !M! Strength this turn. NL Exhaust."
+  },
+  "Underhanded Strike": {
+    "NAME": "\uDB80\uDEB8⚔️",
+    "DESCRIPTION": "Deal !D! damage. NL If you discarded a card this turn, NL gain [G] [G]."
+  },
+  "Bane": {
+    "DESCRIPTION": "Deal !D! damage. NL when the enemy equal Poison, NL deal !D! damage."
+  },
+  "Deadly Poison": {
+    "NAME": "\u2620\ufe0f\uDB80\uDC64"
+  },
+  "Eviscerate": {
+    "NAME": "\uDB80\uDE20\uDB80\uDE20\uDB80\uDE20",
+    "DESCRIPTION": "[G] 1 less NL for each card discarded this turn. NL Deal !D! damage 3 times."
+  },
+  "Finisher": {
+    "NAME": "\uDB80\uDE40"
+  },
+  "Catalyst": {
+    "NAME": "\uDB80\uDC64\u27a1\ufe0f\u267e\ufe0f"
+  },
+  "All Out Attack": {
+    "NAME": "⚔️\uD83E\uDE93\uD83D\uDDE1️\uD83D\uDD2A\uDB80\uDE6D",
+    "DESCRIPTION": "Deal !D! damage NL to ALL enemies. NL Discard 1 card at random."
+  },
+  "Crippling Poison": {
+    "NAME": "\uD83E\uDDBD☁️"
+  },
+  "Riddle With Holes": {
+    "NAME": "\uD83D\uDD73\uD83D\uDD73\uD83D\uDD73"
+  },
+  "Well Laid Plans": {
+    "NAME": "\uD83D\uDC4D\uD83D\uDDFA️",
+    "DESCRIPTION": "At the end of your turn, Retain !M! card.",
+    "UPGRADE_DESCRIPTION": "At the end of your turn, Retain !M! cards."
+  },
+  "Flechettes": {
+    "DESCRIPTION": "Deal !D! damage times hand Skill",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " \uDB80\uDDFA).",
+      " \uDB80\uDDFA)."
+    ]
+  },
+  "Setup": {
+    "DESCRIPTION": "hand card right arrow top of your draw pile. NL costs 0"
+  },
+  "Infinite Blades": {
+    "DESCRIPTION": "At the start of your turn, *Shiv into your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, *Shiv into your hand."
+  },
+  "Endless Agony": {
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you draw ♾️\uD83D\uDE35, NL ♾️\uD83D\uDE35 into your hand. NL Exhaust."
+  },
+  "Blur": {
+    "DESCRIPTION": "Gain !B! Block. NL Block thumbs up at the start of your next turn."
+  },
+  "Noxious Fumes": {
+    "DESCRIPTION": "At the start of your turn, apply !M! Poison NL to ALL enemies."
+  },
+  "Expertise": {
+    "DESCRIPTION": "Draw cards right arrow !M! card hand."
+  },
+  "Caltrops": {
+    "DESCRIPTION": "Whenever you are attacked, NL deal !M! damage right arrow enemy."
+  },
+  "Calculated Gamble": {
+    "DESCRIPTION": "Discard your hand, NL draw hand cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Discard your hand, NL draw hand cards"
+  },
+  "Choke": {
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, NL !M! damage."
+  },
+  "Tactician": {
+    "DESCRIPTION": "Unplayable. NL If this card is discarded, gain [G].",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL If this card is discarded, gain [G] [G]."
+  },
+  "Distraction": {
+    "DESCRIPTION": "Add a random Skill into your hand. NL costs 0 this turn. NL Exhaust."
+  },
+  "Masterful Stab": {
+    "DESCRIPTION": "[G] increase 1 NL times lose HP this combat. NL Deal !D! damage."
+  },
+  "Reflex": {
+    "DESCRIPTION": "Unplayable. NL If this card is discarded, draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL If this card is discarded, draw !M! cards."
+  },
+  "Heel Hook": {
+    "NAME": "\ud83e\uddb6\uDB80\uDEB2",
+    "DESCRIPTION": "Deal !D! damage. NL when the enemy equal Weak, NL gain [G] and draw 1 card."
+  },
+  "Venomology": {
+    "NAME": "\uD83E\uDDD9\uDB80\uDD92",
+    "DESCRIPTION": "random \uDB80\uDD92. NL Exhaust."
+  },
+  "Night Terror": {
+    "NAME": "\uD83D\uDC7A\uD83D\uDE34",
+    "DESCRIPTION": "Choose a card, Next turn, NL !M! copies of that card into your hand NL Exhaust."
+  },
+  "Wraith Form v2": {
+    "NAME": "\uD83D\uDC7B\uD83D\uDCCB"
+  },
+  "Envenom": {
+    "NAME": "\ud83d\udc0d\uDB80\uDC64",
+    "DESCRIPTION": "Whenever an Attack deals unblocked damage, NL apply 1 Poison."
+  },
+  "Glass Knife": {
+    "DESCRIPTION": "Deal !D! damage twice. NL Decrease 2 card damage NL this combat."
+  },
+  "Malaise": {
+    "DESCRIPTION": "Enemy loses X Strength. NL Apply X Weak. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Enemy loses X+1 Strength. NL Apply X+1 Weak. NL Exhaust."
+  },
+  "Corpse Explosion": {
+    "DESCRIPTION": "Apply !M! Poison. NL When Fatal, NL damage equal to enemy Max HP NL to ALL enemies."
+  },
+  "Unload": {
+    "DESCRIPTION": "Deal !D! damage. NL Discard non-Attack hand cards."
+  },
+  "Bullet Time": {
+    "DESCRIPTION": "You cannot draw cards this turn. NL Hand energy equal 0."
+  },
+  "Grand Finale": {
+    "DESCRIPTION": "Can only be played if NL draw pile equal 0 NL Deal !D! damage NL to ALL enemies."
+  },
+  "Burst": {
+    "DESCRIPTION": "Skill is played twice.",
+    "UPGRADE_DESCRIPTION": "!M! Skills are played twice."
+  },
+  "Die Die Die": {
+    "DESCRIPTION": "Deal !D! damage NL to ALL enemies. NL Exhaust."
+  },
+  "Doppelganger": {
+    "UPGRADE_DESCRIPTION": "Next turn, NL X+1 cards NL gain X+1 [G]. NL Exhaust."
+  },
+  "Barrage": {
+    "NAME": "\uDB80\uDE71\uDB80\uDE72\uDB80\uDE71\u27a1\ufe0f\uDB80\uDE36"
+  },
+  "Conserve Battery": {
+    "NAME": "\uD83D\uDD0C\uD83D\uDD0B"
+  },
+  "Gash": {
+    "NAME": "\uD83D\uDC3E",
+    "DESCRIPTION": "Deal !D! damage. NL Increase !M! times NL \uD83D\uDC3E played this combat."
+  },
+  "Redo": {
+    "NAME": "\uD83D\uDCBB♾️",
+    "DESCRIPTION": "Evoke your next Orb. NL Orb ↩️"
+  },
+  "Steam": {
+    "NAME": "\uD83C\uDF2B️\uD83E\uDDF1\uD83C\uDF2B️",
+    "DESCRIPTION": "Gain !B! Block. NL decrease 1 card Block NL this combat."
+  },
+  "Rebound": {
+    "DESCRIPTION": "Deal !D! damage. NL ⏩ card play NL right arrow top of your draw pile."
+  },
+  "Streamline": {
+    "DESCRIPTION": "Deal !D! damage. NL Reduce !M! card energy NL this combat."
+  },
+  "Sweeping Beam": {
+    "DESCRIPTION": "Deal !D! damage NL to ALL enemies. NL Draw !M! card."
+  },
+  "Go for the Eyes": {
+    "DESCRIPTION": "Deal !D! damage. NL if the enemy intends to attack, NL apply !M! Weak."
+  },
+  "Hologram": {
+    "DESCRIPTION": "Gain !B! Block. NL discard pile card right arrow hand NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL discard pile card right arrow hand"
+  },
+  "Stack": {
+    "DESCRIPTION": "Gain Block equal \uDB80\uDEA5 discard pile card.",
+    "UPGRADE_DESCRIPTION": "Gain Block equal to the number of cards in your discard pile +3.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (!B! \uD83D\uDEE1️)"
+    ]
+  },
+  "Compile Driver": {
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card for each Orb."
+  },
+  "Auto Shields": {
+    "NAME": "▶️\uD83D\uDEE1️"
+  },
+  "BootSequence": {
+    "NAME": "\uDB80\uDE26123"
+  },
+  "Lockon": {
+    "NAME": "\uD83C\uDFAF"
+  },
+  "Undo": {
+    "NAME": "\uDB80\uDEA2"
+  },
+  "Steam Power": {
+    "NAME": "⬆️⏰"
+  },
+  "Genetic Algorithm": {
+    "DESCRIPTION": "Gain !B! Block. NL Permanently increase !M! card Block"
+  },
+  "White Noise": {
+    "DESCRIPTION": "Add a random Power card into your hand. NL costs 0 this turn. NL Exhaust."
+  },
+  "Storm": {
+    "DESCRIPTION": "Whenever you play a Power card, NL Channel 1 Lightning.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a Power card, NL Channel 1 Lightning."
+  },
+  "Force Field": {
+    "DESCRIPTION": "[B] 1 less NL for each Power card played NL this combat. NL Gain !B! Block."
+  },
+  "Loop": {
+    "DESCRIPTION": "At the start of your turn, trigger the passive ability of",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, trigger the passive ability of !M! times."
+  },
+  "Melter": {
+    "DESCRIPTION": "Enemy right arrow have no Block NL Deal !D! damage."
+  },
+  "Aggregate": {
+    "DESCRIPTION": "Gain [B] times !M! draw pile card"
+  },
+  "Doom and Gloom": {
+    "DESCRIPTION": "Deal !D! damage NL to ALL enemies. NL Channel !M! Dark."
+  },
+  "FTL": {
+    "DESCRIPTION": "Deal !D! damage NL If you played decrease !M! cards this turn, draw 1 card."
+  },
+  "Recycle": {
+    "DESCRIPTION": "Exhaust a card. NL Gain [B] equal to Exhaust card energy."
+  },
+  "Static Discharge": {
+    "DESCRIPTION": "Whenever lose HP, Channel !M! Lightning.",
+    "UPGRADE_DESCRIPTION": "Whenever lose HP, Channel !M! Lightning."
+  },
+  "Scrape": {
+    "DESCRIPTION": "Deal !D! damage. Draw !M! cards. NL Discard draw cards NL have no cost 0."
+  },
+  "Hello World": {
+    "DESCRIPTION": "At the start of your turn, a random ⚪ card into your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, a random ⚪ card into your hand."
+  },
+  "Blizzard": {
+    "DESCRIPTION": "Deal damage equal to !M! times the Frost Channeled this combat to ALL enemies."
+  },
+  "Core Surge": {
+    "NAME": "\uD83D\uDD0B\ud83c\udf0a"
+  },
+  "Hyperbeam": {
+    "NAME": "\uDB80\uDE4D"
+  },
+  "All For One": {
+    "NAME": "♾️➡️1",
+    "DESCRIPTION": "Deal !D! damage. NL Discard card cost 0 cards right arrow hand"
+  },
+  "Creative AI": {
+    "DESCRIPTION": "At the start of your turn, a random Power card into your hand."
+  },
+  "Amplify": {
+    "DESCRIPTION": "Power card is played twice.",
+    "UPGRADE_DESCRIPTION": "!M! Power cards are played twice."
+  },
+  "Reboot": {
+    "DESCRIPTION": "cards into your draw pile. NL Draw !M! cards. NL Exhaust."
+  },
+  "Fission": {
+    "DESCRIPTION": "Exhaust your Orbs. NL Gain [B] and draw !M! card NL for each Orb. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Evoke. NL Gain [B] and draw !M! card NL for each Evoked. NL Exhaust."
+  },
+  "Buffer": {
+    "DESCRIPTION": "have no lose HP ⏩ lose HP",
+    "UPGRADE_DESCRIPTION": "have no lose HP ⏩ lose HP times !M!"
+  },
+  "Seek": {
+    "DESCRIPTION": "!M! draw pile card into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "!M! draw pile card into your hand. NL Exhaust."
+  },
+  "Echo Form": {
+    "DESCRIPTION": "Ethereal. NL at the start of your turn 1 card play twice.",
+    "UPGRADE_DESCRIPTION": "at the start of your turn 1 card play twice."
+  },
+  "Electrodynamics": {
+    "DESCRIPTION": "Lightning to ALL enemies. NL Channel !M! Lightning."
+  },
+  "BowlingBash": {
+    "NAME": "\uD83C\uDFB3⚔️"
+  },
+  "CrushJoints": {
+    "NAME": "❌\uD83D\uDEAC",
+    "DESCRIPTION": "Deal !D! damage. NL When ⏪ card played equal Skill, apply !M! Vulnerable."
+  },
+  "CutThroughFate": {
+    "NAME": "✂️➡️\uD83D\uDD2E"
+  },
+  "EmptyBody": {
+    "NAME": "⛔\uD83E\uDDCD"
+  },
+  "EmptyFist": {
+    "NAME": "⛔\uD83D\uDC4A"
+  },
+  "FlurryOfBlows": {
+    "NAME": "\uD83C\uDF28️❄️\uD83C\uDF2C️",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever Stances right arrow, NL discard card right arrow hand."
+  },
+  "FlyingSleeves": {
+    "NAME": "✈️\uD83D\uDC55"
+  },
+  "FollowUp": {
+    "NAME": "\uD83D\uDE97\uD83D\uDEA8\uD83D\uDE93⬆️",
+    "DESCRIPTION": "Deal !D! damage. NL When ⏪ card played equal Attack, gain [W]."
+  },
+  "JustLucky": {
+    "NAME": "\uD83E\uDD37\uD83C\uDF40"
+  },
+  "PathToVictory": {
+    "NAME": "\uD83D\uDC86",
+    "DESCRIPTION": "Apply !M! *Mark. NL ALL enemies lose HP equal *Mark."
+  },
+  "SashWhip": {
+    "NAME": "\uD83E\uDDE3\uD83E\uDD20",
+    "DESCRIPTION": "Deal !D! damage. NL When ⏪ card played equal Attack, apply !M! Weak."
+  },
+  "ThirdEye": {
+    "NAME": "\uD83D\uDC41️\uD83D\uDC41️\uD83D\uDC41️"
+  },
+  "ClearTheMind": {
+    "NAME": "\uD83E\uDDD8\uD83D\uDE42"
+  },
+  "Evaluate": {
+    "NAME": "\ud83d\udd0e\uDB80\uDE97"
+  },
+  "Vigilance": {
+    "NAME": "\ud83d\udd6f\ufe0f\uDB80\uDE90"
+  },
+  "BattleHymn": {
+    "NAME": "⚔️\uD83C\uDFB6",
+    "DESCRIPTION": "At the start of each turn, *Smite into your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn, *Smite into your hand."
+  },
+  "CarveReality": {
+    "NAME": "⚒️\uD83C\uDF0E"
+  },
+  "DeceiveReality": {
+    "NAME": "\uD83D\uDE08\uD83C\uDF0E",
+    "DESCRIPTION": "Gain !B! Block. NL Add a *Safety into your hand."
+  },
+  "EmptyMind": {
+    "NAME": "⛔\uD83E\uDDE0"
+  },
+  "Fasting2": {
+    "NAME": "⛔\uD83C\uDF54",
+    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL at the start of each turn, Gain 1 less [W]."
+  },
+  "FearNoEvil": {
+    "NAME": "\uD83D\uDE28⛔\uD83D\uDE08",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to Attack, enter Calm."
+  },
+  "ForeignInfluence": {
+    "NAME": "\uD83C\uDF0E\uD83D\uDCBC",
+    "DESCRIPTION": "Choose random \uD83D\uDD34 \uD83D\uDFE2 \uD83D\uDD35 \uD83D\uDFE3 Attacks into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose random \uD83D\uDD34 \uD83D\uDFE2 \uD83D\uDD35 \uD83D\uDFE3 Attacks into your hand. NL costs 0 this turn. NL Exhaust."
+  },
+  "Wireheading": {
+    "NAME": "\uD83D\uDC41️\uD83D\uDC41️\uD83D\uDC41️\uD83D\uDC41️"
+  },
+  "InnerPeace": {
+    "NAME": "➡️☮️",
+    "DESCRIPTION": "If you are in Calm, draw !M! cards, NL when have no, enter Calm."
+  },
+  "LikeWater": {
+    "NAME": "\uDB80\uDEA2\uD83C\uDF0A"
+  },
+  "MentalFortress": {
+    "NAME": "\uD83E\uDDE0\uD83C\uDFF0"
+  },
+  "ReachHeaven": {
+    "NAME": "➡️\uD83D\uDE07",
+    "DESCRIPTION": "Deal !D! damage. NL *Through *Violence into your draw pile."
+  },
+  "Adaptation": {
+    "NAME": "\uD83C\uDFC3⬇️"
+  },
+  "SandsOfTime": {
+    "NAME": "⏳⌛⏳",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, reduce 1 energy this combat."
+  },
+  "SignatureMove": {
+    "NAME": "\uD83C\uDFC4",
+    "DESCRIPTION": "Can only be played if have no hand Attack NL Deal !D! damage."
+  },
+  "Vengeance": {
+    "NAME": "\uD83D\uDD25\uD83D\uDE20"
+  },
+  "Meditate": {
+    "DESCRIPTION": "Discard card right arrow hand and Retain it. NL Enter Calm. End your turn.",
+    "UPGRADE_DESCRIPTION": "Put 2 cards from your discard pile into your hand and Retain them. NL Enter Calm. NL End your turn."
+  },
+  "Weave": {
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you Scry, discard card right arrow hand."
+  },
+  "Collect": {
+    "DESCRIPTION": "⏩ X ⏰, *Miracle+ into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "⏩ X + 1 ⏰, *Miracle+ into your hand. NL Exhaust."
+  },
+  "Wallop": {
+    "DESCRIPTION": "Deal !D! damage. NL Gain Block equal to have no Block damage."
+  },
+  "Swivel": {
+    "DESCRIPTION": "Gain !B! Block. NL ⏩ Attack costs 0."
+  },
+  "Indignation": {
+    "DESCRIPTION": "If you are in Wrath, apply !M! Vulnerable to ALL enemies, when have no enter Wrath."
+  },
+  "Perseverance": {
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL When Retained, increase !M! card Block this combat."
+  },
+  "Tantrum": {
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Enter Wrath. NL card into your draw pile."
+  },
+  "TalkToTheHand": {
+    "NAME": "\uD83D\uDC44➡️\uD83D\uDD90️",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever damage enemy, gain !M! Block. NL Exhaust."
+  },
+  "WaveOfTheHand": {
+    "NAME": "\uD83D\uDC4B\uD83D\uDD90️"
+  },
+  "WheelKick": {
+    "NAME": "☸️\uD83E\uDDB5"
+  },
+  "WindmillStrike": {
+    "NAME": "\uD83C\uDF00⚔️",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, increase !M! damage this combat."
+  },
+  "WreathOfFlame": {
+    "NAME": "\uD83C\uDF3F\uD83D\uDD25",
+    "DESCRIPTION": "⏩ Attack !M! additional damage."
+  },
+  "Sanctity": {
+    "DESCRIPTION": "Gain !B! Block. NL when ⏪ card played equal Skill, draw !M! cards."
+  },
+  "ConjureBlade": {
+    "NAME": "\uD83E\uDDD9\uD83D\uDDE1️",
+    "UPGRADE_DESCRIPTION": "X+1 *Expunger into your draw pile. NL Exhaust."
+  },
+  "DeusExMachina": {
+    "NAME": "\uD83E\uDD16✖️2",
+    "DESCRIPTION": "Unplayable. NL When you draw card, !M! *Miracles NL right arrow hand and Exhaust."
+  },
+  "DevaForm": {
+    "NAME": "\uDB80\uDE6B\uD83D\uDCCB",
+    "DESCRIPTION": "Ethereal. NL At the start of your turn, gain [W] NL increase ⬆️ !M! [W].",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, gain [W] NL increase ⬆️ !M! [W]."
+  },
+  "Judgement": {
+    "NAME": "⚖️",
+    "DESCRIPTION": "When enemy Max HP equal NL ⬇️ !M!, enemy right arrow ☠️.",
+    "EXTENDED_DESCRIPTION": [
+      "☠️☠️☠️"
+    ]
+  },
+  "LessonLearned": {
+    "NAME": "\uD83C\uDFEB\uD83D\uDC4D",
+    "DESCRIPTION": "Deal !D! damage. NL when Fatal, Upgrade a random card infinity. NL Exhaust."
+  },
+  "MasterReality": {
+    "NAME": "\uDB80\uDE24",
+    "DESCRIPTION": "Whenever card \uD83D\uDC76, Upgrade it."
+  },
+  "SpiritShield": {
+    "NAME": "\uD83D\uDC7B\uD83D\uDEE1️",
+    "DESCRIPTION": "Gain !M! Block for each card your hand."
+  },
+  "Scrawl": {
+    "DESCRIPTION": "Draw hand cards. NL Exhaust."
+  },
+  "Brilliance": {
+    "DESCRIPTION": "Deal !D! damage. NL damage and equal Mantra this combat."
+  },
+  "Wish": {
+    "DESCRIPTION": "Choose 1 NL Gain !B! Plated Armor, !D! Strength, or !M! Gold. NL Exhaust."
+  },
+  "Vault": {
+    "DESCRIPTION": "increase 1 ⏰. NL End your turn. NL Exhaust."
+  },
+  "Omniscience": {
+    "DESCRIPTION": "Choose a draw pile card NL Play card twice and NL exhaust it. NL Exhaust."
+  },
+  "Establishment": {
+    "DESCRIPTION": "Whenever card a card is Retained, reduce !M! energy this combat.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever a card is Retained, reduce !M! energy this combat."
+  },
+  "Shiv": {
+    "NAME": "\uDB80\uDE7A"
+  },
+  "Ghostly": {
+    "NAME": "\uD83D\uDC7B"
+  },
+  "BecomeAlmighty": {
+    "NAME": "\uD83D\uDC76➡️\uD83D\uDCAA\uD83D\uDCAA\uD83D\uDCAA"
+  },
+  "FameAndFortune": {
+    "NAME": "⭐➕\uD83D\uDCB0"
+  },
+  "LiveForever": {
+    "NAME": "♾️\uD83E\uDDCD"
+  },
+  "RitualDagger": {
+    "NAME": "\uDB80\uDE36\uD83D\uDDE1️",
+    "DESCRIPTION": "Deal !D! damage. NL when If Fatal, permanently increase !M! card damage. NL Exhaust."
+  },
+  "ThroughViolence": {
+    "NAME": "➡️⚔️➡️"
+  },
+  "Slimed": {
+    "NAME": "\uDB80\uDE85"
+  },
+  "Void": {
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL Whenever draw, lose 1 Energy."
+  },
+  "Burn": {
+    "DESCRIPTION": "Unplayable. NL At the end of your turn, 2 lose HP.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL At the end of your turn, 4 lose HP."
+  },
+  "Deep Breath": {
+    "NAME": "\uDB80\uDEB7"
+  },
+  "Jack Of All Trades": {
+    "NAME": "\uD83C\uDF83\uD83D\uDEE0️\uD83D\uDD28⚒️"
+  },
+  "PanicButton": {
+    "NAME": "\uD83D\uDE31\uD83D\uDD18",
+    "DESCRIPTION": "Gain !B! Block. NL You cannot card Block !M! ⏰. NL Exhaust."
+  },
+  "Enlightenment": {
+    "DESCRIPTION": "hand energy right arrow 1",
+    "UPGRADE_DESCRIPTION": "hand energy right arrow 1 this combat."
+  },
+  "Madness": {
+    "DESCRIPTION": "random card energy right arrow 0 NL this combat. NL Exhaust."
+  },
+  "Purity": {
+    "DESCRIPTION": "Exhaust !M! hand cards. NL Exhaust."
+  },
+  "Discovery": {
+    "DESCRIPTION": "Choose random cards into your hand. costs 0 this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose random cards into your hand. costs 0 this turn."
+  },
+  "Forethought": {
+    "DESCRIPTION": "Hand card right arrow ⬇️ draw pile NL costs 0.",
+    "UPGRADE_DESCRIPTION": "Hand card card right arrow ⬇️ draw pile NL costs 0."
+  },
+  "Mind Blast": {
+    "DESCRIPTION": "Innate. NL Deal damage equal to \uDB80\uDEA5 draw pile card."
+  },
+  "Impatience": {
+    "DESCRIPTION": "If you have no Attacks your hand, draw !M! cards."
+  },
+  "Apotheosis": {
+    "NAME": "\uDB80\uDE1E\u27a1\ufe0f\uDB80\uDE1F",
+    "DESCRIPTION": "Upgrade infinity cards the rest of combat. NL Exhaust."
+  },
+  "Mayhem": {
+    "NAME": "\uDB80\uDE33",
+    "DESCRIPTION": "At the start of your turn, play the top draw pile card."
+  },
+  "Violence": {
+    "NAME": "\uDB80\uDE68",
+    "DESCRIPTION": "!M! random draw pile Attacks into your hand. NL Exhaust."
+  },
+  "Transmutation": {
+    "NAME": "\uDB80\uDE70\u27a1\ufe0f\ud83d\udc51"
+  },
+  "HandOfGreed": {
+    "NAME": "\uD83D\uDD90️\uD83E\uDD11\uD83D\uDCB8",
+    "DESCRIPTION": "Deal !D! damage. NL when Fatal, gain !M! Gold."
+  },
+  "Magnetism": {
+    "DESCRIPTION": "At the start of your turn, a random Colorless card into your hand."
+  },
+  "Secret Technique": {
+    "DESCRIPTION": "draw pile Skill into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "draw pile Skill into your hand."
+  },
+  "Secret Weapon": {
+    "DESCRIPTION": "draw pile Attack into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "draw pile Attack into your hand."
+  },
+  "The Bomb": {
+    "DESCRIPTION": "3 At the end of, NL deal !M! damage to ALL enemies."
+  },
+  "Thinking Ahead": {
+    "DESCRIPTION": "Draw 2 cards. NL hand card right arrow top of your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw 2 cards. NL hand card right arrow top of your draw pile."
+  },
+  "Panache": {
+    "DESCRIPTION": "Every time play 5 cards, NL deal !M! damage to ALL enemies."
+  },
+  "Sadistic Nature": {
+    "DESCRIPTION": "Whenever you apply a debuff right arrow an enemy, NL enemy right arrow !M! damage."
+  },
+  "Necronomicurse": {
+    "NAME": "\uDB80\uDE37"
+  },
+  "AscendersBane": {
+    "NAME": "\uD83E\uDD73"
+  },
+  "Pride": {
+    "DESCRIPTION": "Innate. NL At the end of your turn, copy of this card right arrow top of your draw pile. Exhaust."
+  },
+  "Parasite": {
+    "DESCRIPTION": "Unplayable. NL when \uD83E\uDDD9 or \uDB80\uDDD1, lose 3 Max HP."
+  },
+  "Normality": {
+    "DESCRIPTION": "Unplayable. NL when right arrow hand, have no play ⬆️ 3 cards this turn."
+  },
+  "Decay": {
+    "DESCRIPTION": "Unplayable. NL At the end of your turn, 2 lose HP."
+  },
+  "Regret": {
+    "DESCRIPTION": "Unplayable. NL At the end of your turn, lose HP equal to \uDB80\uDEA5 hand card."
+  },
+  "Pain": {
+    "DESCRIPTION": "Unplayable. NL when right arrow hand and card play, NL lose 1 HP."
+  },
+  "CurseOfTheBell": {
+    "NAME": "\uD83D\uDD14"
   }
 }

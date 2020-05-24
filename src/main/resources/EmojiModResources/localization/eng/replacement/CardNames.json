@@ -26,9 +26,6 @@
   "Anger": {
     "NAME": "\ud83d\ude24"
   },
-  "Apotheosis": {
-    "NAME": ":awakened_one:\u27a1\ufe0f:awakened_one_revived:"
-  },
   "Armaments": {
     "NAME": "\ud83e\uddbe"
   },
@@ -46,9 +43,6 @@
   },
   "Bane": {
     "NAME": "\ud83e\uddb9"
-  },
-  "Barrage": {
-    "NAME": ":rock:rock:rock:\u27a1\ufe0f:cultist"
   },
   "Barricade": {
     "NAME": "\ud83e\uddf1\ud83e\uddf1\ud83e\uddf1 "
@@ -92,9 +86,6 @@
   "Bloodletting": {
     "NAME": "\ud83e\ude78\ud83e\ude78\ud83e\ude78"
   },
-  "Bludgeon": {
-    "NAME": ":axed:"
-  },
   "Blur": {
     "NAME": "\u26d4\ud83d\udc53"
   },
@@ -106,9 +97,6 @@
   },
   "Brilliance": {
     "NAME": "\ud83e\udd13\ud83c\udfc6\ud83c\udfc5\ud83d\udcaf"
-  },
-  "Brutality": {
-    "NAME": ":anger_skull:"
   },
   "Buffer": {
     "NAME": "\u26a0\ufe0f"
@@ -137,9 +125,6 @@
   "Carnage": {
     "NAME": "\ud83e\udd96\ud83e\udd96\ud83e\udd96"
   },
-  "Catalyst": {
-    "NAME": ":poison:\u27a1\ufe0f\u267e\ufe0f"
-  },
   "Chaos": {
     "NAME": "\ud83e\uddb9\u2795\ud83e\udde8"
   },
@@ -159,7 +144,7 @@
     "NAME": "\ud83e\ude93"
   },
   "Clothesline": {
-    "NAME": "\ud83d\udc55\ud83d\udc56\ud83d\udc5a\ud83d\udc59\ud83d\udc56\ud83d\udc57"
+    "NAME": "\ud83d\udc55\ud83d\udc56\ud83d\udc5a\ud83d\udc59\ud83d\udc57"
   },
   "Clumsy": {
     "NAME": "\ud83d\ude43"
@@ -191,9 +176,6 @@
   "Coolheaded": {
     "NAME": "\u2744\ufe0f\ud83d\ude00"
   },
-  "Core Surge": {
-    "NAME": ":battery:\ud83c\udf0a"
-  },
   "Corpse Explosion": {
     "NAME": "\u26b0\ufe0f\ud83d\udca5"
   },
@@ -205,12 +187,6 @@
   },
   "Crescendo": {
     "NAME": "\ud83c\udfb6\u27a1\ufe0f\ud83c\udfb6\ud83c\udfb6\ud83c\udfb6"
-  },
-  "Dagger Spray": {
-    "NAME": ":repto_dagger:\ud83d\udca6"
-  },
-  "Dagger Throw": {
-    "NAME": ":repto_dagger:\ud83c\udfaf"
   },
   "Dark Embrace": {
     "NAME": "\ud83c\udf19\ud83e\udd17"
@@ -226,9 +202,6 @@
   },
   "Dazed": {
     "NAME": "\ud83d\udcab"
-  },
-  "Deadly Poison": {
-    "NAME": "\u2620\ufe0f:poison:"
   },
   "Decay": {
     "NAME": "\u2622\ufe0f"
@@ -302,26 +275,14 @@
   "Enlightenment": {
     "NAME": "\ud83c\udfeb\ud83d\udd2d\ud83d\udd2c\u2697\ufe0f"
   },
-  "Entrench": {
-    "NAME": ":shovel::shovel::shovel:"
-  },
-  "Envenom": {
-    "NAME": "\ud83d\udc0d:poison:"
-  },
   "Eruption": {
     "NAME": "\ud83c\udf0b"
   },
   "Escape Plan": {
-    "NAME": "\ud83d\uddfa\ufe0f"
+    "NAME": "\uD83C\uDFC3\ud83d\uddfa\ufe0f"
   },
   "Establishment": {
     "NAME": "\ud83d\udd74\ufe0f"
-  },
-  "Evaluate": {
-    "NAME": "\ud83d\udd0e:thonking:"
-  },
-  "Eviscerate": {
-    "NAME": ":axed:axed:axed:"
   },
   "Evolve": {
     "NAME": "\ud83e\uddec"
@@ -339,19 +300,13 @@
     "NAME": "\u26d4\ud83c\udf54"
   },
   "Feed": {
-    "NAME": "\ud83d\ude0b\ud83c\udf74\u27a1\ufe0f\ud83e\udd69\ud83e\udd53\ud83e\udd66\ud83e\udd68\ud83c\udf45"
+    "NAME": "\ud83d\ude0b\ud83c\udf74\u27a1\ufe0f\ud83e\udd69\ud83e\udd53\ud83c\udf45"
   },
   "Feel No Pain": {
     "NAME": "\ud83d\udd90\ufe0f\u26d4\ud83e\udd15"
   },
-  "Fiend Fire": {
-    "NAME": ":cultist: \ud83d\udd25"
-  },
   "Finesse": {
     "NAME": "\ud83c\udfa9"
-  },
-  "Finisher": {
-    "NAME": ":granddab:"
   },
   "Fire Breathing": {
     "NAME": "\ud83d\udc44\ud83d\udd25"
@@ -413,9 +368,6 @@
   "Halt": {
     "NAME": "\ud83d\uded1"
   },
-  "Havoc": {
-    "NAME": ":rock2:"
-  },
   "Headbutt": {
     "NAME": "\ud83d\ude00\ud83c\udf51"
   },
@@ -425,9 +377,6 @@
   "Heavy Blade": {
     "NAME": "\ud83c\udfcb\ufe0f\ud83d\udde1\ufe0f"
   },
-  "Heel Hook": {
-    "NAME": "\ud83e\uddb6:hook:"
-  },
   "Hello World": {
     "NAME": "\ud83d\udc4b\ud83c\udf0e"
   },
@@ -436,9 +385,6 @@
   },
   "Hologram": {
     "NAME": "\ud83d\udcbb\ud83d\udc53"
-  },
-  "Hyperbeam": {
-    "NAME": ":hyperserpant:"
   },
   "Immolate": {
     "NAME": "\ud83d\udd25\ud83d\udd25\ud83d\udd25"
@@ -508,9 +454,6 @@
   },
   "Masterful Stab": {
     "NAME": "\ud83d\udc4c\ud83d\udde1\ufe0f"
-  },
-  "Mayhem": {
-    "NAME": ":coolhis:"
   },
   "Meditate": {
     "NAME": "\ud83e\uddd8"
@@ -583,9 +526,6 @@
   },
   "Phantasmal Killer": {
     "NAME": "\ud83d\udc7b\u2620\ufe0f"
-  },
-  "Poisoned Stab": {
-    "NAME": ":poison:\u2694\ufe0f"
   },
   "Pommel Strike": {
     "NAME": "\ud83e\udd4a\u2694\ufe0f"
@@ -713,9 +653,6 @@
   "Shame": {
     "NAME": "\ud83d\ude30"
   },
-  "Shiv": {
-    "NAME": ":shiv:"
-  },
   "Shockwave": {
     "NAME": "\ud83d\ude31\ud83c\udf0a"
   },
@@ -731,14 +668,8 @@
   "Slice": {
     "NAME": "\ud83c\udf55"
   },
-  "Slimed": {
-    "NAME": ":slime:"
-  },
   "Smite": {
     "NAME": "\ud83d\ude20"
-  },
-  "Spot Weakness": {
-    "NAME": "\ud83d\udc40:weak_power:"
   },
   "Stack": {
     "NAME": "\ud83d\udcda"
@@ -829,12 +760,6 @@
   },
   "Vault": {
     "NAME": "\ud83d\udea7\ud83c\udfc3\u200d\u2642\ufe0f"
-  },
-  "Vigilance": {
-    "NAME": "\ud83d\udd6f\ufe0f:spire_spear:"
-  },
-  "Violence": {
-    "NAME": ":omeganob:"
   },
   "Void": {
     "NAME": "\u26ab"

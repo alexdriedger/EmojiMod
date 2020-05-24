@@ -77,7 +77,7 @@ public class AbstractCardPatches {
     public static class DescriptionWidthStaticVarPatch {
         public static void Postfix() {
             float ORIGINAL_DESC_BOX_WIDTH = Settings.BIG_TEXT_MODE ? (AbstractCard.IMG_WIDTH * 0.95F) : (AbstractCard.IMG_WIDTH * 0.79F);
-            float newWidth = ORIGINAL_DESC_BOX_WIDTH * .7F;
+            float newWidth = ORIGINAL_DESC_BOX_WIDTH * .8F;
             EmojiMod.logger.info("Original desc box: " + ORIGINAL_DESC_BOX_WIDTH + "\tNew desc box: " + newWidth);
             ReflectionHacks.setPrivateStaticFinal(AbstractCard.class, "DESC_BOX_WIDTH", newWidth);
         }

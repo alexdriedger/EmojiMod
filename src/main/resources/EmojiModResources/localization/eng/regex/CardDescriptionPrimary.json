@@ -36,6 +36,10 @@
     "VALUE": " \uDB80\uDEB6 "
   },
   {
+    "KEYS": ["X\\+1"],
+    "VALUE": "\uDB80\uDEB6 ➕ 1"
+  },
+  {
     "KEYS": ["(\\d) times\\."],
     "VALUE": "✖️ ShortenTheSpireSpecialValue",
     "SPECIAL": 1
@@ -122,7 +126,7 @@
     "SPECIAL": 1
   },
   {
-    "KEYS": ["in hand", "in my hand", "hand", "your hand"],
+    "KEYS": ["in hand", "in my hand", "[h|H]and", "your hand"],
     "VALUE": "\uD83D\uDD90️"
   },
   {
@@ -159,7 +163,15 @@
   },
   {
     "KEYS": ["non-Attack"],
-    "VALUE": "⛔\uDB80\uDDDC"
+    "VALUE": "⛔ \uDB80\uDDDC"
+  },
+  {
+    "KEYS": ["receive attack damage", "are attacked", "Attack deals unblocked damage"],
+    "VALUE": "\uD83D\uDD2A \uD83E\uDE78"
+  },
+  {
+    "KEYS": ["[i|I]f the enemy intends to [a|A]ttack"],
+    "VALUE": "\uD83E\uDD37 \uDB80\uDE36 \uDB80\uDEA2 \uDB80\uDE20"
   },
   {
     "KEYS": ["Power"],
@@ -204,6 +216,10 @@
     "SPECIAL": 1
   },
   {
+    "KEYS": ["[e|E]nd your turn"],
+    "VALUE": "⏰⏰⏰"
+  },
+  {
     "KEYS": ["Strength"],
     "VALUE": "\uDB80\uDC7A"
   },
@@ -232,8 +248,12 @@
     "VALUE": "\uD83E\uDDD8"
   },
   {
-    "KEYS": ["Exit your Stance"],
+    "KEYS": ["Exit your Stance", "change Stances"],
     "VALUE": "\uD83C\uDFCB️ ➡️"
+  },
+  {
+    "KEYS": ["[i|I]f you are in"],
+    "VALUE": "\uD83E\uDD37\uD83C\uDFCB️\uDB80\uDEA2"
   },
   {
     "KEYS": ["Stance[s]?"],
@@ -276,12 +296,8 @@
     "VALUE": "\uD83E\uDD33"
   },
   {
-    "KEYS": ["if this ", "If this ", "If you ", "if you ", "Upon " , "upon ", "Whenever you ", "whenever you ", "Whenever a ", "whenever a ", "Whenever an ", "whenever an ", "Whenever ", "whenever ", "Every time ", "every time "],
+    "KEYS": ["if this ", "If this ", "If you ", "if you ", "Upon " , "upon ", "Whenever you ", "whenever you ", "Whenever a ", "whenever a ", "Whenever an ", "whenever an ", "Whenever ", "whenever ", "Every time ", "every time ", "[w|W]hen "],
     "VALUE": "\uD83E\uDD37 "
-  },
-  {
-    "KEYS": ["receive attack damage", "are attacked", "Attack deals unblocked damage"],
-    "VALUE": "\uD83D\uDD2A \uD83E\uDE78"
   },
   {
     "KEYS": ["play a card"],
@@ -304,15 +320,15 @@
     "VALUE": "\uDB80\uDCC5"
   },
   {
-    "KEYS": ["Draw !M! cards", "Draw !M! card"],
+    "KEYS": ["[d|D]raw !M! card[s]?"],
     "VALUE": "!M! \uD83C\uDCCF"
   },
   {
-    "KEYS": ["Draw !B! cards", "Draw !B! card"],
+    "KEYS": ["[d|D]raw !B! card[s]?"],
     "VALUE": "!B! \uD83C\uDCCF"
   },
   {
-    "KEYS": ["Draw !D! cards", "Draw !D! card"],
+    "KEYS": ["[d|D]raw !D! card[s]?"],
     "VALUE": "!D! \uD83C\uDCCF"
   },
   {
@@ -357,7 +373,7 @@
     "VALUE": "\uDB80\uDE06 \uD83C\uDCCF"
   },
   {
-    "KEYS": ["[a|A]t the start of your next turn", "[n|N]ext turn[,]?"],
+    "KEYS": ["[a|A]t the start of your next turn", "[n|N]ext turn"],
     "VALUE": "⏩ ⏰"
   },
   {
@@ -369,7 +385,7 @@
     "VALUE": "⏰ ↩️"
   },
   {
-    "KEYS": ["[t|T]his turn[,]?"],
+    "KEYS": ["[t|T]his turn"],
     "VALUE": ""
   },
   {
@@ -458,12 +474,16 @@
     "VALUE": " \uDB80\uDEA2 "
   },
   {
-    "KEYS": ["[i|I]f the enemy intends to [a|A]ttack"],
-    "VALUE": "\uDB80\uDE36 \uDB80\uDEA2 \uDB80\uDE20"
+    "KEYS": ["equal"],
+    "VALUE": "\uDB80\uDEA2"
   },
   {
-    "KEYS": [" is played twice", " are played twice"],
+    "KEYS": ["\\bis played twice", "\\bare played twice"],
     "VALUE": "▶️ ✖️ \uDB80\uDEAB"
+  },
+  {
+    "KEYS": ["played"],
+    "VALUE": "▶️"
   },
   {
     "KEYS": ["twice"],
@@ -626,7 +646,7 @@
     "VALUE": "\uDB80\uDC4D"
   },
   {
-    "KEYS": ["Energy"],
+    "KEYS": ["[e|E]nergy"],
     "VALUE": "\uD83D\uDD0B"
   },
   {
@@ -650,12 +670,24 @@
     "VALUE": "\uDB80\uDE36"
   },
   {
-    "KEYS": ["draw"],
+    "KEYS": ["[d|D]raw"],
     "VALUE": "✒️"
   },
   {
-    "KEYS": ["right arrow"],
+    "KEYS": ["[r|R]ight arrow"],
     "VALUE": "➡️"
+  },
+  {
+    "KEYS": ["[t|T]humbs up"],
+    "VALUE": "\uD83D\uDC4D"
+  },
+  {
+    "KEYS": ["[t|T]imes"],
+    "VALUE": "✖️"
+  },
+  {
+    "KEYS": ["[i|I]nfinity"],
+    "VALUE": "♾️"
   },
   {
     "KEYS": ["it\\."],

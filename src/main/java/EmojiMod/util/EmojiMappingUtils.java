@@ -16,7 +16,7 @@ public class EmojiMappingUtils {
     public static String[] emojiNumberMappings = { "\uDB80\uDEAC", "\uDB80\uDEA7", "\uDB80\uDEAB", "\uDB80\uDEAA", "\uDB80\uDEA4", "\uDB80\uDEA3", "\uDB80\uDEA9", "\uDB80\uDEA8", "\uDB80\uDEA1", "\uDB80\uDEA6" };
 
     public static String replaceIntWithEmoji(int num) {
-        String delim = " ";
+        String delim = "";
         if (num >= 999) {
             return "☠️" + delim;
         }
@@ -24,9 +24,8 @@ public class EmojiMappingUtils {
                 .chars()
                 .map(Character::getNumericValue)
                 .mapToObj(x -> emojiNumberMappings[x])
-                .collect(Collectors.joining(delim, "", delim));
-        String filteredStr = EmojiMod.emojiSupport.FilterEmojis(str);
-        return filteredStr;
+                .collect(Collectors.joining(delim, "", " "));
+        return EmojiMod.emojiSupport.FilterEmojis(str);
     }
 
     public static float getStringWidthWithEmoji(AbstractCard __instance, String[] tokens, BitmapFont font) {
