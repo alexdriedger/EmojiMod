@@ -172,6 +172,21 @@ public class EmojiMod implements
 
             ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "cards", cardStrings);
         }
+        Map<String, UIStrings> uiStrings = (Map<String, UIStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "ui");
+        if (uiStrings != null) {
+            for (UIStrings us : uiStrings.values()) {
+                EnglishHeckStrings(us, cardDescriptionWords);
+            }
+
+            ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "ui", uiStrings);
+        }
+    }
+
+    private static void EnglishHeckStrings(UIStrings uiStrings, ReplaceData[] rd) {
+        if (uiStrings.TEXT != null)
+            EnglishDestroyString(uiStrings.TEXT, rd);
+        if (uiStrings.EXTRA_TEXT != null)
+            EnglishDestroyString(uiStrings.EXTRA_TEXT, rd);
     }
 
     private static void EnglishHeckStrings(CardStrings cardStrings, ReplaceData[] rd)
@@ -199,6 +214,12 @@ public class EmojiMod implements
             for (int i = 0; i < eventStrings.OPTIONS.length; i++)
                 eventStrings.OPTIONS[i] = EnglishDestroyString(eventStrings.OPTIONS[i], eventOptionWords);
     }
+    private static void EnglishDestroyString(String[] spireString, ReplaceData[] regexReplacements) {
+        for (int i = 0; i < spireString.length; i++) {
+            spireString[i] = EnglishDestroyString(spireString[i], regexReplacements);
+        }
+    }
+
     private static String EnglishDestroyString(String spireString, ReplaceData[] regexReplacements)
     {
         String returnString = spireString;
