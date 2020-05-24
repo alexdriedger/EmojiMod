@@ -345,7 +345,7 @@
   },
   "Stack": {
     "DESCRIPTION": "Gain Block equal \uDB80\uDEA5 discard pile card.",
-    "UPGRADE_DESCRIPTION": "Gain Block equal to the number of cards in your discard pile +3.",
+    "UPGRADE_DESCRIPTION": "Gain Block equal \uDB80\uDEA5 discard pile card +3.",
     "EXTENDED_DESCRIPTION": [
       " NL (!B! \uD83D\uDEE1️)"
     ]
@@ -564,14 +564,14 @@
   },
   "Meditate": {
     "DESCRIPTION": "Discard card right arrow hand and Retain it. NL Enter Calm. End your turn.",
-    "UPGRADE_DESCRIPTION": "Put 2 cards from your discard pile into your hand and Retain them. NL Enter Calm. NL End your turn."
+    "UPGRADE_DESCRIPTION": "Discard 2 card right arrow hand and Retain it. NL Enter Calm. NL End your turn."
   },
   "Weave": {
     "DESCRIPTION": "Deal !D! damage. NL Whenever you Scry, discard card right arrow hand."
   },
   "Collect": {
     "DESCRIPTION": "⏩ X ⏰, *Miracle+ into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "⏩ X + 1 ⏰, *Miracle+ into your hand. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "⏩ X+1 ⏰, *Miracle+ into your hand. NL Exhaust."
   },
   "Wallop": {
     "DESCRIPTION": "Deal !D! damage. NL Gain Block equal to have no Block damage."
@@ -739,7 +739,8 @@
     "DESCRIPTION": "!M! random draw pile Attacks into your hand. NL Exhaust."
   },
   "Transmutation": {
-    "NAME": "\uDB80\uDE70\u27a1\ufe0f\ud83d\udc51"
+    "NAME": "\uDB80\uDE70\u27a1\ufe0f\ud83d\udc51",
+    "UPGRADE_DESCRIPTION": "Add X random Upgraded Colorless cards into your hand. NL They cost 0 this turn. NL Exhaust."
   },
   "HandOfGreed": {
     "NAME": "\uD83D\uDD90️\uD83E\uDD11\uD83D\uDCB8",
@@ -795,5 +796,8 @@
   },
   "CurseOfTheBell": {
     "NAME": "\uD83D\uDD14"
+  },
+  "Dual Wield": {
+    "UPGRADE_DESCRIPTION": "Choose an Attack or Power card. NL Add 2 copies of that card into your hand."
   }
 }
