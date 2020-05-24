@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.LocalizedStrings;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -136,11 +137,34 @@ public class EmojiMod implements
         }
     }
 
+    private static void replaceMainMenuString() {
+        Map<String, UIStrings> uiStrings = (Map<String, UIStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "ui");
+        UIStrings menuStrings = uiStrings.get("MenuButton");
+        menuStrings.TEXT = new String[] {
+                "",
+                "▶️",
+                "",
+                "",
+                "⏩",
+                "",
+                "\uD83D\uDCC8",
+                "",
+                "❌",
+                "\uD83D\uDCDD",
+                "☠️",
+                "",
+                "⚙️",
+                "",
+                "\uD83D\uDCDA"
+        };
+    }
+
     @SuppressWarnings("unchecked")
     private static void EnglishImproveStrings() {
         Map<String, CardStrings> cardStrings = (Map<String, CardStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "cards");
         replaceCardString(cardStrings, replacementCardNames);
         replaceCardString(cardStrings, replacementCardNameAndDescriptions);
+        replaceMainMenuString();
         if (cardStrings != null) {
             for (CardStrings cardString : cardStrings.values()) {
                 EnglishHeckStrings(cardString, cardDescriptionWords);
