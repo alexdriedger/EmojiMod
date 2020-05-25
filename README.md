@@ -2,10 +2,10 @@
 
 Emojis have taken over the Spire 😃 All 370 base game cards have been translated into emojis 😋
 
+**"What have they done to my game"** - *Casey Yano, Slay the Spire Developer*
+
 ![Example Cards](https://raw.githubusercontent.com/alexdriedger/EmojiMod/master/workshopImages/Example%20Cards.png)
 ![More Example Cards](https://raw.githubusercontent.com/alexdriedger/EmojiMod/master/workshopImages/Emoji%20Form.png)
-
-"What have they done to my game" - *Casey Yano, Slay the Spire Developer*
 
 ## Mod Support
 Emoji Spire attempts to translate modded cards too! Results will vary
