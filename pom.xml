@@ -3,8 +3,10 @@
     <groupId>emojimod</groupId>
     <artifactId>EmojiMod</artifactId>
     <name>Emoji Mod</name>
-    <version>0.0.1</version>
-    <description>An emoji translation of the game</description>
+    <version>1.0.0</version>
+    <description>
+        Emojis have taken over the spire All base game cards are translated and attempts to translate modded cards too. Emojis are from Google and Twitter.
+    </description>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

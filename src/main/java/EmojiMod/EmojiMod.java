@@ -1,6 +1,7 @@
 package EmojiMod;
 
 import basemod.BaseMod;
+import basemod.ModPanel;
 import basemod.ReflectionHacks;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -11,6 +12,7 @@ import com.google.gson.reflect.TypeToken;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.red.Bash;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,7 +28,8 @@ import static com.megacrit.cardcrawl.core.Settings.GameLanguage.ENG;
 
 @SpireInitializer
 public class EmojiMod implements
-        EditStringsSubscriber
+        EditStringsSubscriber,
+        PostInitializeSubscriber
 {
 
     // TODO: Determine best way to allow cross mod compatibility for adding emojis translations (and emojis?)
@@ -65,6 +68,11 @@ public class EmojiMod implements
 
     private static String loadJson(String path) {
         return Gdx.files.internal(path).readString(String.valueOf(StandardCharsets.UTF_8));
+    }
+
+    @Override
+    public void receivePostInitialize() {
+        BaseMod.registerModBadge(ImageMaster.loadImage("EmojiModResources/images/modBadge.png"), "Emoji Mod", "alexdriedger", "Emojis Everywhere", new ModPanel());
     }
 
     @Override
@@ -219,7 +227,9 @@ public class EmojiMod implements
 
     private static String[] EnglishDestroyString(String[] spireString, ReplaceData[] regexReplacements) {
         for (int i = 0; i < spireString.length; i++) {
-            spireString[i] = EnglishDestroyString(spireString[i], regexReplacements);
+            if (spireString[i] != null) {
+                spireString[i] = EnglishDestroyString(spireString[i], regexReplacements);
+            }
         }
         return spireString;
     }
