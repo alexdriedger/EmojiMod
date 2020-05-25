@@ -194,7 +194,7 @@
     "VALUE": "⛔"
   },
   {
-    "KEYS": ["discard pile", "[d|D]iscarded", "[d|D]iscard"],
+    "KEYS": ["[d|D]iscard [p|P]ile", "[d|D]iscarded", "[d|D]iscard"],
     "VALUE": "\uDB80\uDCC4"
   },
   {
@@ -316,7 +316,7 @@
     "VALUE": ""
   },
   {
-    "KEYS": ["draw pile"],
+    "KEYS": ["[d|D]raw [p|P]ile"],
     "VALUE": "\uDB80\uDCC5"
   },
   {
@@ -638,7 +638,7 @@
     "VALUE": "\uD83D\uDCAB"
   },
   {
-    "KEYS": ["Curse"],
+    "KEYS": ["Curse[d|s]?"],
     "VALUE": "\uDB80\uDCAC"
   },
   {
@@ -670,7 +670,7 @@
     "VALUE": "\uDB80\uDE36"
   },
   {
-    "KEYS": ["[d|D]raw"],
+    "KEYS": ["[d|D]raw[n]?"],
     "VALUE": "✒️"
   },
   {
@@ -684,6 +684,10 @@
   {
     "KEYS": ["[t|T]imes"],
     "VALUE": "✖️"
+  },
+  {
+    "KEYS": ["[c|C]ard"],
+    "VALUE": "\uD83C\uDCCF"
   },
   {
     "KEYS": ["[i|I]nfinity"],

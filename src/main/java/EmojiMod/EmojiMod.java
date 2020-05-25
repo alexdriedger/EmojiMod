@@ -11,13 +11,11 @@ import com.google.gson.reflect.TypeToken;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.red.Bash;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.localization.LocalizedStrings;
-import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.localization.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
@@ -43,6 +41,7 @@ public class EmojiMod implements
     private static ReplaceData[] numberRP;
     private static ReplaceData[] eventDescriptionWords;
     private static ReplaceData[] eventOptionWords;
+    private static ReplaceData[] uiWords;
     private static Map<String, CardStrings> replacementCardNames;
     private static Map<String, CardStrings> replacementCardNameAndDescriptions;
     
@@ -87,6 +86,7 @@ public class EmojiMod implements
             numberRP = gson.fromJson(loadJson(regexPath + "Numbers.json"), ReplaceData[].class);
             eventDescriptionWords = gson.fromJson(loadJson(regexPath + "EventDescriptionImportant.json"), ReplaceData[].class);
             eventOptionWords = gson.fromJson(loadJson(regexPath + "EventOptionImportant.json"), ReplaceData[].class);
+            uiWords = gson.fromJson(loadJson(regexPath + "UIStrings.json"), ReplaceData[].class);
 
             Type cardType = (new TypeToken<Map<String, CardStrings>>() {  }).getType();
             replacementCardNames = gson.fromJson(loadJson(replacePath + "CardNames.json"), cardType);
@@ -164,60 +164,64 @@ public class EmojiMod implements
         Map<String, CardStrings> cardStrings = (Map<String, CardStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "cards");
         replaceCardString(cardStrings, replacementCardNames);
         replaceCardString(cardStrings, replacementCardNameAndDescriptions);
+        changeStrings(cardStrings, cardDescriptionWords, "cards");
+
         replaceMainMenuString();
-        if (cardStrings != null) {
-            for (CardStrings cardString : cardStrings.values()) {
-                EnglishHeckStrings(cardString, cardDescriptionWords);
-            }
-
-            ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "cards", cardStrings);
-        }
         Map<String, UIStrings> uiStrings = (Map<String, UIStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "ui");
-        if (uiStrings != null) {
-            for (UIStrings us : uiStrings.values()) {
-                EnglishHeckStrings(us, cardDescriptionWords);
-            }
+        changeStrings(uiStrings, uiWords, "ui");
+        changeStrings(uiStrings, cardDescriptionWords, "ui");
 
-            ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "ui", uiStrings);
+        Map<String, PowerStrings> powerStrings = (Map<String, PowerStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "powers");
+        changeStrings(powerStrings, cardDescriptionWords, "powers");
+
+        Map<String, EventStrings> eventStrings = (Map<String, EventStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "events");
+        changeStrings(eventStrings, cardDescriptionWords, "events");
+
+//        Map<String, RelicStrings> relicStrings = (Map<String, RelicStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "relics");
+//        changeStrings(relicStrings, cardDescriptionWords, "relics");
+//
+//        Map<String, PotionStrings> potionStrings = (Map<String, PotionStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "potions");
+//        changeStrings(potionStrings, cardDescriptionWords, "potions");
+    }
+
+    private static <V> void changeStrings(Map<String, V> stringMap, ReplaceData[] rd, String fieldName) {
+        if (stringMap != null) {
+            for (V strings : stringMap.values()) {
+                EnglishHeckStrings(strings, rd);
+            }
+            ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, fieldName, stringMap);
         }
     }
 
-    private static void EnglishHeckStrings(UIStrings uiStrings, ReplaceData[] rd) {
-        if (uiStrings.TEXT != null)
-            EnglishDestroyString(uiStrings.TEXT, rd);
-        if (uiStrings.EXTRA_TEXT != null)
-            EnglishDestroyString(uiStrings.EXTRA_TEXT, rd);
+    private static void EnglishHeckStrings(Object o, ReplaceData[] rd) {
+        try {
+            for (Field f : o.getClass().getDeclaredFields()) {
+                if (f != null && f.getType().equals(String[].class)) {
+                    String[] strings = (String[]) f.get(o);
+                    if (strings != null) {
+                        String[] returnVal = EnglishDestroyString(strings, rd);
+                        f.setAccessible(true);
+                        f.set(o, returnVal);
+                    }
+                } else if (f != null && f.getType().equals(String.class)) {
+                    String s = (String) f.get(o);
+                    if (s != null) {
+                        String returnVal = EnglishDestroyString(s, rd);
+                        f.setAccessible(true);
+                        f.set(o, returnVal);
+                    }
+                }
+            }
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 
-    private static void EnglishHeckStrings(CardStrings cardStrings, ReplaceData[] rd)
-    {
-        if (cardStrings.NAME != null)
-            cardStrings.NAME = EnglishDestroyString(cardStrings.NAME, numberRP);
-
-        if (cardStrings.DESCRIPTION != null)
-            cardStrings.DESCRIPTION = EnglishDestroyString(cardStrings.DESCRIPTION, rd);
-
-        if (cardStrings.UPGRADE_DESCRIPTION != null)
-            cardStrings.UPGRADE_DESCRIPTION = EnglishDestroyString(cardStrings.UPGRADE_DESCRIPTION, rd);
-
-        if (cardStrings.EXTENDED_DESCRIPTION != null)
-            for (int i = 0; i < cardStrings.EXTENDED_DESCRIPTION.length; i++)
-                cardStrings.EXTENDED_DESCRIPTION[i] = EnglishDestroyString(cardStrings.EXTENDED_DESCRIPTION[i], rd);
-    }
-    private static void EnglishHeckStrings(EventStrings eventStrings)
-    {
-        if (eventStrings.DESCRIPTIONS != null)
-            for (int i = 0; i < eventStrings.DESCRIPTIONS.length; i++)
-                eventStrings.DESCRIPTIONS[i] = EnglishDestroyString(eventStrings.DESCRIPTIONS[i], eventDescriptionWords);
-
-        if (eventStrings.OPTIONS != null)
-            for (int i = 0; i < eventStrings.OPTIONS.length; i++)
-                eventStrings.OPTIONS[i] = EnglishDestroyString(eventStrings.OPTIONS[i], eventOptionWords);
-    }
-    private static void EnglishDestroyString(String[] spireString, ReplaceData[] regexReplacements) {
+    private static String[] EnglishDestroyString(String[] spireString, ReplaceData[] regexReplacements) {
         for (int i = 0; i < spireString.length; i++) {
             spireString[i] = EnglishDestroyString(spireString[i], regexReplacements);
         }
+        return spireString;
     }
 
     private static String EnglishDestroyString(String spireString, ReplaceData[] regexReplacements)

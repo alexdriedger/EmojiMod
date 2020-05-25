@@ -1,0 +1,70 @@
+[
+  {
+    "KEYS": ["End Turn"],
+    "VALUE": "⏰⏰⏰"
+  },
+  {
+    "KEYS": ["Enemy Turn"],
+    "VALUE": "\uDB80\uDE36 ⏰"
+  },
+  {
+    "KEYS": ["Return", "Leave"],
+    "VALUE": "↩️"
+  },
+  {
+    "KEYS": ["Confirm"],
+    "VALUE": "✔️"
+  },
+  {
+    "KEYS": ["Cancel"],
+    "VALUE": "❌"
+  },
+  {
+    "KEYS": ["Throw"],
+    "VALUE": "\uD83C\uDFAF"
+  },
+  {
+    "KEYS": ["Drink"],
+    "VALUE": "\uD83C\uDF7A"
+  },
+  {
+    "KEYS": ["Skip"],
+    "VALUE": "\uD83D\uDC4E"
+  },
+  {
+    "KEYS": ["Add a card to your deck"],
+    "VALUE": "\uD83C\uDCCF right arrow \uDB80\uDCC5"
+  },
+  {
+    "KEYS": ["Proceed"],
+    "VALUE": "➡️"
+  },
+  {
+    "KEYS": ["Spoils!"],
+    "VALUE": "\uD83D\uDE00"
+  },
+  {
+    "KEYS": ["Rewards!"],
+    "VALUE": "\uD83D\uDE42"
+  },
+  {
+    "KEYS": ["Loot!"],
+    "VALUE": "\uD83D\uDE04"
+  },
+  {
+    "KEYS": ["Red"],
+    "VALUE": "\uD83D\uDD34"
+  },
+  {
+    "KEYS": ["Green"],
+    "VALUE": "\uD83D\uDFE2"
+  },
+  {
+    "KEYS": ["Blue"],
+    "VALUE": "\uD83D\uDD35"
+  },
+  {
+    "KEYS": ["Purple"],
+    "VALUE": "\uD83D\uDFE3"
+  }
+]
